@@ -1,11 +1,13 @@
 
 import * as React from "react";
+
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 
 
  export default function Getstarted() {
   return (
     <View style={styles.image}>
+      
       <Image source={require("../assets/images/Truck.png")} />
       <View>
         <Text style={styles.text}>Manage Fleet</Text>
@@ -30,10 +32,9 @@ const styles = StyleSheet.create({
   },
   text: {
     paddingTop: 48,
-    paddingLeft: 48,
-    paddingRight: 47,
+    // paddingLeft: 48,
+    //paddingRight: 47,
     fontStyle: "normal",
-
     fontSize: 40,
     lineHeight: 47,
     textAlign: "center",
@@ -51,13 +52,13 @@ const styles = StyleSheet.create({
   text2: {
     fontSize: 20,
     paddingTop: 10,
-    paddingLeft: 47,
-    paddingRight: 40,
+    paddingLeft: 35,
+     //paddingRight: 40,
   },
   text3: {
     fontSize: 20,
-    paddingLeft: 47,
-    paddingRight: 40,
+    paddingLeft: 35,
+    // paddingRight: 40,
   },
   hellostarted: {
     paddingTop: 40,

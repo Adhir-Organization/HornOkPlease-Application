@@ -13,7 +13,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
        
-        <Stack.Screen name="Getstart" component={Getstarted} />
+        <Stack.Screen options={{headerShown: false}} name="Getstart" component={Getstarted}  />
+       
       </Stack.Navigator>
     
     </NavigationContainer>
