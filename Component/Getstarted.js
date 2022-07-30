@@ -1,11 +1,12 @@
-import { NavigationContainer } from "@react-navigation/native";
+
 import * as React from "react";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 
-export default function Getstarted() {
+
+ export default function Getstarted() {
   return (
     <View style={styles.image}>
-      <Image source={require("../../images/Truck.png")} />
+      <Image source={require("../assets/images/Truck.png")} />
       <View>
         <Text style={styles.text}>Manage Fleet</Text>
         <Text style={styles.text1}>Easily</Text>
@@ -65,3 +66,4 @@ const styles = StyleSheet.create({
     padding: 50,
   },
 });
+
