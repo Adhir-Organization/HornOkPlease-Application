@@ -1,93 +1,67 @@
-import { NavigationContainer } from '@react-navigation/native';
-import * as React from 'react';
-import { StyleSheet, Text, View, Image, Button} from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import * as React from "react";
+import { StyleSheet, Text, View, Image, Button } from "react-native";
 
-
- export default function Getstarted() {
-  
+export default function Getstarted() {
   return (
-    
     <View style={styles.image}>
-    <Image  source={require('../../images/Truck.png')}/>
-    <View>
-    <Text style={styles.text}>Manage Fleet</Text>
-   <Text style={styles.text1}>Easily</Text>
-    <Text style={styles.text2}> lorem ipsum dolar amit set</Text>
-    <Text style={styles.text3}> lorem ipsum dolar amit set</Text>
-   </View> 
-   <View style={styles.hellostarted}>
-   <Button 
-    
-    title="Get started"
-    color={'#2871E6'}
-    />
+      <Image source={require("../../images/Truck.png")} />
+      <View>
+        <Text style={styles.text}>Manage Fleet</Text>
+        <Text style={styles.text1}>Easily</Text>
+        <Text style={styles.text2}> lorem ipsum dolar amit set</Text>
+        <Text style={styles.text3}> lorem ipsum dolar amit set</Text>
+      </View>
+      <View style={styles.hellostarted}>
+        <Button title="Get started" color={"#2871E6"} />
+      </View>
     </View>
-  
-   
-  </View>
   );
-  
 }
 
 const styles = StyleSheet.create({
-  container:{
-
-  },
+  container: {},
   image: {
     paddingTop: 60,
-    paddingLeft:30,
-    height:400,
-    Width:330
-  
+    paddingLeft: 30,
+    height: 400,
+    Width: 330,
   },
-  text:{
-     
-    
-   // position: 'absolute',
-    //width: 300,
-    //height: 120,
+  text: {
     paddingTop: 48,
     paddingLeft: 48,
-    paddingRight:47,
-    fontFamily:'',
- 
-   // fontFamily: 'Raleway',
-  
-    fontStyle: 'normal',
-    //fontWeight: 800,
+    paddingRight: 47,
+    fontStyle: "normal",
+
     fontSize: 40,
     lineHeight: 47,
-    textAlign:'center',
-    color: '#0058DB',
+    textAlign: "center",
+    color: "#0058DB",
   },
-  text1:{
+  text1: {
     paddingLeft: 48,
-    paddingRight:47,
-    //fontWeight: 800,
+    paddingRight: 47,
+
     fontSize: 40,
     lineHeight: 47,
-    textAlign:'center',
-    color: '#0058DB',
+    textAlign: "center",
+    color: "#0058DB",
   },
-  text2:{
-    fontSize:20,
-    paddingTop:10,
-    paddingLeft:47,
-    paddingRight:40
-  },
-  text3:{
-   // paddingTop:10,
-   fontSize:20,
+  text2: {
+    fontSize: 20,
+    paddingTop: 10,
     paddingLeft: 47,
-    paddingRight:40
+    paddingRight: 40,
   },
-  hellostarted:{
-    paddingTop:40,
-    paddingRight:100,
-    paddingLeft:90,
-    padding: 50
-    
-  }
-}); 
-
-
+  text3: {
+    fontSize: 20,
+    paddingLeft: 47,
+    paddingRight: 40,
+  },
+  hellostarted: {
+    paddingTop: 40,
+    paddingRight: 100,
+    paddingLeft: 90,
+    padding: 50,
+  },
+});
