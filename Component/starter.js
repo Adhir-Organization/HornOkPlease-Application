@@ -1,7 +1,8 @@
 
 import * as React from "react";
-
+import Login from './Login'
 import { StyleSheet, Text, View, Image, Button } from "react-native";
+import { NavigationContainer, StackActions } from "@react-navigation/native";
 
 
  export default function Getstarted() {
@@ -16,7 +17,7 @@ import { StyleSheet, Text, View, Image, Button } from "react-native";
         <Text style={styles.text3}> lorem ipsum dolar amit set</Text>
       </View>
       <View style={styles.hellostarted}>
-        <Button title="Get started" color={"#2871E6"} />
+        <Button title="Get started" color={"#2871E6"}  onPress={() => navigator('Login')} />
       </View>
     </View>
   );
