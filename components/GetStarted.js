@@ -30,12 +30,6 @@ export default function Getstarted({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    // image: {
-    //     width: '80%',
-    //     height: '80%',
-    //     resizeMode: 'contain',
-    //     alignSelf: 'center',
-    // },
     heading: {
         paddingVertical: 20,
         fontSize: 20,
