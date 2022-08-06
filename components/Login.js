@@ -1,7 +1,17 @@
 import { StyleSheet, Text, View, Image, TextInput, Button } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  NavigationContainer,
+  StackActions,
+  navigator,
+} from "@react-navigation/native";
+export default function Login({ navigation }) {
+  const pressHandler = () => {
+    // Here we pass the name of navigator from "homeStack.js" file:
+    // navigation.navigate(" NAME OF NAVIGATOR ");
 
-export default function Login() {
+    navigation.navigate("Otpver");
+  };
   return (
     <SafeAreaView>
       <Text style={styles.text1}>Welcome Back!</Text>
@@ -31,7 +41,7 @@ export default function Login() {
           }}
         >
           {/* TODO OTP functionality */}
-          <Button title="Get OTP" color={"#2871E6"} />
+          <Button title="Get OTP" color={"#2871E6"} onPress={pressHandler} />
           {/* TODO forgot psw and contact owner in one line */}
           <Text style={{ paddingTop: 120 }}> Forgot Password?</Text>
           <Text> Contact Owner</Text>

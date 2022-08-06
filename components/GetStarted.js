@@ -7,7 +7,10 @@ import {
   navigator,
 } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 export default function GetStarted({ navigation }) {
   const pressHandler = () => {
     // Here we pass the name of navigator from "homeStack.js" file:
@@ -17,8 +20,10 @@ export default function GetStarted({ navigation }) {
   };
 
   return (
-    <SafeAreaView style={styles.truck}>
-      <Image source={require("../assets/images/Truck.png")} />
+    <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.truck}>
+        <Image source={require("../assets/images/Truck.png")} />
+      </SafeAreaView>
       <SafeAreaView>
         <Text style={styles.heading}>Manage Fleet Easily</Text>
         <Text style={styles.text}>lorem ipsum dolar amit set</Text>
@@ -33,6 +38,10 @@ export default function GetStarted({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    height: hp("70%"),
+    width: wp("80%"),
+  },
   truck: {
     paddingTop: 0,
     paddingLeft: 20,
