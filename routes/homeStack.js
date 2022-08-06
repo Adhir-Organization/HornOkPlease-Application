@@ -2,6 +2,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import getStarted from "../components/GetStarted";
 import login from "../components/Login";
+import Dashboard from "../components/Dashboard";
 
 const screens = {
   // * SYNTAX GUIDE
@@ -11,12 +12,15 @@ const screens = {
    * }
    *
    */
-
+  
+  Login: {
+    screen: login,
+  }, 
   GetStarted: {
     screen: getStarted,
   },
-  Login: {
-    screen: login,
+  Dashboard: {
+    screen: Dashboard,
   },
 };
 
