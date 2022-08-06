@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     fontSize: 36,
     color: "#0058DB",
     textAlign: "center",
+    fontWeight: "bold",
   },
   text2: {
     paddingLeft: 75,

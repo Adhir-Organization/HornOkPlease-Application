@@ -39,11 +39,10 @@ export default function GetStarted({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    height: hp("70%"),
-    width: wp("80%"),
+    height: hp("100%"),
+    width: wp("100%"),
   },
   truck: {
-    paddingTop: 0,
     paddingLeft: 20,
   },
   heading: {
