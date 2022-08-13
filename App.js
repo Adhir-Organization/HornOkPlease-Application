@@ -7,10 +7,11 @@ import { Provider as PaperProvider } from "react-native-paper";
 
 import GetStarted from './components/GetStarted'
 import Login from './components/Login'
-
+import Otpver from './components/Otpver'
 
 // Other Import
 // import Navigator from "./routes/homeStack";
+
 const Stack = createStackNavigator()
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
                 <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
                     <Stack.Screen name="Get Started" component={GetStarted} />
                     <Stack.Screen name="Login" component={Login} />
+                    <Stack.Screen name="Otpver" component={Otpver} />
                 </Stack.Navigator>
             </NavigationContainer>
         </PaperProvider>

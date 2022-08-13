@@ -14,19 +14,18 @@ export default function GetStarted({ navigation }) {
 
     return (
         <SafeAreaView style={styles.container}>
-            <SafeAreaView style={styles.truck}>
+            <View style={styles.truck}>
                 <Image source={require("../assets/images/Truck.png")} />
-            </SafeAreaView>
-            <SafeAreaView>
-                <Text variant="displayLarge">Display Large</Text>
+            </View>
+            <View>
                 <Text style={styles.heading}>Manage Fleet Easily</Text>
                 <Text style={styles.text}>lorem ipsum dolar amit set</Text>
                 <Text style={styles.text}>lorem ipsum dolar amit set</Text>
-            </SafeAreaView>
-            <SafeAreaView style={styles.helloStarted}>
+            </View>
+            <View style={styles.helloStarted}>
                 {/* TODO: make this button reusable */}
                 <Button title="Get started" color={"#2871E6"} onPress={pressHandler} />
-            </SafeAreaView>
+            </View>
         </SafeAreaView>
     );
 }
