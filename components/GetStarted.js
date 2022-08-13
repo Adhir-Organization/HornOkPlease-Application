@@ -3,7 +3,7 @@ import Login from "./Login";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { NavigationContainer, StackActions, navigator } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+// import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 export default function GetStarted({ navigation }) {
     const pressHandler = () => {
@@ -18,6 +18,7 @@ export default function GetStarted({ navigation }) {
                 <Image source={require("../assets/images/Truck.png")} />
             </SafeAreaView>
             <SafeAreaView>
+                <Text variant="displayLarge">Display Large</Text>
                 <Text style={styles.heading}>Manage Fleet Easily</Text>
                 <Text style={styles.text}>lorem ipsum dolar amit set</Text>
                 <Text style={styles.text}>lorem ipsum dolar amit set</Text>
@@ -34,8 +35,8 @@ export default function GetStarted({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-        height: hp("100%"),
-        width: wp("100%"),
+        // height: hp("100%"),
+        // width: wp("100%"),
     },
     truck: {
         paddingLeft: 20,
