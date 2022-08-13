@@ -5,6 +5,7 @@ import { TextInput } from 'react-native-paper'
 
 // UI components
 import { Text, Subheading } from 'react-native-paper'
+import { TEXT } from '../constants/theme'
 
 export default function Login({ navigation }) {
     const pressHandler = () => {
@@ -14,7 +15,7 @@ export default function Login({ navigation }) {
     };
     return (
         <SafeAreaView>
-            <Text variant="displayLarge">Display Large</Text>
+            <Text style={TEXT.xl}></Text>
             <Text style={styles.text2}>Login to your account to continue</Text>
             <SafeAreaView style={styles.phoneImage}>
                 <Image source={require("../assets/images/ic_baseline-mobile-friendly.png")} />
