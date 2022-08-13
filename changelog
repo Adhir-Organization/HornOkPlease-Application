@@ -1,0 +1,10 @@
+# Update 01 : 12082022 
+**Rohan**
+
+1. Stack Navigator changed to default stack navigation
+2. Screen header is hidden
+3. Made new file named 'screens' for screens like "Get Started", "Dashboard" and "Login".
+   1. NOTE: Only create REUSEABLE components like "button", "input", etc. not for screens.
+4. Font Updated - Use 'Inter' instead of 'Raleway' for accessibility purposes.
+5. Icons Library Added
+6. 

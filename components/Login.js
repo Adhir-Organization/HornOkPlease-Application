@@ -1,6 +1,11 @@
-import { StyleSheet, Text, View, Image, TextInput, Button } from "react-native";
+import { StyleSheet, View, Image, Button } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { NavigationContainer, StackActions, navigator } from "@react-navigation/native";
+import { TextInput } from 'react-native-paper'
+
+// UI components
+import { Text, Subheading } from 'react-native-paper'
+import { TEXT } from '../constants/theme'
 
 export default function Login({ navigation }) {
     const pressHandler = () => {
@@ -10,7 +15,7 @@ export default function Login({ navigation }) {
     };
     return (
         <SafeAreaView>
-            <Text style={styles.text1}>Welcome Back!</Text>
+            <Text style={TEXT.xl}></Text>
             <Text style={styles.text2}>Login to your account to continue</Text>
             <SafeAreaView style={styles.phoneImage}>
                 <Image source={require("../assets/images/ic_baseline-mobile-friendly.png")} />
@@ -19,7 +24,9 @@ export default function Login({ navigation }) {
                 <Text style={styles.text3}>Enter your mobile number</Text>
                 <Text style={{ paddingLeft: 60 }}>We will send you a verification code</Text>
                 <Text style={{ paddingTop: 30, paddingLeft: 70, fontWeight: "200" }}>Mobile Number</Text>
-                <TextInput style={styles.textIn} placeholder="+91 99999999999"></TextInput>
+                {/* <TextInput style={styles.textIn} placeholder="+91 99999999999"></TextInput> */}
+                <TextInput
+                    label="Email" />
                 <SafeAreaView
                     style={{
                         paddingRight: 120,

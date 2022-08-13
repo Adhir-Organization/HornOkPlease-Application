@@ -67,3 +67,7 @@ Create different routes files for different section.
 
 -   Remove redundancy variables and try to make code cleaner.
 -   Use the same naming convention for components, pages, and routes.
+
+
+## Icons
+https://oblador.github.io/react-native-vector-icons/
