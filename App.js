@@ -7,7 +7,7 @@ import { Provider as PaperProvider } from "react-native-paper";
 import GetStarted from "./screens/GetStarted";
 import Login from "./screens/Login";
 import Dashboard from "./screens/Dashboard";
-import OtpVerification from "./screens/otpVerification";
+import OtpVerification from "./screens/OtpVerification";
 
 
 const Stack = createStackNavigator();
