@@ -19,8 +19,7 @@ export default function App() {
                 <Stack.Navigator screenOptions={{ headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} initialRouteName="Home">
                     <Stack.Screen name="Get Started" component={GetStarted} />
                     <Stack.Screen name="Login" component={Login} />
-                    <Stack.Screen name="Login" component={OtpVerification} />
-
+                    <Stack.Screen name="OTP Verification" component={OtpVerification} />
                     <Stack.Screen name="Dashboard" component={Dashboard} />
                 </Stack.Navigator>
             </NavigationContainer>
