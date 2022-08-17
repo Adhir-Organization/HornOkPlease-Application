@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import {} from "react-native-web";
+import { } from "react-native-web";
 import { COLORS, SIZES } from "../constants/theme";
 
 export default function GetStarted({ navigation }) {
@@ -8,9 +8,10 @@ export default function GetStarted({ navigation }) {
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
                 <Image style={styles.heroImg} source={require("../assets/images/hero.png")} />
-                <Text style={styles.heading}>Manage Fleet Easily</Text>
-                <Text style={styles.text}>lorem ipsum dolar amit set</Text>
-                <Text style={styles.text}>lorem ipsum dolar amit set</Text>
+                <Text style={styles.heading}>HornOKPlease</Text>
+                <Text style={styles.text} multiline={true}>
+                    Manage your fleet from anywhere in the world with HornOKPlease.
+                </Text>
                 <TouchableOpacity activeOpacity={0.7} style={styles.btn} onPress={() => navigation.navigate("Login")}>
                     <Text style={styles.btnTxt}>Get Started</Text>
                 </TouchableOpacity>

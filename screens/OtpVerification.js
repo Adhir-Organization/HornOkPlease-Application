@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 import OTPTextInput from "react-native-otp-textinput";
 
-export default function OtpVer({ navigation }) {
+export default function OtpVerification({ navigation }) {
     //   const otpInput = useRef(null);
 
     //   const clearText = () => {
