@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
 
-const dashboard = () => {
+const Dashboard = () => {
     return (
         <SafeAreaView style={{ flex: 1 }}>
 
@@ -9,4 +9,4 @@ const dashboard = () => {
     )
 }
 
-export default dashboard
+export default Dashboard
