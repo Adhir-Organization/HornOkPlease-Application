@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Dshboard() {
-
     return (
         <SafeAreaView style={styles.global}>
             <SafeAreaView style={styles.tripData}>
@@ -41,7 +40,6 @@ const styles = StyleSheet.create({
         width: 390,
         // marginLeft: 45,
         height: 320,
-
     },
     tripData: {
         fontSize: 100,
@@ -86,7 +84,7 @@ const styles = StyleSheet.create({
     },
     Workshop: {
         fontSize: 17,
-        marginLeft: 9
+        marginLeft: 9,
     },
     CTrip: {
         fontSize: 14,
@@ -100,7 +98,6 @@ const styles = StyleSheet.create({
         fontSize: 30,
         padding: 10,
         color: "#FF3838",
-
     },
     WorkshopNumber: {
         fontSize: 30,

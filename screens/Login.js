@@ -1,16 +1,15 @@
 import { StyleSheet, View, Image, Button, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { TextInput } from 'react-native-paper'
+import { TextInput } from "react-native-paper";
 
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 // UI components
-import { Text } from 'react-native-paper'
-import { SIZES, ICONS, COLORS } from '../constants/theme'
+import { Text } from "react-native-paper";
+import { SIZES, ICONS, COLORS } from "../constants/theme";
+// import { useNavigation } from "@react-navigation/native";
 
 export default function Login({ navigation }) {
-
-
     const pressHandler = () => {
         // Here we pass the name of navigator from "homeStack.js" file:
         // navigation.navigate(" NAME OF NAVIGATOR ");
@@ -19,19 +18,18 @@ export default function Login({ navigation }) {
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <View style={{ padding: 20 }}>
-                <Text style={{ fontSize: SIZES.xl, textAlign: 'center' }}>Welcome Back!</Text>
-                <Text style={{ fontSize: SIZES.base, textAlign: 'center' }}>Login to your account to continue</Text>
+                <Text style={{ fontSize: SIZES.xl, textAlign: "center" }}>Welcome Back!</Text>
+                <Text style={{ fontSize: SIZES.base, textAlign: "center" }}>Login to your account to continue</Text>
             </View>
             <View>
-                <Icon name={ICONS.loginIcon} size={110} color={COLORS.primaryBlue} style={{ textAlign: 'center' }} />
+                <Icon name={ICONS.loginIcon} size={110} color={COLORS.primaryBlue} style={{ textAlign: "center" }} />
             </View>
             <SafeAreaView>
                 <Text style={styles.text3}>Enter your mobile number</Text>
                 <Text style={{ paddingLeft: 60 }}>We will send you a verification code</Text>
                 <Text style={{ paddingTop: 30, paddingLeft: 70, fontWeight: "200" }}>Mobile Number</Text>
                 {/* <TextInput style={styles.textIn} placeholder="+91 99999999999"></TextInput> */}
-                <TextInput
-                    label="Email" />
+                <TextInput label="Email" />
                 <SafeAreaView
                     style={{
                         paddingRight: 120,
@@ -47,7 +45,6 @@ export default function Login({ navigation }) {
                 </SafeAreaView>
             </SafeAreaView>
         </SafeAreaView>
-
     );
 }
 

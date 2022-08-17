@@ -9,7 +9,6 @@ import Login from "./screens/Login";
 import Dashboard from "./screens/Dashboard";
 import OtpVerification from "./screens/OtpVerification";
 
-
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -19,7 +18,7 @@ export default function App() {
                 <Stack.Navigator screenOptions={{ headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} initialRouteName="Home">
                     <Stack.Screen name="Get Started" component={GetStarted} />
                     <Stack.Screen name="Login" component={Login} />
-                    <Stack.Screen name="OTP Verification" component={OtpVerification} />
+                    <Stack.Screen name="OtpVerification" component={OtpVerification} />
                     <Stack.Screen name="Dashboard" component={Dashboard} />
                 </Stack.Navigator>
             </NavigationContainer>

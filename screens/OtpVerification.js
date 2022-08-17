@@ -1,7 +1,6 @@
-import React from "react";
+// import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
-
 
 export default function OtpVerification({ navigation }) {
     //   const otpInput = useRef(null);
@@ -24,7 +23,6 @@ export default function OtpVerification({ navigation }) {
             <Text style={styles.text2}>Enter OTP code sent to your number</Text>
             <Text style={styles.text3}>+91-9999999999</Text>
             <SafeAreaView style={styles.otp1}>
-
                 <Text style={styles.text4}>Resend OTP</Text>
             </SafeAreaView>
 
