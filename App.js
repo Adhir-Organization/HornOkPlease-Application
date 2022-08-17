@@ -8,6 +8,7 @@ import { Provider as PaperProvider } from "react-native-paper";
 import GetStarted from './components/GetStarted'
 import Login from './components/Login'
 import Otpver from './components/Otpver'
+import Dashboard from './components/Dashboard'
 
 // Other Import
 // import Navigator from "./routes/homeStack";
@@ -22,6 +23,7 @@ export default function App() {
                     <Stack.Screen name="Get Started" component={GetStarted} />
                     <Stack.Screen name="Login" component={Login} />
                     <Stack.Screen name="Otpver" component={Otpver} />
+                    <Stack.Screen name="Dashboard" component={Dashboard} />
                 </Stack.Navigator>
             </NavigationContainer>
         </PaperProvider>
