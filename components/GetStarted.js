@@ -1,61 +1,27 @@
 import * as React from "react";
 import Login from "./Login";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
-import { NavigationContainer, StackActions, navigator } from "@react-navigation/native";
-import { SafeAreaView } from "react-native-safe-area-context";
-// import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 export default function GetStarted({ navigation }) {
-    const pressHandler = () => {
-        // Here we pass the name of navigator from "homeStack.js" file:
-        // navigation.navigate(" NAME OF NAVIGATOR ");
-        navigation.navigate("Login");
-    };
-
     return (
-        <SafeAreaView style={styles.container}>
-            <View style={styles.truck}>
-                <Image source={require("../assets/images/Truck.png")} />
-            </View>
-            <View>
-                <Text style={styles.heading}>Manage Fleet Easily</Text>
-                <Text style={styles.text}>lorem ipsum dolar amit set</Text>
-                <Text style={styles.text}>lorem ipsum dolar amit set</Text>
-            </View>
-            <View style={styles.helloStarted}>
-                {/* TODO: make this button reusable */}
-                <Button title="Get started" color={"#2871E6"} onPress={pressHandler} />
-            </View>
-        </SafeAreaView>
+        // <SafeAreaView>
+        <View style={styles.container}>
+            <Image style={styles.heroImg} source={require("../assets/images/hero.png")} />
+            <Text style={styles.heading}>Manage Fleet Easily</Text>
+            <Text style={styles.text}>lorem ipsum dolar amit set</Text>
+            <Text style={styles.text}>lorem ipsum dolar amit set</Text>
+            <Button title="Get started" color={"#2871E6"} onPress={() => navigation.navigate("Login")} />
+        </View>
+        // {/* </SafeAreaView> */}
     );
 }
 
-// TODO: create variable and pass color string.
-
 const styles = StyleSheet.create({
     container: {
-        // height: hp("100%"),
-        // width: wp("100%"),
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
     },
-    truck: {
-        paddingLeft: 20,
-    },
-    heading: {
-        paddingVertical: 20,
-        fontSize: 30,
-        color: "blue",
-        fontWeight: "bold",
-        textAlign: "center",
-    },
-    text: {
-        fontSize: 18,
-        color: "#222",
-        textAlign: "center",
-    },
-    helloStarted: {
-        paddingTop: 40,
-        paddingRight: 100,
-        paddingLeft: 90,
-        padding: 50,
-    },
+    heroImg: { width: "90%", alignSelf: "center", height: "50%", resizeMode: "contain" },
 });
