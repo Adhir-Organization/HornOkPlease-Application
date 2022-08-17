@@ -1,57 +1,52 @@
-import { StyleSheet, Text, View, Image, Button } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import {} from "react-native-web";
+import { COLORS, SIZES } from "../constants/theme";
 
 export default function GetStarted({ navigation }) {
-    const pressHandler = () => {
-        // Here we pass the name of navigator from "homeStack.js" file:
-        // navigation.navigate(" NAME OF NAVIGATOR ");
-        navigation.navigate("Login");
-    };
-
     return (
-        <SafeAreaView style={styles.container}>
-            <View style={styles.truck}>
-                <Image source={require("../assets/images/Truck.png")} />
-            </View>
-            <View>
+        <SafeAreaView style={{ flex: 1 }}>
+            <View style={styles.container}>
+                <Image style={styles.heroImg} source={require("../assets/images/hero.png")} />
                 <Text style={styles.heading}>Manage Fleet Easily</Text>
                 <Text style={styles.text}>lorem ipsum dolar amit set</Text>
                 <Text style={styles.text}>lorem ipsum dolar amit set</Text>
-            </View>
-            <View style={styles.helloStarted}>
-                {/* TODO: make this button reusable */}
-                <Button title="Get started" color={"#2871E6"} onPress={pressHandler} />
+                <TouchableOpacity activeOpacity={0.7} style={styles.btn} onPress={() => navigation.navigate("Login")}>
+                    <Text style={styles.btnTxt}>Get Started</Text>
+                </TouchableOpacity>
             </View>
         </SafeAreaView>
     );
 }
 
-// TODO: create variable and pass color string.
-
 const styles = StyleSheet.create({
     container: {
-        // height: hp("100%"),
-        // width: wp("100%"),
-    },
-    truck: {
-        paddingLeft: 20,
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
     },
     heading: {
-        paddingVertical: 20,
-        fontSize: 30,
-        color: "blue",
+        fontSize: SIZES.xxl,
         fontWeight: "bold",
-        textAlign: "center",
+        marginTop: 50,
+        marginBottom: 20,
+        color: COLORS.primaryBlue,
     },
     text: {
-        fontSize: 18,
-        color: "#222",
+        fontSize: SIZES.md,
+    },
+    btn: {
+        width: "70%",
+        marginTop: 20,
+        backgroundColor: COLORS.primaryBlue,
+        borderRadius: 70,
+    },
+    btnTxt: {
+        fontSize: SIZES.md,
+        color: "#fff",
         textAlign: "center",
+        paddingVertical: 10,
     },
-    helloStarted: {
-        paddingTop: 40,
-        paddingRight: 100,
-        paddingLeft: 90,
-        padding: 50,
-    },
+    heroImg: { width: "90%", alignSelf: "center", height: "50%", resizeMode: "contain" },
 });

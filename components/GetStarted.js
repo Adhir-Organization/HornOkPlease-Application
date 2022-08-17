@@ -1,8 +1,6 @@
 import * as React from "react";
 import Login from "./Login";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
-import { NavigationContainer, StackActions, navigator } from "@react-navigation/native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function GetStarted({ navigation }) {
     return (
