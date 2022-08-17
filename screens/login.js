@@ -1,24 +1,30 @@
-import { StyleSheet, View, Image, Button } from "react-native";
+import { StyleSheet, View, Image, Button, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TextInput } from 'react-native-paper'
 
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
 // UI components
 import { Text } from 'react-native-paper'
-import { SIZES } from '../constants/theme'
+import { SIZES, ICONS, COLORS } from '../constants/theme'
 
 export default function Login({ navigation }) {
+
+
     const pressHandler = () => {
         // Here we pass the name of navigator from "homeStack.js" file:
         // navigation.navigate(" NAME OF NAVIGATOR ");
         navigation.navigate("Otpver");
     };
     return (
-        <SafeAreaView>
-            <Text style={{ fontSize: SIZES.xl }}>Welcome Back!</Text>
-            <Text style={styles.text2}>Login to your account to continue</Text>
-            <SafeAreaView style={styles.phoneImage}>
-                <Image source={require("../assets/images/ic_baseline-mobile-friendly.png")} />
-            </SafeAreaView>
+        <SafeAreaView style={{ flex: 1 }}>
+            <View style={{ padding: 20 }}>
+                <Text style={{ fontSize: SIZES.xl, textAlign: 'center' }}>Welcome Back!</Text>
+                <Text style={{ fontSize: SIZES.base, textAlign: 'center' }}>Login to your account to continue</Text>
+            </View>
+            <View>
+                <Icon name={ICONS.loginIcon} size={110} color={COLORS.primaryBlue} style={{ textAlign: 'center' }} />
+            </View>
             <SafeAreaView>
                 <Text style={styles.text3}>Enter your mobile number</Text>
                 <Text style={{ paddingLeft: 60 }}>We will send you a verification code</Text>
@@ -41,6 +47,7 @@ export default function Login({ navigation }) {
                 </SafeAreaView>
             </SafeAreaView>
         </SafeAreaView>
+
     );
 }
 

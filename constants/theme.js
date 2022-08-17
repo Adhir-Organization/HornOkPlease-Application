@@ -1,3 +1,4 @@
+
 export const COLORS = {
     primaryBlue: '#2871E6',
 
@@ -8,10 +9,17 @@ export const COLORS = {
 
 export const SIZES = {
     xs: 8,
-    base: 12,
-    sm: 14,
-    md: 16,
+    base: 14,
+    sm: 16,
+    md: 20,
     lg: 24,
     xl: 28,
     xxl: 32,
+}
+
+export const ICONS = {
+
+    loginIcon: 'mobile-friendly',
+
+
 }
