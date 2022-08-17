@@ -5,7 +5,6 @@ const dashboard = () => {
     return (
         <SafeAreaView style={{ flex: 1 }}>
 
-
         </SafeAreaView>
     )
 }
