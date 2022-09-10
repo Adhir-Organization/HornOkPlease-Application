@@ -6,7 +6,7 @@ import {
   CardStyleInterpolators,
 } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import { NativeBaseProvider } from "native-base";
+import { NativeBaseProvider, extendTheme } from "native-base";
 
 import GetStarted from "./screens/GetStarted";
 import Login from "./screens/Login";
@@ -16,8 +16,22 @@ import OtpVerification from "./screens/OtpVerification";
 const Stack = createStackNavigator();
 
 export default function App() {
+  const theme = extendTheme({
+    colors: {
+      customClrs: {
+        50: "#2871E6",
+      },
+    },
+    components: {
+      Button: {
+        defaultProps: {
+          colorScheme: "blue",
+        },
+      },
+    },
+  });
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
