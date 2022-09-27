@@ -17,4 +17,5 @@ export const SIZES = {
 
 export const ICONS = {
   loginIcon: "mobile-friendly",
+  otpIcon: "message-processing-outline",
 };
