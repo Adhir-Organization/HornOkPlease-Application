@@ -27,9 +27,9 @@ Folder names should in lowercase.
 
 #### File Naming Convention
 
--   Componenets should be named with the capitalized name of the component.
--   Pages should be camelCased.
--   Routes should be camelCased.
+- Componenets should be named with the capitalized name of the component.
+- Pages should be camelCased.
+- Routes should be camelCased.
 
 ```
 |- components
@@ -65,9 +65,9 @@ Create different routes files for different section.
 
 ### Extra Notes
 
--   Remove redundancy variables and try to make code cleaner.
--   Use the same naming convention for components, pages, and routes.
-
+- Remove redundancy variables and try to make code cleaner.
+- Use the same naming convention for components, pages, and routes.
 
 ## Icons
+
 https://oblador.github.io/react-native-vector-icons/

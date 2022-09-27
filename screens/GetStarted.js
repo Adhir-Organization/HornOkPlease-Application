@@ -26,9 +26,7 @@ export default function GetStarted({ navigation }) {
           </Text>
         </Center>
         <Center>
-          <Button onPress={() => navigation.navigate("Login")}>
-            Get Started
-          </Button>
+          <Button onPress={() => navigation.navigate("Login")}>Get Started</Button>
         </Center>
       </VStack>
     </Box>

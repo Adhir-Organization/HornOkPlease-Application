@@ -1,13 +1,4 @@
-import {
-  Box,
-  VStack,
-  Heading,
-  Text,
-  Center,
-  Input,
-  Container,
-  Button,
-} from "native-base";
+import { Box, VStack, Heading, Text, Center, Input, Container, Button } from "native-base";
 import { StyleSheet, View, Image, ScrollView } from "react-native";
 
 import { ICONS, COLORS } from "../constants/theme";

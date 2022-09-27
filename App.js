@@ -1,10 +1,7 @@
 // !IMPORTANT: Do not remove these import
 import "react-native-gesture-handler";
 
-import {
-  createStackNavigator,
-  CardStyleInterpolators,
-} from "@react-navigation/stack";
+import { createStackNavigator, CardStyleInterpolators } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { NativeBaseProvider, extendTheme } from "native-base";
 
