@@ -2,7 +2,7 @@ import * as React from "react";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function Dshboard() {
+export default function Dashboard() {
     return (
         <SafeAreaView style={styles.global}>
             <SafeAreaView style={styles.tripData}>
