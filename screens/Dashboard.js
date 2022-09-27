@@ -58,32 +58,4 @@ export default function Dashboard() {
       </Box>
     </Box>
   );
-export default function Dashboard() {
-    return (
-        <SafeAreaView style={styles.global}>
-            <SafeAreaView style={styles.tripData}>
-                <Text style={styles.username}>Hello John</Text>
-                <Text style={styles.userid}>13sf4556</Text>
-            </SafeAreaView>
-            <SafeAreaView style={styles.boxes}>
-                <SafeAreaView style={styles.box1}>
-                    <Text style={styles.liveData}>On-Road expense</Text>
-                    <Text style={styles.CTrip}>Current Trip</Text>
-                    <Text style={styles.RoadNumber}>455</Text>
-                </SafeAreaView>
-                <SafeAreaView style={styles.box2}>
-                    <Text style={styles.Workshop}>Workshop</Text>
-                    <Text style={styles.WData}>Repaired</Text>
-                    <Text style={styles.WorkshopNumber}>0</Text>
-                </SafeAreaView>
-            </SafeAreaView>
-            <SafeAreaView style={styles.Shortcuts}>
-                <Text style={styles.Short}>Shortcuts</Text>
-            </SafeAreaView>
-            <SafeAreaView style={styles.helloStarted}>
-                {/* TODO: make this button reusable */}
-                <Button title="Start Trip" color={"#2871E6"} />
-            </SafeAreaView>
-        </SafeAreaView>
-    );
 }
