@@ -1,5 +1,4 @@
-import { StyleSheet, Image } from "react-native";
-import { COLORS, SIZES } from "../constants/theme";
+import { Image } from "react-native";
 import { Box, Center, VStack, Heading, Text, Button } from "native-base";
 
 export default function GetStarted({ navigation }) {
@@ -26,7 +25,9 @@ export default function GetStarted({ navigation }) {
           </Text>
         </Center>
         <Center>
-          <Button onPress={() => navigation.navigate("Login")}>Get Started</Button>
+          <Button size={"lg"} onPress={() => navigation.navigate("Login")}>
+            Get Started
+          </Button>
         </Center>
       </VStack>
     </Box>
