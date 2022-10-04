@@ -8,6 +8,7 @@ import {
   ScrollView,
   IconButton,
   Button,
+  Avatar,
 } from "native-base";
 /* Importing the FontAwesome5 icon library. */
 import Icon from "react-native-vector-icons/FontAwesome5";
@@ -31,7 +32,7 @@ export default function Dashboard({ navigation }) {
       },
       {
         icon: "user",
-        title: "Profile",
+        title: "Assigned Trip",
         screen: () => navigation.navigate("ScreenName"),
       },
     ],
@@ -56,7 +57,7 @@ export default function Dashboard({ navigation }) {
 
   const HeroBox = () => {
     return (
-      <Box background="#FFE1E1" p="3" borderRadius="10" w="1/2">
+      <Box background="#FFE1E1" p="3" borderRadius="20" w="1/2">
         <Box>
           <Icon name="rupee-sign" size={20} />
           <Text fontSize="md" fontWeight="medium">
@@ -88,13 +89,21 @@ export default function Dashboard({ navigation }) {
         <VStack>
           <Box mb="5">
             {/* Fetch from API : Name of Driver */}
+            <Avatar
+              bg="green.500"
+              source={{
+                uri: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+              }}
+            >
+              AJ
+            </Avatar>
             <Heading color={"white"} size="lg">
               Hello, John
             </Heading>
             {/* Driver ID: */}
             <Text color={"white"}>1BSR23134S</Text>
           </Box>
-          <HStack justifyContent="space-between">
+          <HStack justifyContent="space-between" space={2}>
             {/* Block 1 */}
             <HeroBox />
 
@@ -147,7 +156,7 @@ export default function Dashboard({ navigation }) {
           </VStack>
         </Box>
 
-        <Box px={7} py={4}>
+        {/* <Box px={7} py={4}>
           <VStack space="3">
             <Box>
               <Heading size="lg">Trip</Heading>
@@ -167,7 +176,7 @@ export default function Dashboard({ navigation }) {
               </HStack>
             </VStack>
           </VStack>
-        </Box>
+        </Box> */}
 
         <Box px={7} py={4}>
           <VStack space="5">
