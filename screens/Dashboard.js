@@ -114,48 +114,6 @@ export default function Dashboard({ navigation }) {
       </Box>
 
       <ScrollView>
-        <Box px={7} py={4}>
-          <VStack space="5">
-            <Box>
-              <Heading size="lg">Shortcuts</Heading>
-            </Box>
-            <VStack space={2} alignItems="center" justifyContent="center">
-              {content.shortcutButtons.map((btn, index) => (
-                <Button
-                  onPress={btn.screen}
-                  p="3"
-                  w="full"
-                  key={index}
-                  background={"#D5E6FF"}
-                  rounded="md"
-                  justifyContent={"flex-start"}
-                >
-                  <HStack alignItems="flex-start" justifyItems={"center"}>
-                    <Box
-                      background={"#0058DB"}
-                      h={10}
-                      w={10}
-                      rounded="full"
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                    >
-                      <Icon name={btn.icon} color={"white"} size={20} />
-                    </Box>
-                    <Heading
-                      size="md"
-                      alignSelf={"center"}
-                      color={"#0058DB"}
-                      ml={2}
-                    >
-                      {btn.title}
-                    </Heading>
-                  </HStack>
-                </Button>
-              ))}
-            </VStack>
-          </VStack>
-        </Box>
-
         {/* <Box px={7} py={4}>
           <VStack space="3">
             <Box>
@@ -199,6 +157,47 @@ export default function Dashboard({ navigation }) {
                 ></IconButton>
               ))}
             </HStack>
+          </VStack>
+        </Box>
+        <Box px={7} py={4}>
+          <VStack space="5">
+            <Box>
+              <Heading size="lg">Shortcuts</Heading>
+            </Box>
+            <VStack space={2} alignItems="center" justifyContent="center">
+              {content.shortcutButtons.map((btn, index) => (
+                <Button
+                  onPress={btn.screen}
+                  p="3"
+                  w="full"
+                  key={index}
+                  background={"#D5E6FF"}
+                  rounded="md"
+                  justifyContent={"flex-start"}
+                >
+                  <HStack alignItems="flex-start" justifyItems={"center"}>
+                    <Box
+                      background={"#0058DB"}
+                      h={10}
+                      w={10}
+                      rounded="full"
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                    >
+                      <Icon name={btn.icon} color={"white"} size={20} />
+                    </Box>
+                    <Heading
+                      size="md"
+                      alignSelf={"center"}
+                      color={"#0058DB"}
+                      ml={2}
+                    >
+                      {btn.title}
+                    </Heading>
+                  </HStack>
+                </Button>
+              ))}
+            </VStack>
           </VStack>
         </Box>
       </ScrollView>
