@@ -210,7 +210,7 @@ export default function Dashboard({ navigation }) {
       </Box> */}
 
       {/* Bottom Navbar */}
-      <Box background={"#B8D4FF"} shadow={"black"}>
+      {/* <Box background={"#B8D4FF"} shadow={"black"}>
         <HStack
           space={0}
           alignItems="center"
@@ -262,7 +262,7 @@ export default function Dashboard({ navigation }) {
             <Box mt={-3}>Profile</Box>
           </VStack>
         </HStack>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

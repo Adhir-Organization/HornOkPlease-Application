@@ -1,16 +1,20 @@
 // !IMPORTANT: Do not remove these import
 import "react-native-gesture-handler";
 
-import { createStackNavigator, CardStyleInterpolators } from "@react-navigation/stack";
+import Icon from "react-native-vector-icons/Ionicons";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { NativeBaseProvider, extendTheme } from "native-base";
 
-import GetStarted from "./screens/GetStarted";
-import Login from "./screens/Login";
+// import GetStarted from "./screens/GetStarted";
+// import Login from "./screens/Login";
 import Dashboard from "./screens/Dashboard";
-import OtpVerification from "./screens/OtpVerification";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import Docs from "./screens/Docs";
+import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
+import { withOrientation } from "react-navigation";
+// import OtpVerification from "./screens/OtpVerification";
 
-const Stack = createStackNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   const theme = extendTheme({
@@ -27,22 +31,52 @@ export default function App() {
       },
     },
   });
+
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
-        <Stack.Navigator
+        <Tab.Navigator
+          initialRouteName="Home"
           screenOptions={{
             headerShown: false,
-            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+            //tabBarActiveBackgroundColor: "#B8D4FF",
           }}
-          initialRouteName="Home"
+          barStyle={{ backgroundColor: "#B8D4FF", paddingBottom: 600 }}
         >
-          <Stack.Screen name="Get Started" component={GetStarted} />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="OtpVerification" component={OtpVerification} />
-          <Stack.Screen name="Dashboard" component={Dashboard} />
-        </Stack.Navigator>
+          <Tab.Screen
+            name="Home"
+            component={Dashboard}
+            options={{
+              tabBarLabel: "home",
+              tabBarIcon: ({ color, size }) => (
+                <Icon name="md-home-outline" size={25} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Docs"
+            component={Docs}
+            options={{
+              tabBarLabel: "Docs",
+              tabBarIcon: ({ color, size }) => (
+                <Icon name="md-home-outline" size={25} />
+              ),
+            }}
+          />
+        </Tab.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
   );
 }
+/* <Stack.Navigator
+  screenOptions={{
+    headerShown: false,
+    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+  }}
+  initialRouteName="Home"
+>
+  <Stack.Screen name="Get Started" component={GetStarted} />
+  <Stack.Screen name="Login" component={Login} />
+  <Stack.Screen name="OtpVerification" component={OtpVerification} />
+  <Stack.Screen name="Dashboard" component={Dashboard} />
+</Stack.Navigator> */
