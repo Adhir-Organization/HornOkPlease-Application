@@ -4,7 +4,8 @@ import "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/Ionicons";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { NativeBaseProvider, extendTheme } from "native-base";
-
+import Icons from "react-native-vector-icons/MaterialCommunityIcons";
+import Call from "react-native-vector-icons/Feather";
 // import GetStarted from "./screens/GetStarted";
 // import Login from "./screens/Login";
 import Dashboard from "./screens/Dashboard";
@@ -12,6 +13,9 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import Docs from "./screens/Docs";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import { withOrientation } from "react-navigation";
+import Contacts from "./screens/Contacts";
+import Notifications from "./screens/Notifications";
+
 // import OtpVerification from "./screens/OtpVerification";
 
 const Tab = createMaterialBottomTabNavigator();
@@ -41,7 +45,7 @@ export default function App() {
             headerShown: false,
             //tabBarActiveBackgroundColor: "#B8D4FF",
           }}
-          barStyle={{ backgroundColor: "#B8D4FF", paddingBottom: 600 }}
+          barStyle={{ backgroundColor: "#B8D4FF", paddingBottom: 10 }}
         >
           <Tab.Screen
             name="Home"
@@ -58,8 +62,28 @@ export default function App() {
             component={Docs}
             options={{
               tabBarLabel: "Docs",
+              tabBarIcon: ({ size }) => (
+                <Icons name="file-document-outline" size={25} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Notifications"
+            component={Notifications}
+            options={{
+              tabBarLabel: "Notification",
               tabBarIcon: ({ color, size }) => (
-                <Icon name="md-home-outline" size={25} />
+                <Icon name="notifications-outline" size={25} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Contacts"
+            component={Contacts}
+            options={{
+              tabBarLabel: "Contacts",
+              tabBarIcon: ({ color, size }) => (
+                <Call name="phone-call" size={25} />
               ),
             }}
           />
