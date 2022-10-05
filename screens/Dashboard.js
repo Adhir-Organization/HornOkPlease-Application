@@ -56,7 +56,7 @@ export default function Dashboard({ navigation }) {
 
   const HeroBox = () => {
     return (
-      <Box background="#FFE1E1" p="3" borderRadius="10" w="1/2">
+      <Box background="#FFE1E1" p="3" borderRadius="10" w="1/2" m="3" ml="-1">
         <Box>
           <Icon name="rupee-sign" size={20} />
           <Text fontSize="md" fontWeight="medium">
