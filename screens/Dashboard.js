@@ -81,27 +81,33 @@ export default function Dashboard({ navigation }) {
     <Box flex="1" safeArea>
       {/* <Navbar /> */}
       <Box
-        background="#0058DB"
+        background="#0558DB"
         p={5}
         borderBottomLeftRadius="30"
         borderBottomRightRadius="30"
       >
         <VStack>
           <Box mb="5">
-            {/* Fetch from API : Name of Driver */}
-            <Avatar
-              bg="green.500"
-              source={{
-                uri: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-              }}
-            >
-              AJ
-            </Avatar>
-            <Heading color={"white"} size="lg">
-              Hello, John
-            </Heading>
-            {/* Driver ID: */}
-            <Text color={"white"}>1BSR23134S</Text>
+            <HStack>
+              {/* Fetch from API : Name of Driver */}
+              <VStack>
+                <Heading color={"white"} size="lg">
+                  Hello, John
+                </Heading>
+                {/* Driver ID: */}
+                <Text color={"white"}>1BSR23134S</Text>
+              </VStack>
+              <Avatar
+                marginHorizontal={150}
+                size={55}
+                bg="green.500"
+                source={{
+                  uri: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+                }}
+              >
+                AJ
+              </Avatar>
+            </HStack>
           </Box>
           <HStack justifyContent="space-between" space={2}>
             {/* Block 1 */}

@@ -43,9 +43,12 @@ export default function App() {
           initialRouteName="Home"
           screenOptions={{
             headerShown: false,
-            //tabBarActiveBackgroundColor: "#B8D4FF",
+            //tabBarInActiveBackgroundColor: "#0058DB",
           }}
-          barStyle={{ backgroundColor: "#B8D4FF", paddingBottom: 10 }}
+          barStyle={{
+            backgroundColor: "#DCEAFF",
+            paddingBottom: 8,
+          }}
         >
           <Tab.Screen
             name="Home"
@@ -72,6 +75,7 @@ export default function App() {
             component={Notifications}
             options={{
               tabBarLabel: "Notification",
+
               tabBarIcon: ({ color, size }) => (
                 <Icon name="notifications-outline" size={25} />
               ),
