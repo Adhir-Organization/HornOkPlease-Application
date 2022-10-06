@@ -1,5 +1,5 @@
 import { Center, Heading, VStack, Box, Text, Input, Button } from "native-base";
-import { COLORS } from "../constants/theme";
+import { COLORS } from "../../constants/theme";
 
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Image } from "react-native";
