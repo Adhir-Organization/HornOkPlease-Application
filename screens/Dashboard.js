@@ -81,7 +81,7 @@ export default function Dashboard({ navigation }) {
     <Box flex="1" safeArea>
       {/* <Navbar /> */}
       <Box
-        background="#0058DB"
+        background="#0558DB"
         p={5}
         borderBottomLeftRadius="30"
         borderBottomRightRadius="30"
@@ -102,6 +102,26 @@ export default function Dashboard({ navigation }) {
             </Heading>
             {/* Driver ID: */}
             <Text color={"white"}>1BSR23134S</Text>
+            <HStack>
+              {/* Fetch from API : Name of Driver */}
+              <VStack>
+                <Heading color={"white"} size="lg">
+                  Hello, John
+                </Heading>
+                {/* Driver ID: */}
+                <Text color={"white"}>1BSR23134S</Text>
+              </VStack>
+              <Avatar
+                marginHorizontal={150}
+                size={55}
+                bg="green.500"
+                source={{
+                  uri: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+                }}
+              >
+                AJ
+              </Avatar>
+            </HStack>
           </Box>
           <HStack justifyContent="space-between" space={2}>
             {/* Block 1 */}
@@ -201,6 +221,47 @@ export default function Dashboard({ navigation }) {
             </HStack>
           </VStack>
         </Box>
+        <Box px={7} py={4}>
+          <VStack space="5">
+            <Box>
+              <Heading size="lg">Shortcuts</Heading>
+            </Box>
+            <VStack space={2} alignItems="center" justifyContent="center">
+              {content.shortcutButtons.map((btn, index) => (
+                <Button
+                  onPress={btn.screen}
+                  p="3"
+                  w="full"
+                  key={index}
+                  background={"#D5E6FF"}
+                  rounded="md"
+                  justifyContent={"flex-start"}
+                >
+                  <HStack alignItems="flex-start" justifyItems={"center"}>
+                    <Box
+                      background={"#0058DB"}
+                      h={10}
+                      w={10}
+                      rounded="full"
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                    >
+                      <Icon name={btn.icon} color={"white"} size={20} />
+                    </Box>
+                    <Heading
+                      size="md"
+                      alignSelf={"center"}
+                      color={"#0058DB"}
+                      ml={2}
+                    >
+                      {btn.title}
+                    </Heading>
+                  </HStack>
+                </Button>
+              ))}
+            </VStack>
+          </VStack>
+        </Box>
       </ScrollView>
 
       {/* Maintenance report button */}
@@ -211,7 +272,7 @@ export default function Dashboard({ navigation }) {
       </Box> */}
 
       {/* Bottom Navbar */}
-      <Box background={"#B8D4FF"} shadow={"black"}>
+      {/* <Box background={"#B8D4FF"} shadow={"black"}>
         <HStack
           space={0}
           alignItems="center"
@@ -263,7 +324,7 @@ export default function Dashboard({ navigation }) {
             <Box mt={-3}>Profile</Box>
           </VStack>
         </HStack>
-      </Box>
+      </Box> */}
     </Box>
   );
 }
