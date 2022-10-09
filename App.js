@@ -118,64 +118,7 @@ export default function App() {
     <>
       <StackNavigation>
         <StackNavigation />
-        {/* <TabNavigation /> */}
       </StackNavigation>
     </>
   );
 }
-
-/**
- *  <Tab.Navigator
-          initialRouteName="Home"
-          screenOptions={{
-            headerShown: false,
-            //tabBarInActiveBackgroundColor: "#0058DB",
-          }}
-          barStyle={{
-            backgroundColor: "#DCEAFF",
-            paddingBottom: 8,
-          }}
-        >
-          <Tab.Screen
-            name="Home"
-            component={Dashboard}
-            options={{
-              tabBarLabel: "home",
-              tabBarIcon: ({ color, size }) => (
-                <Icon name="md-home-outline" size={25} />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Docs"
-            component={Docs}
-            options={{
-              tabBarLabel: "Docs",
-              tabBarIcon: ({ size }) => (
-                <Icons name="file-document-outline" size={25} />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Notifications"
-            component={Notifications}
-            options={{
-              tabBarLabel: "Notification",
-
-              tabBarIcon: ({ color, size }) => (
-                <Icon name="notifications-outline" size={25} />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Contacts"
-            component={Contacts}
-            options={{
-              tabBarLabel: "Contacts",
-              tabBarIcon: ({ color, size }) => (
-                <Call name="phone-call" size={25} />
-              ),
-            }}
-          />
-        </Tab.Navigator>
- */
