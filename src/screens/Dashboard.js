@@ -9,13 +9,16 @@ import {
   IconButton,
   Button,
   Avatar,
+  Container,
 } from "native-base";
+
 /* Importing the FontAwesome5 icon library. */
 import Icon from "react-native-vector-icons/FontAwesome5";
-import MaterialIcon from "react-native-vector-icons/MaterialCommunityIcons";
-import AntIcon from "react-native-vector-icons/AntDesign";
-import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
-import SimpleIcon from "react-native-vector-icons/SimpleLineIcons";
+
+// Importing Components
+import HeroCard from "../components/dashboard/HeroCard";
+import ShortcutButton from "../components/dashboard/ShortcutButton";
+import StatusButton from "../components/dashboard/StatusButton";
 
 export default function Dashboard({ navigation }) {
   const content = {
@@ -55,240 +58,59 @@ export default function Dashboard({ navigation }) {
     ],
   };
 
-  const HeroBox = () => {
-    return (
-      <Box background="#FFE1E1" p="3" borderRadius="20" w="1/2">
-        <Box>
-          <Icon name="rupee-sign" size={20} />
-          <Text fontSize="md" fontWeight="medium">
-            On-road Expense
-          </Text>
-          <Text fontSize="sm" mt={-1}>
-            Current Trip
-          </Text>
-        </Box>
-        <Box>
-          {/* Amount */}
-          <Text fontSize="2xl" color={"#FF3838"} fontWeight="bold" mt={"2"}>
-            40,000
-          </Text>
-        </Box>
-      </Box>
-    );
-  };
   return (
-    // TODO: Create Navbar component
-    <Box flex="1" safeArea>
-      {/* <Navbar /> */}
-      <Box
-        background="#0558DB"
-        p={5}
-        borderBottomLeftRadius="30"
-        borderBottomRightRadius="30"
-      >
-        <VStack>
-          <Box mb="5">
-            <HStack>
-              {/* Fetch from API : Name of Driver */}
-              <VStack>
-                <Heading color={"white"} size="lg">
-                  Hello, John
-                </Heading>
-                {/* Driver ID: */}
-                <Text color={"white"}>1BSR23134S</Text>
-              </VStack>
-              <Avatar
-                marginHorizontal={150}
-                size={55}
-                bg="green.500"
-                source={{
-                  uri: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-                }}
-              >
-                AJ
-              </Avatar>
+    <Box flex="1" safeArea background="gray.50">
+      <ScrollView>
+        {/* Hero Section Rounded */}
+        <Box background="blue.500" p={5} borderBottomRadius="3xl">
+          <HStack justifyContent="space-between" space={2}>
+            {/* Hero Section Card 1 */}
+            <HeroCard background="red.200" />
+
+            {/* Hero Section Card 2 */}
+            <HeroCard background="red.200" />
+          </HStack>
+        </Box>
+
+        <Box p={5}>
+          {/* Shortcut Section */}
+          <Box py={5}>
+            <Heading
+              size="md"
+              letterSpacing={"lg"}
+              fontWeight={"medium"}
+              mb={3}
+            >
+              Shortcuts
+            </Heading>
+            <VStack space={2} alignItems="center" justifyContent="center">
+              <ShortcutButton />
+              <ShortcutButton />
+              <ShortcutButton />
+            </VStack>
+          </Box>
+
+          {/* Status Section */}
+          <Box>
+            <Heading
+              size="md"
+              letterSpacing={"lg"}
+              fontWeight={"medium"}
+              mb={3}
+            >
+              Status
+            </Heading>
+
+            <HStack justifyContent="space-between" px={2}>
+              <StatusButton />
+              <StatusButton />
+              <StatusButton />
             </HStack>
           </Box>
-          <HStack justifyContent="space-between" space={2}>
-            {/* Block 1 */}
-            <HeroBox />
 
-            {/*Block 2 */}
-            <HeroBox />
-          </HStack>
-        </VStack>
-      </Box>
-
-      <ScrollView>
-        <Box px={7} py={4}>
-          <VStack space="5">
-            <Box>
-              <Heading size="lg">Shortcuts</Heading>
-            </Box>
-            <VStack space={2} alignItems="center" justifyContent="center">
-              {content.shortcutButtons.map((btn, index) => (
-                <Button
-                  onPress={btn.screen}
-                  p="3"
-                  w="full"
-                  key={index}
-                  background={"#D5E6FF"}
-                  rounded="md"
-                  justifyContent={"flex-start"}
-                >
-                  <HStack alignItems="flex-start" justifyItems={"center"}>
-                    <Box
-                      background={"#0058DB"}
-                      h={10}
-                      w={10}
-                      rounded="full"
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                    >
-                      <Icon name={btn.icon} color={"white"} size={20} />
-                    </Box>
-                    <Heading
-                      size="md"
-                      alignSelf={"center"}
-                      color={"#0058DB"}
-                      ml={2}
-                    >
-                      {btn.title}
-                    </Heading>
-                  </HStack>
-                </Button>
-              ))}
-            </VStack>
-          </VStack>
-        </Box>
-
-        <Box px={7} py={4}>
-          <VStack space="5">
-            <Box>
-              <Heading size="lg">Status</Heading>
-            </Box>
-            <HStack space={10} alignItems="center" justifyContent="center">
-              {content.statusButtons.map((btn, index) => (
-                <IconButton
-                  key={index}
-                  onPress={btn.screen}
-                  icon={<Icon name={btn.icon} color={"white"} size={27} />}
-                  variant="unstyled"
-                  background={btn.color}
-                  rounded="full"
-                  h={16}
-                  w={16}
-                  alignItems="center"
-                  justifyContent={"center"}
-                ></IconButton>
-              ))}
-            </HStack>
-          </VStack>
-        </Box>
-        <Box px={7} py={4}>
-          <VStack space="5">
-            <Box>
-              <Heading size="lg">Shortcuts</Heading>
-            </Box>
-            <VStack space={2} alignItems="center" justifyContent="center">
-              {content.shortcutButtons.map((btn, index) => (
-                <Button
-                  onPress={btn.screen}
-                  p="3"
-                  w="full"
-                  key={index}
-                  background={"#D5E6FF"}
-                  rounded="md"
-                  justifyContent={"flex-start"}
-                >
-                  <HStack alignItems="flex-start" justifyItems={"center"}>
-                    <Box
-                      background={"#0058DB"}
-                      h={10}
-                      w={10}
-                      rounded="full"
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                    >
-                      <Icon name={btn.icon} color={"white"} size={20} />
-                    </Box>
-                    <Heading
-                      size="md"
-                      alignSelf={"center"}
-                      color={"#0058DB"}
-                      ml={2}
-                    >
-                      {btn.title}
-                    </Heading>
-                  </HStack>
-                </Button>
-              ))}
-            </VStack>
-          </VStack>
+          {/* 👇 Main Box */}
         </Box>
       </ScrollView>
-
-      {/* Maintenance report button */}
-      {/* <Box position="absolute" bottom={0} right={0} left={0} zIndex={1}>
-        <HStack space={2} alignItems="flex-end" justifyContent="flex-end" p={2}>
-          <IconButton onPress={() => navigation.navigate("Dashboard")} icon={<Icon name="exclamation-triangle" size={27} color={"#000"} />} variant="unstyled" rounded="full" h={16} w={16} background={"yellow.400"} />
-        </HStack>
-      </Box> */}
-
-      {/* Bottom Navbar */}
-      {/* <Box background={"#B8D4FF"} shadow={"black"}>
-        <HStack
-          space={0}
-          alignItems="center"
-          justifyContent="space-around"
-          py={0}
-        >
-          <VStack space={0} alignItems="center" justifyContent="center">
-            <IconButton
-              onPress={() => navigation.navigate("Dashboard")}
-              icon={<AntIcon name="home" size={27} color={"#000"} />}
-              variant="unstyled"
-              rounded="full"
-              h={16}
-              w={16}
-            />
-            <Box mt={-3}>Home</Box>
-          </VStack>
-          <VStack space={0} alignItems="center" justifyContent="center">
-            <IconButton
-              onPress={() => navigation.navigate("Docs")}
-              icon={<AntIcon name="filetext1" size={27} color={"#000"} />}
-              variant="unstyled"
-              rounded="full"
-              h={16}
-              w={16}
-            />
-            <Box mt={-3}>Docs</Box>
-          </VStack>
-          <VStack space={0} alignItems="center" justifyContent="center">
-            <IconButton
-              onPress={() => navigation.navigate("Notifications")}
-              icon={<SimpleIcon name="bell" size={27} color={"#000"} />}
-              variant="unstyled"
-              rounded="full"
-              h={16}
-              w={16}
-            />
-            <Box mt={-3}>Notifications</Box>
-          </VStack>
-          <VStack space={0} alignItems="center" justifyContent="center">
-            <IconButton
-              onPress={() => navigation.navigate("Profile")}
-              icon={<FontAwesomeIcon name="user-o" size={27} color={"#000"} />}
-              variant="unstyled"
-              rounded="full"
-              h={16}
-              w={16}
-            />
-            <Box mt={-3}>Profile</Box>
-          </VStack>
-        </HStack>
-      </Box> */}
     </Box>
   );
 }
