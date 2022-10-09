@@ -19,7 +19,7 @@ export default function Login({ navigation }) {
     // Here we pass the name of navigator from "homeStack.js" file:
     // navigation.navigate(" NAME OF NAVIGATOR ");
 
-    navigation.navigate("OtpVerification");
+    navigation.navigate("TabNavigation");
   };
   return (
     <Box flex="1" safeArea p="5">
