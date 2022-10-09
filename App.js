@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider, extendTheme } from "native-base";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
+import Icon from "react-native-vector-icons/Feather";
 
 // Screens Import
 import GetStarted from "./src/screens/GetStarted";
@@ -13,7 +14,11 @@ import Login from "./src/screens/Login";
 import OtpVerification from "./src/screens/OtpVerification";
 import Dashboard from "./src/screens/Dashboard";
 
-// const Tab = createMaterialBottomTabNavigator();
+import Docs from "./src/screens/Docs";
+import Notifications from "./src/screens/Notifications";
+import Contacts from "./src/screens/Contacts";
+
+const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -44,6 +49,59 @@ export default function App() {
           <Stack.Screen name="OtpVerification" component={OtpVerification} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
         </Stack.Navigator>
+      </NavigationContainer>
+      <NavigationContainer>
+        <Tab.Navigator
+          initialRouteName="Home"
+          screenOptions={{
+            headerShown: false,
+            //tabBarInActiveBackgroundColor: "#0058DB",
+          }}
+          barStyle={{
+            backgroundColor: "#DCEAFF",
+            paddingBottom: 8,
+          }}
+        >
+          <Tab.Screen
+            name="Home"
+            component={Dashboard}
+            options={{
+              tabBarLabel: "home",
+              tabBarIcon: ({ color, size }) => (
+                <Icon name="alert-circle" size={20} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Docs"
+            component={Docs}
+            options={{
+              tabBarLabel: "Docs",
+              tabBarIcon: ({ size }) => <Icon name="alert-circle" size={20} />,
+            }}
+          />
+          <Tab.Screen
+            name="Notifications"
+            component={Notifications}
+            options={{
+              tabBarLabel: "Notification",
+
+              tabBarIcon: ({ color, size }) => (
+                <Icon name="alert-circle" size={20} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Contacts"
+            component={Contacts}
+            options={{
+              tabBarLabel: "Contacts",
+              tabBarIcon: ({ color, size }) => (
+                <Icon name="alert-circle" size={20} />
+              ),
+            }}
+          />
+        </Tab.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
   );
