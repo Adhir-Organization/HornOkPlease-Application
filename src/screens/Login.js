@@ -10,7 +10,8 @@ import {
 } from "native-base";
 import { Image } from "react-native";
 
-import { ICONS, COLORS } from "../constants/theme";
+import { ICONS, COLORS } from "../../constants/theme";
+
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 export default function Login({ navigation }) {
@@ -30,7 +31,7 @@ export default function Login({ navigation }) {
             height: "10%",
             resizeMode: "contain",
           }}
-          source={require("../assets/images/hopLogo.png")}
+          source={require("../../assets/images/hopLogo.png")}
         />
         <Box>
           <Heading size="lg" color={COLORS.primaryBlue}>

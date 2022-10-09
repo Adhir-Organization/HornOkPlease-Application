@@ -1,24 +1,20 @@
 // !IMPORTANT: Do not remove these import
 import "react-native-gesture-handler";
 
-import Icon from "react-native-vector-icons/Ionicons";
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+// Packages Import
+import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider, extendTheme } from "native-base";
-import Icons from "react-native-vector-icons/MaterialCommunityIcons";
-import Call from "react-native-vector-icons/Feather";
-// import GetStarted from "./screens/GetStarted";
-// import Login from "./screens/Login";
-import Dashboard from "./screens/Dashboard";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import Docs from "./screens/Docs";
-import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
-import { withOrientation } from "react-navigation";
-import Contacts from "./screens/Contacts";
-import Notifications from "./screens/Notifications";
+import { createStackNavigator } from "@react-navigation/stack";
 
-// import OtpVerification from "./screens/OtpVerification";
+// Screens Import
+import GetStarted from "./src/screens/GetStarted";
+import Login from "./src/screens/Login";
+import OtpVerification from "./src/screens/OtpVerification";
+import Dashboard from "./src/screens/Dashboard";
 
-const Tab = createMaterialBottomTabNavigator();
+// const Tab = createMaterialBottomTabNavigator();
+const Stack = createStackNavigator();
 
 export default function App() {
   const theme = extendTheme({
@@ -39,7 +35,22 @@ export default function App() {
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
-        <Tab.Navigator
+        <Stack.Navigator
+          screenOptions={{ headerShown: false }}
+          initialRouteName="Home"
+        >
+          <Stack.Screen name="Get Started" component={GetStarted} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="OtpVerification" component={OtpVerification} />
+          <Stack.Screen name="Dashboard" component={Dashboard} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </NativeBaseProvider>
+  );
+}
+
+/**
+ *  <Tab.Navigator
           initialRouteName="Home"
           screenOptions={{
             headerShown: false,
@@ -92,19 +103,4 @@ export default function App() {
             }}
           />
         </Tab.Navigator>
-      </NavigationContainer>
-    </NativeBaseProvider>
-  );
-}
-/* <Stack.Navigator
-  screenOptions={{
-    headerShown: false,
-    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-  }}
-  initialRouteName="Home"
->
-  <Stack.Screen name="Get Started" component={GetStarted} />
-  <Stack.Screen name="Login" component={Login} />
-  <Stack.Screen name="OtpVerification" component={OtpVerification} />
-  <Stack.Screen name="Dashboard" component={Dashboard} />
-</Stack.Navigator> */
+ */

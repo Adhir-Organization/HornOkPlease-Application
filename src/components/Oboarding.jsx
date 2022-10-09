@@ -1,12 +1,11 @@
-import Onboarding from "../components/Oboarding";
-import { Box, VStack, Heading, Text, Button } from "native-base";
 import { Image } from "react-native";
+import { Box, VStack, Heading, Text, Button } from "native-base";
 
-export default function GetStarted({ navigation }) {
+const Oboarding = () => {
   return (
     <Box flex="1" safeArea>
       <VStack space="2" p="5">
-        <Image
+        {/* <Image
           style={{
             width: "80%",
             alignSelf: "center",
@@ -15,7 +14,7 @@ export default function GetStarted({ navigation }) {
           }}
           // ../assets/images/hero.png
           source={require("../../assets/images/hero.png")}
-        />
+        /> */}
         <Box>
           <Heading size="xl" mb="4">
             HornOKPlease
@@ -32,4 +31,6 @@ export default function GetStarted({ navigation }) {
       </VStack>
     </Box>
   );
-}
+};
+
+export default Oboarding;

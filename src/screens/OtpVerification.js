@@ -19,7 +19,7 @@ export default function OtpVerification({ navigation }) {
             height: "10%",
             resizeMode: "contain",
           }}
-          source={require("../assets/images/hopLogo.png")}
+          source={require("../../assets/images/hopLogo.png")}
         />
         <Box>
           <Heading size="lg" color={COLORS.primaryBlue}>
