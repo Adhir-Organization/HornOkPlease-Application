@@ -6,7 +6,7 @@ import { Image } from "react-native";
 
 export default function OtpVerification({ navigation }) {
   const pressHandler = () => {
-    navigation.navigate("Dashboard");
+    navigation.navigate("TabNavigation");
   };
 
   return (
