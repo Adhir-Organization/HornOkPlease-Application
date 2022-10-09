@@ -1,19 +1,5 @@
 import * as React from "react";
-import {
-  Box,
-  VStack,
-  Heading,
-  Text,
-  HStack,
-  ScrollView,
-  IconButton,
-  Button,
-  Avatar,
-  Container,
-} from "native-base";
-
-/* Importing the FontAwesome5 icon library. */
-import Icon from "react-native-vector-icons/FontAwesome5";
+import { Box, VStack, Heading, HStack, ScrollView } from "native-base";
 
 // Importing Components
 import HeroCard from "../components/dashboard/HeroCard";
