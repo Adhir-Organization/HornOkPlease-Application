@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, VStack, Heading, HStack, ScrollView } from "native-base";
+import { Box, VStack, Heading, HStack, ScrollView, Text } from "native-base";
 
 // Importing Components
 import HeroCard from "../components/dashboard/HeroCard";
@@ -48,7 +48,7 @@ export default function Dashboard({ navigation }) {
     <Box flex="1" safeArea background="gray.50">
       <ScrollView>
         {/* Hero Section Rounded */}
-        <Box background="blue.500" p={5} borderBottomRadius="3xl">
+        <Box background="blue.500" p={5} borderBottomRadius="3xl" h={"1/3"}>
           <HStack justifyContent="space-between" space={2}>
             {/* Hero Section Card 1 */}
             <HeroCard background="red.200" />

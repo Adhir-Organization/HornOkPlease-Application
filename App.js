@@ -41,7 +41,7 @@ const StackNavigation = (state) => {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{ headerShown: false }}
-          initialRouteName="GetStarted"
+          initialRouteName="TabNavigation"
         >
           <Stack.Screen name="Get Started" component={GetStarted} />
 
