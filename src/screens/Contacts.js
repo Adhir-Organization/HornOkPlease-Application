@@ -1,5 +1,5 @@
 import React from "react";
-import { ReloadInstructions } from "react-native/Libraries/NewAppScreen";
+import { Linking, TouchableOpacity } from "react-native";
 import {
   Box,
   Text,
@@ -8,51 +8,59 @@ import {
   VStack,
   HStack,
   IconButton,
+  Flex,
 } from "native-base";
 import Icon from "react-native-vector-icons/Ionicons";
 export default function Contacts() {
   const Header = () => {
     return <Box background="#0058DB">Contacts</Box>;
   };
-  const HeroBox = () => {
+
+  const HeroBox = (props) => {
     return (
-      <Box background="#E0DCDC" p="0" m="6" borderRadius="7">
-        <Box>
-          <HStack>
-            <IconButton h={16}>
-              <Icon
-                name="person-circle-sharp"
-                size={43}
-                style={{ color: "#FFBE17" }}
-              />
-            </IconButton>
+      <Box
+        flex={1}
+        background="#E0DCDC"
+        p="2"
+        mt="6"
+        ml="6"
+        mr="6"
+        borderRadius="13"
+      >
+        <HStack>
+          <Box pt="1">
+            <Icon
+              name="person-circle-sharp"
+              size={50}
+              style={{ color: "#FFBE17" }}
+            />
+          </Box>
+
+          <Box flexDirection="row">
             <VStack>
-              <Text fontSize="md" fontWeight="medium" pt={2} paddingLeft={4}>
-                Tyre Shop
-              </Text>
-              <Text fontSize="xs" pl={4}>
-                +9100299209039
-              </Text>
+              <Box w="40">
+                <Text fontSize="md" fontWeight="medium" pt={1} paddingLeft={4}>
+                  {props.name}
+                </Text>
+                <Text fontSize="xs" pl={5}>
+                  {props.number}
+                </Text>
+              </Box>
             </VStack>
-          </HStack>
-        </Box>
-        {/*  *<Box>
-          <Icon name="rupee-sign" size={20} />
-          <Text fontSize="md" fontWeight="medium">
-            On-road Expense
-          </Text>
-          <Text fontSize="sm" mt={-1}>
-            Current Trip
-          </Text>
-        </Box>
-        <Box>
-          {/* Amount */}
-        {/* <Text fontSize="2xl" color={"#FF3838"} fontWeight="bold" mt={"2"}>
-            40,000
-          </Text>
-        </Box>/} */}
+            <TouchableOpacity>
+              <Box pl="20" pt="3">
+                <Icon
+                  name="call-sharp"
+                  size={28}
+                  onPress={() => {
+                    Linking.openURL(`tel:${props.number}`);
+                  }}
+                />
+              </Box>
+            </TouchableOpacity>
+          </Box>
+        </HStack>
       </Box>
-      //<Box background="#F9F9F9" p="3" borderRadius="20"></Box>
     );
   };
   return (
@@ -65,9 +73,16 @@ export default function Contacts() {
             </Text>
           </Center>
         </Box>
-        <ScrollView>
-          <VStack space={2}>
-            <HeroBox />
+        <ScrollView w={["400", "300"]} h="630">
+          <VStack>
+            <HeroBox name="Tyre Shop" number={9978352230} />
+            <HeroBox name="Supervisor" number={9313826043} />
+            <HeroBox name="WorkShop" number={9978352230} />
+            <HeroBox name="FleetManager" number={9978352230} />
+            <HeroBox name="Maintenance" number={9978352230} />
+            <HeroBox name="Supervisor" number={9978352230} />
+            <HeroBox name="Supervisor" number={9978352230} />
+            <HeroBox name="Supervisor" number={9978352230} />
           </VStack>
         </ScrollView>
       </VStack>

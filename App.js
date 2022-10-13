@@ -6,8 +6,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider, extendTheme, useTheme } from "native-base";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
-import Icon from "react-native-vector-icons/Feather";
-
+// icons import
+import Icon from "react-native-vector-icons/Ionicons";
+import Home from "react-native-vector-icons/MaterialCommunityIcons";
 // Screens Import
 import Dashboard from "./src/screens/Dashboard";
 
@@ -74,9 +75,7 @@ const TabNavigation = () => {
           component={Dashboard}
           options={{
             tabBarLabel: "home",
-            tabBarIcon: ({ color, size }) => (
-              <Icon name="alert-circle" size={20} />
-            ),
+            tabBarIcon: ({ color, size }) => <Home name="home" size={26} />,
           }}
         />
         <Tab.Screen
@@ -84,7 +83,9 @@ const TabNavigation = () => {
           component={Docs}
           options={{
             tabBarLabel: "Docs",
-            tabBarIcon: ({ size }) => <Icon name="alert-circle" size={20} />,
+            tabBarIcon: ({ size }) => (
+              <Home name="file-document-multiple-outline" size={23} />
+            ),
           }}
         />
         <Tab.Screen
@@ -94,7 +95,7 @@ const TabNavigation = () => {
             tabBarLabel: "Notification",
 
             tabBarIcon: ({ color, size }) => (
-              <Icon name="alert-circle" size={20} />
+              <Icon name="notifications" size={23} />
             ),
           }}
         />
@@ -104,7 +105,7 @@ const TabNavigation = () => {
           options={{
             tabBarLabel: "Contacts",
             tabBarIcon: ({ color, size }) => (
-              <Icon name="alert-circle" size={20} />
+              <Icon name="call-sharp" size={23} />
             ),
           }}
         />
