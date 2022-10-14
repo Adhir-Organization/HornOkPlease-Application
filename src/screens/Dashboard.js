@@ -5,6 +5,7 @@ import { Box, VStack, Heading, HStack, ScrollView, Text } from "native-base";
 import HeroCard from "../components/dashboard/HeroCard";
 import ShortcutButton from "../components/dashboard/ShortcutButton";
 import StatusButton from "../components/dashboard/StatusButton";
+import MaintenanceFAB from "../components/dashboard/MaintenanceFAB";
 
 export default function Dashboard({ navigation }) {
   const content = {
@@ -115,6 +116,9 @@ export default function Dashboard({ navigation }) {
           {/* 👇 Main Box */}
         </Box>
       </ScrollView>
+
+      {/* 🔘 Floating Action Button - Maintenance */}
+      <MaintenanceFAB />
     </Box>
   );
 }
