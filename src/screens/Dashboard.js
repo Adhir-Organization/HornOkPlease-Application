@@ -45,7 +45,7 @@ export default function Dashboard({ navigation }) {
   };
 
   return (
-    <Box flex="1" safeArea background="gray.50">
+    <Box flex="1" safeArea background="white">
       <ScrollView>
         {/* Hero Section Rounded */}
         <Box background="blue.500" p={5} borderBottomRadius="3xl" h={"1/3"}>
@@ -74,6 +74,24 @@ export default function Dashboard({ navigation }) {
               <ShortcutButton />
               <ShortcutButton />
             </VStack>
+          </Box>
+
+          {/* Status Section */}
+          <Box>
+            <Heading
+              size="md"
+              letterSpacing={"lg"}
+              fontWeight={"medium"}
+              mb={3}
+            >
+              Status
+            </Heading>
+
+            <HStack justifyContent="space-between" px={2}>
+              <StatusButton />
+              <StatusButton />
+              <StatusButton />
+            </HStack>
           </Box>
 
           {/* Status Section */}

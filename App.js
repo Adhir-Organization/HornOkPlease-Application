@@ -36,90 +36,82 @@ const theme = extendTheme({
   },
 });
 
-const StackNavigation = (state) => {
+const StackNavigation = () => {
   return (
-    <NativeBaseProvider usetheme={theme}>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{ headerShown: false }}
-          initialRouteName="GetStarted"
-        >
-          <Stack.Screen name="GetStarted" component={GetStarted} />
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName="GetStarted"
+      >
+        <Stack.Screen name="GetStarted" component={GetStarted} />
 
-          <>
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="OtpVerification" component={OtpVerification} />
-            <Stack.Screen name="TabNavigation" component={TabNavigation} />
-          </>
-        </Stack.Navigator>
-      </NavigationContainer>
-    </NativeBaseProvider>
+        <>
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="OtpVerification" component={OtpVerification} />
+          <Stack.Screen name="TabNavigation" component={TabNavigation} />
+        </>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 const TabNavigation = () => {
   return (
-    <NativeBaseProvider usetheme={theme}>
-      <Tab.Navigator
-        // initialRouteName="Home"
-        screenOptions={{
-          headerShown: false,
-          //tabBarInActiveBackgroundColor: "#0058DB",
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+      barStyle={{
+        backgroundColor: "#DCEAFF",
+        paddingBottom: 8,
+      }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={Dashboard}
+        options={{
+          tabBarLabel: "Home",
+          tabBarIcon: ({ color, size }) => <Home name="home" size={26} />,
         }}
-        barStyle={{
-          backgroundColor: "#DCEAFF",
-          paddingBottom: 8,
+      />
+      <Tab.Screen
+        name="Docs"
+        component={Docs}
+        options={{
+          tabBarLabel: "Docs",
+          tabBarIcon: () => (
+            <Home name="file-document-multiple-outline" size={23} />
+          ),
         }}
-      >
-        <Tab.Screen
-          name="Home"
-          component={Dashboard}
-          options={{
-            tabBarLabel: "home",
-            tabBarIcon: ({ color, size }) => <Home name="home" size={26} />,
-          }}
-        />
-        <Tab.Screen
-          name="Docs"
-          component={Docs}
-          options={{
-            tabBarLabel: "Docs",
-            tabBarIcon: ({ size }) => (
-              <Home name="file-document-multiple-outline" size={23} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Notifications"
-          component={Notifications}
-          options={{
-            tabBarLabel: "Notification",
+      />
+      <Tab.Screen
+        name="Notifications"
+        component={Notifications}
+        options={{
+          tabBarLabel: "Notification",
 
-            tabBarIcon: ({ color, size }) => (
-              <Icon name="notifications" size={23} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Contacts"
-          component={Contacts}
-          options={{
-            tabBarLabel: "Contacts",
-            tabBarIcon: ({ color, size }) => (
-              <Icon name="call-sharp" size={23} />
-            ),
-          }}
-        />
-      </Tab.Navigator>
-    </NativeBaseProvider>
+          tabBarIcon: () => <Icon name="notifications" size={23} />,
+        }}
+      />
+      <Tab.Screen
+        name="Contacts"
+        component={Contacts}
+        options={{
+          tabBarLabel: "Contacts",
+          tabBarIcon: () => <Icon name="call-sharp" size={23} />,
+        }}
+      />
+    </Tab.Navigator>
   );
 };
 
 export default function App() {
   return (
     <>
-      <StackNavigation>
-        <StackNavigation />
-      </StackNavigation>
+      <NativeBaseProvider usetheme={theme}>
+        <StackNavigation>
+          <StackNavigation />
+        </StackNavigation>
+      </NativeBaseProvider>
     </>
   );
 }
