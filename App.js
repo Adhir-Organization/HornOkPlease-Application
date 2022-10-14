@@ -42,9 +42,9 @@ const StackNavigation = (state) => {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{ headerShown: false }}
-          initialRouteName="TabNavigation"
+          initialRouteName="GetStarted"
         >
-          <Stack.Screen name="Get Started" component={GetStarted} />
+          <Stack.Screen name="GetStarted" component={GetStarted} />
 
           <>
             <Stack.Screen name="Login" component={Login} />
