@@ -13,6 +13,40 @@ import {
 import Icon from "react-native-vector-icons/Ionicons";
 import HeroBox from "../components/contancts/HeroBox";
 export default function Contacts() {
+  const data = [
+    {
+      name: "Tyre",
+      phone: "9978352230",
+    },
+    {
+      name: "Supervisor",
+      phone: "9313826043",
+    },
+    {
+      name: "WorkShop",
+      phone: "9978352230",
+    },
+    {
+      name: "FleetManager",
+      phone: "9978352230",
+    },
+    {
+      name: "Maintenance",
+      phone: "9978352230",
+    },
+    {
+      name: "Supervisor",
+      phone: "9978352230",
+    },
+    {
+      name: "Supervisor",
+      phone: "9978352230",
+    },
+    {
+      name: "Supervisor",
+      phone: "9978352230",
+    },
+  ];
   const Header = () => {
     return <Box background="#0058DB">Contacts</Box>;
   };
@@ -29,14 +63,9 @@ export default function Contacts() {
         </Box>
         <ScrollView w={["400", "300"]} h="630">
           <VStack>
-            <HeroBox name="Tyre Shop" number={9978352230} />
-            <HeroBox name="Supervisor" number={9313826043} />
-            <HeroBox name="WorkShop" number={9978352230} />
-            <HeroBox name="FleetManager" number={9978352230} />
-            <HeroBox name="Maintenance" number={9978352230} />
-            <HeroBox name="Supervisor" number={9978352230} />
-            <HeroBox name="Supervisor" number={9978352230} />
-            <HeroBox name="Supervisor" number={9978352230} />
+            {data.map((contact, index) => {
+              <HeroBox name={contact.name} number={contact.phone} />;
+            })}
           </VStack>
         </ScrollView>
       </VStack>
