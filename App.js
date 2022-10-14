@@ -6,9 +6,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider, extendTheme, useTheme } from "native-base";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
-// icons import
-import Icon from "react-native-vector-icons/Ionicons";
-import Home from "react-native-vector-icons/MaterialCommunityIcons";
+import { BlurView } from "expo-blur";
+
+// Icons import
+import Icon from "react-native-vector-icons/Feather";
+
 // Screens Import
 import Dashboard from "./src/screens/Dashboard";
 
@@ -57,12 +59,10 @@ const StackNavigation = () => {
 const TabNavigation = () => {
   return (
     <Tab.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}
       barStyle={{
-        backgroundColor: "#DCEAFF",
-        paddingBottom: 8,
+        backgroundColor: "#deecff",
+        paddingVertical: 5,
+        borderRadius: 10,
       }}
     >
       <Tab.Screen
@@ -70,7 +70,7 @@ const TabNavigation = () => {
         component={Dashboard}
         options={{
           tabBarLabel: "Home",
-          tabBarIcon: ({ color, size }) => <Home name="home" size={26} />,
+          tabBarIcon: () => <Icon name="home" size={24} />,
         }}
       />
       <Tab.Screen
@@ -78,9 +78,7 @@ const TabNavigation = () => {
         component={Docs}
         options={{
           tabBarLabel: "Docs",
-          tabBarIcon: () => (
-            <Home name="file-document-multiple-outline" size={23} />
-          ),
+          tabBarIcon: () => <Icon name="file" size={24} />,
         }}
       />
       <Tab.Screen
@@ -89,7 +87,7 @@ const TabNavigation = () => {
         options={{
           tabBarLabel: "Notification",
 
-          tabBarIcon: () => <Icon name="notifications" size={23} />,
+          tabBarIcon: () => <Icon name="bell" size={24} />,
         }}
       />
       <Tab.Screen
@@ -97,7 +95,7 @@ const TabNavigation = () => {
         component={Contacts}
         options={{
           tabBarLabel: "Contacts",
-          tabBarIcon: () => <Icon name="call-sharp" size={23} />,
+          tabBarIcon: () => <Icon name="phone" size={24} />,
         }}
       />
     </Tab.Navigator>
@@ -107,7 +105,7 @@ const TabNavigation = () => {
 export default function App() {
   return (
     <>
-      <NativeBaseProvider usetheme={theme}>
+      <NativeBaseProvider useTheme={theme}>
         <StackNavigation>
           <StackNavigation />
         </StackNavigation>
