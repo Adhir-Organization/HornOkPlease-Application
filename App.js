@@ -16,6 +16,7 @@ import Dashboard from "./src/screens/Dashboard";
 
 import Docs from "./src/screens/Docs";
 import Notifications from "./src/screens/Notifications";
+import ExpenseEntry from "./src/screens/ExpenseEntry";
 import Contacts from "./src/screens/Contacts";
 import GetStarted from "./src/screens/GetStarted";
 import Login from "./src/screens/Login";
@@ -45,9 +46,11 @@ const StackNavigation = () => {
         screenOptions={{ headerShown: false }}
         initialRouteName="GetStarted"
       >
-        <Stack.Screen name="GetStarted" component={GetStarted} />
-
         <>
+          <Stack.Screen name="Contacts" component={Contacts} />
+          <Stack.Screen name="Notifications" component={Notifications} />
+          <Stack.Screen name="ExpenseEntry" component={ExpenseEntry} />
+          <Stack.Screen name="GetStarted" component={GetStarted} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="OtpVerification" component={OtpVerification} />
           <Stack.Screen name="TabNavigation" component={TabNavigation} />
