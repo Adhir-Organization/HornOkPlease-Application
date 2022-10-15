@@ -6,7 +6,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider, extendTheme, useTheme } from "native-base";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
-import { BlurView } from "expo-blur";
+
+/* A provider for redux. */
+import { Provider, useDispatch, useSelector } from "react-redux";
+import store from "./src/store/store";
 
 // Icons import
 import Icon from "react-native-vector-icons/Feather";
@@ -16,11 +19,13 @@ import Dashboard from "./src/screens/Dashboard";
 
 import Docs from "./src/screens/Docs";
 import Notifications from "./src/screens/Notifications";
+import ExpenseEntry from "./src/screens/ExpenseEntry";
 import Contacts from "./src/screens/Contacts";
 import GetStarted from "./src/screens/GetStarted";
 import Login from "./src/screens/Login";
 import OtpVerification from "./src/screens/OtpVerification";
-//
+import { login } from "./src/store/authSlice";
+
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 const theme = extendTheme({
@@ -39,19 +44,21 @@ const theme = extendTheme({
 });
 
 const StackNavigation = () => {
+  const items = useSelector((state) => state.auth);
+  console.log(items.isLoggedIn);
   return (
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="GetStarted"
+        initialRouteName={items.isLoggedIn ? "TabNavigation" : "GetStarted"}
       >
         <Stack.Screen name="GetStarted" component={GetStarted} />
-
-        <>
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="OtpVerification" component={OtpVerification} />
-          <Stack.Screen name="TabNavigation" component={TabNavigation} />
-        </>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="OtpVerification" component={OtpVerification} />
+        <Stack.Screen name="TabNavigation" component={TabNavigation} />
+        <Stack.Screen name="Contacts" component={Contacts} />
+        <Stack.Screen name="Notifications" component={Notifications} />
+        <Stack.Screen name="ExpenseEntry" component={ExpenseEntry} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -105,11 +112,13 @@ const TabNavigation = () => {
 export default function App() {
   return (
     <>
-      <NativeBaseProvider useTheme={theme}>
-        <StackNavigation>
-          <StackNavigation />
-        </StackNavigation>
-      </NativeBaseProvider>
+      <Provider store={store}>
+        <NativeBaseProvider useTheme={theme}>
+          <StackNavigation>
+            <StackNavigation />
+          </StackNavigation>
+        </NativeBaseProvider>
+      </Provider>
     </>
   );
 }
