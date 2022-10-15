@@ -11,7 +11,7 @@ import {
   Flex,
 } from "native-base";
 import Icon from "react-native-vector-icons/Ionicons";
-import HeroBox from "../components/contancts/HeroBox";
+import HeroBox from "../components/contacts/HeroBox";
 export default function Contacts() {
   const data = [
     {
@@ -65,8 +65,7 @@ export default function Contacts() {
           <VStack>
             {data.map((contact, index) => (
               <HeroBox name={contact.name} number={contact.phone} />
-            )
-            )}
+            ))}
           </VStack>
         </ScrollView>
       </VStack>

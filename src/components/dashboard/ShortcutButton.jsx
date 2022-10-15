@@ -22,7 +22,7 @@ export default function ShortcutButton(props) {
           fontWeight={"medium"}
           color="blue.500"
         >
-          Lorem
+          props.
         </Text>
       </HStack>
     </Button>

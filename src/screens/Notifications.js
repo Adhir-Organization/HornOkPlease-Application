@@ -12,7 +12,7 @@ import {
   IconButton,
   Flex,
 } from "native-base";
-import HeroBox from "../components/contancts/HeroBox";
+import HeroBox from "../components/contacts/HeroBox";
 import NotifyCard from "../components/Notifications/NotifyCard";
 
 export default function Notifications() {
@@ -27,7 +27,7 @@ export default function Notifications() {
       name: "lorem ipsom 35",
     },
   ];
-  const data2 =[
+  const data2 = [
     {
       name: "lorem ipsom 36 ",
     },
@@ -40,7 +40,7 @@ export default function Notifications() {
     {
       name: "lorem ipsom 39",
     },
-  ] 
+  ];
   return (
     <Box safeArea>
       <VStack space={5}>
@@ -53,25 +53,30 @@ export default function Notifications() {
         </Box>
         <ScrollView>
           <VStack>
-            <Text  marginLeft={6} fontSize="xl">
+            <Text marginLeft={6} fontSize="xl">
               Today
             </Text>
             {data.map((notifications, index) => (
-              <NotifyCard name={notifications.name} icon={notifications.icon} key={index} />
+              <NotifyCard
+                name={notifications.name}
+                icon={notifications.icon}
+                key={index}
+              />
             ))}
           </VStack>
           <Text marginTop="8" marginLeft={6} fontSize="xl">
             Yesterday
           </Text>
           {data2.map((notifications, index) => (
-              <NotifyCard name={notifications.name} icon={notifications.icon} key={index} />
-            ))}
+            <NotifyCard
+              name={notifications.name}
+              icon={notifications.icon}
+              key={index}
+            />
+          ))}
         </ScrollView>
       </VStack>
     </Box>
-
-
-
   );
 }
 
