@@ -3,7 +3,7 @@ import { Box, HStack, VStack } from "native-base";
 import DatePicker from "../components/maintenance/DatePicker";
 import IssueSelector from "../components/maintenance/IssueSelector";
 
-export default function DriverMaintenance() {
+export default function DriverMaintenance(navigation) {
   return (
     <>
       <Box flex={1} safeArea>

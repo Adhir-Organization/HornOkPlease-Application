@@ -46,6 +46,10 @@ export default function Contacts() {
       name: "Supervisor",
       phone: "9978352230",
     },
+    {
+      name: "Supervisor",
+      phone: "9978352230",
+    },
   ];
   const Header = () => {
     return <Box background="#0058DB">Contacts</Box>;
@@ -61,7 +65,7 @@ export default function Contacts() {
             </Text>
           </Center>
         </Box>
-        <ScrollView>
+        <ScrollView h={650}>
           <VStack>
             {data.map((contact, index) => (
               <HeroBox name={contact.name} number={contact.phone} />

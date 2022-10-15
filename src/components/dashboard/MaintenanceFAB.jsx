@@ -9,7 +9,7 @@ export default function MaintenanceFAB({ navigation }) {
         size="lg"
         bottom={20}
         backgroundColor="yellow.500"
-        onPress={() => navigation.navigate("DriverMaintenace")}
+        onPress={() => {navigation.navigate("DriverMaintenance")}}
       />
     </>
   );
