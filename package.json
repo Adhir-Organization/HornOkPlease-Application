@@ -10,11 +10,13 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.10",
     "@react-navigation/bottom-tabs": "^6.4.0",
     "@react-navigation/material-bottom-tabs": "^6.2.4",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.0",
     "@react-navigation/stack": "^6.3.2",
+    "@reduxjs/toolkit": "^1.8.6",
     "entities": "^4.4.0",
     "expo": "^46.0.15",
     "expo-blur": "^11.2.0",
@@ -33,7 +35,8 @@
     "react-native-vector-icons": "^9.2.0",
     "react-native-web": "~0.18.7",
     "react-navigation": "^4.4.4",
-    "react-navigation-stack": "^2.10.4"
+    "react-navigation-stack": "^2.10.4",
+    "react-redux": "^8.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3"

@@ -15,10 +15,7 @@ import { ICONS, COLORS } from "../../constants/theme";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 export default function Login({ navigation }) {
-  const pressHandler = () => {
-    // Here we pass the name of navigator from "homeStack.js" file:
-    // navigation.navigate(" NAME OF NAVIGATOR ");
-
+  const pressHandler = async () => {
     navigation.navigate("OtpVerification");
   };
   return (
