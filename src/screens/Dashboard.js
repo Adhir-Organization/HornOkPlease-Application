@@ -96,7 +96,7 @@ export default function Dashboard({ navigation }) {
           </Box>
 
           {/* Status Section */}
-          <Box>
+          {/* <Box>
             <Heading
               size="md"
               letterSpacing={"lg"}
@@ -111,7 +111,7 @@ export default function Dashboard({ navigation }) {
               <StatusButton />
               <StatusButton />
             </HStack>
-          </Box>
+          </Box> */}
 
           {/* 👇 Main Box */}
         </Box>

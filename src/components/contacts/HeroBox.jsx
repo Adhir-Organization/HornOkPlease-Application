@@ -3,12 +3,10 @@ import { Linking, TouchableOpacity } from "react-native";
 import {
   Box,
   Text,
-  Center,
-  ScrollView,
+ 
   VStack,
   HStack,
-  IconButton,
-  Flex,
+ 
 } from "native-base";
 import Icon from "react-native-vector-icons/Ionicons";
 
