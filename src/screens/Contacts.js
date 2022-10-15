@@ -61,11 +61,12 @@ export default function Contacts() {
             </Text>
           </Center>
         </Box>
-        <ScrollView w={["400", "300"]} h="630">
+        <ScrollView>
           <VStack>
-            {data.map((contact, index) => {
-              <HeroBox name={contact.name} number={contact.phone} />;
-            })}
+            {data.map((contact, index) => (
+              <HeroBox name={contact.name} number={contact.phone} />
+            )
+            )}
           </VStack>
         </ScrollView>
       </VStack>
