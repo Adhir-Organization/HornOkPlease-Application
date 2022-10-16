@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { Fab, Pressable } from "native-base";
+import { Fab } from "native-base";
 import Icon from "react-native-vector-icons/Feather";
 
 export default function MaintenanceFAB() {

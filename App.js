@@ -50,7 +50,10 @@ const StackNavigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        screenOptions={{ headerShown: false }}
+        screenOptions={{
+          headerShown: false,
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
         initialRouteName={items.isLoggedIn ? "TabNavigation" : "GetStarted"}
       >
         <Stack.Screen name="GetStarted" component={GetStarted} />
@@ -95,7 +98,6 @@ const TabNavigation = () => {
         component={Notifications}
         options={{
           tabBarLabel: "Notification",
-
           tabBarIcon: () => <Icon name="bell" size={24} />,
         }}
       />

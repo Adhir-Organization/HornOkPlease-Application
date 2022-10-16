@@ -1,5 +1,4 @@
-import { Button, Box, Heading, HStack, Text } from "native-base";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { Button, Box, HStack, Text } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
