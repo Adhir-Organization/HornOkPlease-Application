@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import { Fab, Pressable } from "native-base";
 import Icon from "react-native-vector-icons/Feather";
 
-export default function MaintenanceFAB({ navigation }) {
+export default function MaintenanceFAB() {
+  const navigation = useNavigation();
   return (
     <>
       <Fab
@@ -9,7 +11,9 @@ export default function MaintenanceFAB({ navigation }) {
         size="lg"
         bottom={20}
         backgroundColor="yellow.500"
-        onPress={() => {navigation.navigate("DriverMaintenance")}}
+        onPress={() => {
+          navigation.navigate("DriverMaintenance");
+        }}
       />
     </>
   );

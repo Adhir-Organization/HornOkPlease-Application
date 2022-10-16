@@ -1,12 +1,11 @@
 import { Button, Box, Heading, HStack, Text } from "native-base";
 import { TouchableOpacity } from "react-native-gesture-handler";
- import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-export default function ShortcutButton(props) {
-   const navigation = useNavigation();
-  return (
-    
 
+export default function ShortcutButton(props) {
+  const navigation = useNavigation();
+  return (
     <Button
       p="3"
       w="full"
@@ -14,11 +13,10 @@ export default function ShortcutButton(props) {
       rounded="md"
       justifyContent={"flex-start"}
       shadow="0"
-      
-      >
+    >
       <HStack>
-        <Box background={"blue.500"} p={2} rounded="full" >
-        <Icon name={props.iconName} color={"white"} size={20}  />
+        <Box background={"blue.500"} p={2} rounded="full">
+          <Icon name={props.iconName} color={"white"} size={20} />
         </Box>
         <Text
           alignSelf={"center"}
@@ -26,15 +24,13 @@ export default function ShortcutButton(props) {
           fontSize={"xl"}
           fontWeight={"medium"}
           color="blue.500"
-          onPress={ ()=>{
-            navigation.navigate([props.nav])
-    
+          onPress={() => {
+            navigation.navigate(props.nav);
           }}
-          >
-         { props.names}
+        >
+          {props.names}
         </Text>
       </HStack>
     </Button>
-         
   );
 }

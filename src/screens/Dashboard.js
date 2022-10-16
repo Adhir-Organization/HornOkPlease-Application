@@ -93,6 +93,7 @@ export default function Dashboard({ navigation }) {
           <VStack space={2} alignItems="center" justifyContent="center">
             {content.shortcutButtons.map((shortcutButtons, index) => (
               <ShortcutButton
+                key={index}
                 iconName={shortcutButtons.icon}
                 names={shortcutButtons.title}
                 nav={shortcutButtons.screen}

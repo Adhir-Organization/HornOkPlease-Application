@@ -1,4 +1,4 @@
-import { Box, HStack, VStack } from "native-base";
+import { Box, HStack, VStack, Input } from "native-base";
 
 import DatePicker from "../components/maintenance/DatePicker";
 import IssueSelector from "../components/maintenance/IssueSelector";

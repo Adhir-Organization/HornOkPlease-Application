@@ -1,5 +1,4 @@
 import React from "react";
-import { Linking, TouchableOpacity } from "react-native";
 import {
   Box,
   Text,
@@ -51,6 +50,7 @@ export default function Contacts() {
       phone: "9978352230",
     },
   ];
+
   const Header = () => {
     return <Box background="#0058DB">Contacts</Box>;
   };
@@ -65,10 +65,10 @@ export default function Contacts() {
             </Text>
           </Center>
         </Box>
-        <ScrollView h={650}>
+        <ScrollView>
           <VStack>
             {data.map((contact, index) => (
-              <HeroBox name={contact.name} number={contact.phone} />
+              <HeroBox key={index} name={contact.name} number={contact.phone} />
             ))}
           </VStack>
         </ScrollView>

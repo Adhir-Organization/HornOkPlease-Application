@@ -25,6 +25,7 @@ import GetStarted from "./src/screens/GetStarted";
 import Login from "./src/screens/Login";
 import OtpVerification from "./src/screens/OtpVerification";
 import { login } from "./src/store/authSlice";
+import DriverMaintenance from "./src/screens/DriverMaintenance";
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -59,6 +60,7 @@ const StackNavigation = () => {
         <Stack.Screen name="Contacts" component={Contacts} />
         <Stack.Screen name="Notifications" component={Notifications} />
         <Stack.Screen name="ExpenseEntry" component={ExpenseEntry} />
+        <Stack.Screen name="DriverMaintenance" component={DriverMaintenance} />
       </Stack.Navigator>
     </NavigationContainer>
   );
