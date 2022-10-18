@@ -10,14 +10,27 @@ import {
   FormControl,
   Center,
   NativeBaseProvider,
+  
 } from "native-base";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-
+import { useState } from "react";
 export default function AssignedTrip() {
   const [modalVisible, setModalVisible] = React.useState(false);
-  
+
+  const [placement, setPlacement] = useState(undefined);
+
+  const [open, setOpen] = useState(false);
+  const openModal = placement => {
+    setOpen(true);
+    setPlacement(placement);
+  };
+  const styles= {
+    center : {}
+
+  }
   return (
     <>
+      
       <Modal
         isOpen={modalVisible}
         onClose={() => setModalVisible(false)}
@@ -26,14 +39,24 @@ export default function AssignedTrip() {
         bottom="4"
         size="lg"
       >
-        <Modal.Content>
+      <Center flex={1}  w={"full"} >
+        <Modal.Content  >
           <Modal.CloseButton />
-          <Modal.Header>Assigned Trip</Modal.Header>
+          <Modal.Header pl="24" color="blue.500">Assigned Trip</Modal.Header>
           <Modal.Body>
-            Enter email address and we'll send a link to reset your password.
-            <FormControl mt="3">
+           
+            <FormControl mt="1">
+                <Box color={"blue.200"}>
+              <HStack>
+              <FormControl.Label fontSize={10} mr="20">Email : </FormControl.Label>
+                <Input w="32" size="xs"></Input>
+              </HStack>
+                </Box>
+              <FormControl.Label >Email : </FormControl.Label>
               <FormControl.Label>Email</FormControl.Label>
-              <Input />
+              <FormControl.Label>Email</FormControl.Label>
+              
+              
             </FormControl>
           </Modal.Body>
           <Modal.Footer>
@@ -43,11 +66,14 @@ export default function AssignedTrip() {
                 setModalVisible(false);
               }}
             >
-              Proceed
+              Start Trip
             </Button>
           </Modal.Footer>
         </Modal.Content>
+      </Center>
       </Modal>
+
+
       <Button
       p="3"
       w="full"
@@ -57,8 +83,9 @@ export default function AssignedTrip() {
       shadow="0"
       onPress={() => {
         setModalVisible(!modalVisible);
+        // openModal("center");
       }} 
-    >
+      >
       <HStack>
         <Box background={"blue.500"} p={2} rounded="full">
           <Icon name="road" color={"white"} size={20} />
@@ -70,7 +97,7 @@ export default function AssignedTrip() {
           fontWeight={"medium"}
           color="blue.500"
           
-        >
+          >
          Assigned Trip
         </Text>
       </HStack>

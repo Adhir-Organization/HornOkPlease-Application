@@ -30,7 +30,7 @@ export default function Dashboard({ navigation }) {
         index: 2,
         icon: "application-edit-outline",
         title: "Expense Entry",
-        screen: "Notifications",
+        screen: "ExpenseEntry",
       },
       // {
       //   index: 3,
