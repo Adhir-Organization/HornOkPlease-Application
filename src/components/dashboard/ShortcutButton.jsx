@@ -12,6 +12,9 @@ export default function ShortcutButton(props) {
       rounded="md"
       justifyContent={"flex-start"}
       shadow="0"
+      onPress={() => {
+        navigation.navigate(props.nav);
+      }}
     >
       <HStack>
         <Box background={"blue.500"} p={2} rounded="full">
@@ -23,9 +26,7 @@ export default function ShortcutButton(props) {
           fontSize={"xl"}
           fontWeight={"medium"}
           color="blue.500"
-          onPress={() => {
-            navigation.navigate(props.nav);
-          }}
+          
         >
           {props.names}
         </Text>

@@ -6,7 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider, extendTheme, useTheme } from "native-base";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
-
+import { CardStyleInterpolators } from "react-navigation-stack";
 /* A provider for redux. */
 import { Provider, useDispatch, useSelector } from "react-redux";
 import store from "./src/store/store";
