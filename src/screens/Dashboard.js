@@ -14,6 +14,7 @@ import HeroCard from "../components/dashboard/HeroCard";
 import ShortcutButton from "../components/dashboard/ShortcutButton";
 import StatusButton from "../components/dashboard/StatusButton";
 import MaintenanceFAB from "../components/dashboard/MaintenanceFAB";
+import AssignedTrip from "../components/dashboard/AssignedTrip";
 // Importing Icons
 
 export default function Dashboard({ navigation }) {
@@ -31,12 +32,12 @@ export default function Dashboard({ navigation }) {
         title: "Expense Entry",
         screen: "Notifications",
       },
-      {
-        index: 3,
-        icon: "road",
-        title: "Assigned Trip",
-        screen: "Docs",
-      },
+      // {
+      //   index: 3,
+      //   icon: "road",
+      //   title: "Assigned Trip",
+      //   screen: "Docs",
+      // },
     ],
     statusButtons: [
       {
@@ -99,6 +100,7 @@ export default function Dashboard({ navigation }) {
                 nav={shortcutButtons.screen}
               />
             ))}
+            <AssignedTrip />
           </VStack>
         </Box>
 
