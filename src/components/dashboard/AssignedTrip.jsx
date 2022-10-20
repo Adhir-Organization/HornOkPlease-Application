@@ -28,6 +28,22 @@ export default function AssignedTrip() {
     center : {}
 
   }
+    const FieldBox = (props) => {
+    return(
+
+      <Box  backgroundColor={"#F2EDED"} borderRadius="md" flex="1">
+      <HStack>
+        <Box >
+      <Text fontSize={15} pt="2" pl="3"  >{props.label} : </Text>
+        </Box>
+        <Box flexDirection={"row"} >
+      <Input w="32" fontSize="13" borderColor={"black"}>{props.input}</Input>
+        </Box>
+      </HStack>
+      </Box>
+      );
+      
+      };
   return (
     <>
       
@@ -45,32 +61,33 @@ export default function AssignedTrip() {
           <Modal.Header pl="24" color="blue.500">Assigned Trip</Modal.Header>
           <Modal.Body>
            
-            <FormControl mt="1">
-                <Box color={"blue.200"}>
-              <HStack>
-              <FormControl.Label fontSize={10} mr="20">Email : </FormControl.Label>
-                <Input w="32" size="xs"></Input>
-              </HStack>
-                </Box>
-              <FormControl.Label >Email : </FormControl.Label>
-              <FormControl.Label>Email</FormControl.Label>
-              <FormControl.Label>Email</FormControl.Label>
-              
-              
+            <FormControl>
+                  <VStack space={2} >
+                    <FieldBox label={"Vehicle Number"} input={"GJ06AB5739"} />
+                    <FieldBox label={"Date"} input={"01 August 1999"} />
+                    <FieldBox label={"From"} input={"Jamnagar"} />
+                    <FieldBox label={"To"} input={"Surat"} />
+                    <FieldBox label={"Duration "} input={"3 days"} />
+                    <FieldBox label={"Diesel"} input={"155 L"} />
+                    <FieldBox label={"Advance Amount"} input={"Rs. 2000"} />
+                    <FieldBox label={"Flat"} input={"Rs. 2000"} />
+                    <FieldBox label={"Estimated Km "} input={"1500"} />
+                    <FieldBox label={"LR Number"} input={"ABH456"} />
+                  </VStack>
             </FormControl>
           </Modal.Body>
-          <Modal.Footer>
-            <Button
-              flex="1"
-              onPress={() => {
-                setModalVisible(false);
-              }}
-            >
-              Start Trip
-            </Button>
-          </Modal.Footer>
-        </Modal.Content>
-      </Center>
+                  <Modal.Footer>
+                    <Button
+                      flex="1"
+                      onPress={() => {
+                        setModalVisible(false);
+                      }}
+                    >
+                      Start Trip
+                    </Button>
+                  </Modal.Footer>
+          </Modal.Content>
+        </Center>
       </Modal>
 
 
