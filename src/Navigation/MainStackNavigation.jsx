@@ -23,6 +23,7 @@ import OtpVerification from "../screens/OtpVerification";
 import { login } from "../store/authSlice";
 import DriverMaintenance from "../screens/DriverMaintenance";
 import PTNavigation from "./PTNavigation";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const Stack = createStackNavigator();
 const theme = extendTheme({
@@ -44,6 +45,8 @@ export default function StackNavigation  () {
   const items = useSelector((state) => state.auth);
   console.log(items.isLoggedIn);
   return (
+    <SafeAreaProvider>
+
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
@@ -63,5 +66,6 @@ export default function StackNavigation  () {
         <Stack.Screen name="PTNavigation" component={PTNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
+        </SafeAreaProvider>
   );
 };

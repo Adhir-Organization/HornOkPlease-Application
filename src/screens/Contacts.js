@@ -52,14 +52,10 @@ export default function Contacts() {
     },
   ];
 
-  const Header = () => {
-    return <Box background="#0058DB">Contacts</Box>;
-  };
-
   return (
     <Box safeArea>
       <VStack space={5}>
-        <Header />
+        <Header headerName={"Contacts"} />
         <ScrollView>
           <VStack>
             {data.map((contact, index) => (

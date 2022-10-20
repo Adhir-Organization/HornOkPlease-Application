@@ -1,10 +1,11 @@
 import React from "react";
-
-import { Box, Text } from "native-base";
+import Header from "../../components/Header";
+import { Box, Text, VStack } from "native-base";
+import { SafeAreaView } from "react-native-safe-area-context";
 export default function PT1StartCheck() {
   return (
     <Box>
-      <Text>PT1-StartCheck</Text>
+      <VStack>{/* <Header headerName={"Pre-Trip Checkup"} /> */}</VStack>
     </Box>
   );
 }

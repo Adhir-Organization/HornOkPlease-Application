@@ -7,6 +7,7 @@ import MainStackNavigation from "./src/Navigation/MainStackNavigation";
 /* A provider for redux. */
 import { Provider, useDispatch, useSelector } from "react-redux";
 import store from "./src/store/store";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const theme = extendTheme({
   colors: {
@@ -26,11 +27,13 @@ const theme = extendTheme({
 export default function App() {
   return (
     <>
-      <Provider store={store}>
-        <NativeBaseProvider useTheme={theme}>
-          <MainStackNavigation />
-        </NativeBaseProvider>
-      </Provider>
+      <SafeAreaProvider>
+        <Provider store={store}>
+          <NativeBaseProvider useTheme={theme}>
+            <MainStackNavigation />
+          </NativeBaseProvider>
+        </Provider>
+      </SafeAreaProvider>
     </>
   );
 }
