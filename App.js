@@ -19,7 +19,7 @@ import Icon from "react-native-vector-icons/Feather";
 
 // Screens Import
 import Dashboard from "./src/screens/Dashboard";
-
+import PT1StartCheck from "./src/screens/PreTripCheckup/PT1StartCheck";
 import Docs from "./src/screens/Docs";
 import Notifications from "./src/screens/Notifications";
 import ExpenseEntry from "./src/screens/ExpenseEntry";
@@ -29,7 +29,7 @@ import Login from "./src/screens/Login";
 import OtpVerification from "./src/screens/OtpVerification";
 import { login } from "./src/store/authSlice";
 import DriverMaintenance from "./src/screens/DriverMaintenance";
-
+import PTNavigation from "./src/components/dashboard/PTNavigation.jsx";
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 const theme = extendTheme({
@@ -67,6 +67,7 @@ const StackNavigation = () => {
         <Stack.Screen name="Notifications" component={Notifications} />
         <Stack.Screen name="ExpenseEntry" component={ExpenseEntry} />
         <Stack.Screen name="DriverMaintenance" component={DriverMaintenance} />
+        <Stack.Screen name="PTNavigation" component={PTNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );

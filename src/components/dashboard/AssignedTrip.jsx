@@ -14,7 +14,8 @@ import {
 } from "native-base";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { useState } from "react";
-export default function AssignedTrip() {
+import { useNavigation } from "@react-navigation/native";
+export default function AssignedTrip( ) {
   const [modalVisible, setModalVisible] = React.useState(false);
 
   const [placement, setPlacement] = useState(undefined);
@@ -28,16 +29,20 @@ export default function AssignedTrip() {
     center : {}
 
   }
+  const navigation = useNavigation();
     const FieldBox = (props) => {
     return(
 
-      <Box  backgroundColor={"#F2EDED"} borderRadius="md" flex="1">
+      <Box  backgroundColor={"#F2EDED"} borderRadius="md" flex="1" >
       <HStack>
-        <Box >
-      <Text fontSize={15} pt="2" pl="3"  >{props.label} : </Text>
+        <Box flex="1"  >
+      <Text fontSize={15} pt="2" pl="3"  >{props.label}  </Text>
         </Box>
-        <Box flexDirection={"row"} >
-      <Input w="32" fontSize="13" borderColor={"black"}>{props.input}</Input>
+        <Box pt="2">
+          :
+        </Box>
+        <Box flex="1"  flexDirection={"column"} >
+      <Input w="40" fontSize="13"  borderColor={"#F2EDED"} >{props.input}</Input>
         </Box>
       </HStack>
       </Box>
@@ -55,13 +60,13 @@ export default function AssignedTrip() {
         bottom="4"
         size="lg"
       >
-      <Center flex={1}  w={"full"} >
+      <Center flex={1} >
         <Modal.Content  >
           <Modal.CloseButton />
           <Modal.Header pl="24" color="blue.500">Assigned Trip</Modal.Header>
           <Modal.Body>
            
-            <FormControl>
+            <FormControl w={"80"}>
                   <VStack space={2} >
                     <FieldBox label={"Vehicle Number"} input={"GJ06AB5739"} />
                     <FieldBox label={"Date"} input={"01 August 1999"} />
@@ -80,7 +85,8 @@ export default function AssignedTrip() {
                     <Button
                       flex="1"
                       onPress={() => {
-                        setModalVisible(false);
+                        navigation.navigate("PTNavigation");
+                        setModalVisible(!modalVisible);
                       }}
                     >
                       Start Trip
