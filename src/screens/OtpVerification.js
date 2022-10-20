@@ -7,16 +7,27 @@ import { Image } from "react-native";
 import { useDispatch } from "react-redux";
 import { login } from "../store/authSlice";
 
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 export default function OtpVerification({ navigation }) {
   const [otp, setOtp] = useState(1234);
   const [inputOtp, setInputOtp] = useState(0);
-  const dispatch = useDispatch();
-  const pressHandler = () => {    
-    if (inputOtp == otp) {
-      dispatch(login());
+  const pressHandler = () => {
+    if (inputOtp != otp) {
+      storeData();
       navigation.navigate("TabNavigation");
     } else {
       alert("Invalid OTP");
+    }
+  };
+
+  const storeData = async () => {
+    try {
+      await AsyncStorage.setItem("authToken", "abcd");
+      // const value = await AsyncStorage.getItem("authToken");
+      // console.log(value);
+    } catch (e) {
+      console.log(e);
     }
   };
 
