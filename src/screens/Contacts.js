@@ -9,6 +9,7 @@ import {
   IconButton,
   Flex,
 } from "native-base";
+import Header from "../components/Header";
 import Icon from "react-native-vector-icons/Ionicons";
 import HeroBox from "../components/contacts/HeroBox";
 export default function Contacts() {
@@ -58,13 +59,7 @@ export default function Contacts() {
   return (
     <Box safeArea>
       <VStack space={5}>
-        <Box background="#0058DB" padding="3">
-          <Center>
-            <Text fontSize="xl" color="white">
-              Contacts
-            </Text>
-          </Center>
-        </Box>
+        <Header />
         <ScrollView>
           <VStack>
             {data.map((contact, index) => (
