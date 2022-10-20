@@ -41,31 +41,33 @@ const theme = extendTheme({
   },
 });
 
-export default function StackNavigation  () {
+export default function StackNavigation() {
   const items = useSelector((state) => state.auth);
   console.log(items.isLoggedIn);
   return (
     <SafeAreaProvider>
-
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-        }}
-        initialRouteName={items.isLoggedIn ? "TabNavigation" : "GetStarted"}
-      >
-        <Stack.Screen name="GetStarted" component={GetStarted} />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="OtpVerification" component={OtpVerification} />
-        <Stack.Screen name="TabNavigation" component={TabNavigation} />
-        <Stack.Screen name="Contacts" component={Contacts} />
-        <Stack.Screen name="Notifications" component={Notifications} />
-        <Stack.Screen name="ExpenseEntry" component={ExpenseEntry} />
-        <Stack.Screen name="DriverMaintenance" component={DriverMaintenance} />
-        <Stack.Screen name="PTNavigation" component={PTNavigation} />
-      </Stack.Navigator>
-    </NavigationContainer>
-        </SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+          }}
+          initialRouteName={items.isLoggedIn ? "TabNavigation" : "GetStarted"}
+        >
+          <Stack.Screen name="GetStarted" component={GetStarted} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="OtpVerification" component={OtpVerification} />
+          <Stack.Screen name="TabNavigation" component={TabNavigation} />
+          <Stack.Screen name="Contacts" component={Contacts} />
+          <Stack.Screen name="Notifications" component={Notifications} />
+          <Stack.Screen name="ExpenseEntry" component={ExpenseEntry} />
+          <Stack.Screen
+            name="DriverMaintenance"
+            component={DriverMaintenance}
+          />
+          <Stack.Screen name="PTNavigation" component={PTNavigation} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
-};
+}
