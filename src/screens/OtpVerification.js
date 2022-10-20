@@ -11,9 +11,9 @@ export default function OtpVerification({ navigation }) {
   const [otp, setOtp] = useState(1234);
   const [inputOtp, setInputOtp] = useState(0);
   const dispatch = useDispatch();
-  const pressHandler = () => {
-    dispatch(login(true));
+  const pressHandler = () => {    
     if (inputOtp == otp) {
+      dispatch(login());
       navigation.navigate("TabNavigation");
     } else {
       alert("Invalid OTP");

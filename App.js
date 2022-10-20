@@ -8,6 +8,9 @@ import MainStackNavigation from "./src/Navigation/MainStackNavigation";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import store from "./src/store/store";
 
+// async storage import
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 const theme = extendTheme({
   colors: {
     customClrs: {

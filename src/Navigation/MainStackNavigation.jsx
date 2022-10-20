@@ -2,15 +2,14 @@ import "react-native-gesture-handler";
 
 // Packages Import
 import { NavigationContainer } from "@react-navigation/native";
-import { NativeBaseProvider, extendTheme, useTheme } from "native-base";
+import { extendTheme, useTheme } from "native-base";
 import {
   createStackNavigator,
   CardStyleInterpolators,
 } from "@react-navigation/stack";
 
 /* A provider for redux. */
-import { Provider, useDispatch, useSelector } from "react-redux";
-import store from "../store/store";
+import { useSelector } from "react-redux";
 
 // Screens Import
 import TabNavigation from "./TabNavigation";
@@ -20,7 +19,6 @@ import Contacts from "../screens/Contacts";
 import GetStarted from "../screens/GetStarted";
 import Login from "../screens/Login";
 import OtpVerification from "../screens/OtpVerification";
-import { login } from "../store/authSlice";
 import DriverMaintenance from "../screens/DriverMaintenance";
 import PTNavigation from "./PTNavigation";
 
@@ -40,9 +38,8 @@ const theme = extendTheme({
   },
 });
 
-export default function StackNavigation  () {
+export default function StackNavigation() {
   const items = useSelector((state) => state.auth);
-  console.log(items.isLoggedIn);
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -64,4 +61,4 @@ export default function StackNavigation  () {
       </Stack.Navigator>
     </NavigationContainer>
   );
-};
+}
