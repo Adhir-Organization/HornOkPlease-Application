@@ -49,7 +49,7 @@ const theme = extendTheme({
 
 const StackNavigation = () => {
   const items = useSelector((state) => state.auth);
-  console.log(items.isLoggedIn);
+  // console.log(items.isLoggedIn);
   return (
     <NavigationContainer>
       <Stack.Navigator

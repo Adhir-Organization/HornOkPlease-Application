@@ -113,6 +113,7 @@ export default function Dashboard({ navigation }) {
           <HStack justifyContent="space-between" px={2}>
             {content.statusButtons.map((statusButtons, index) => (
               <StatusButton
+                key={index}
                 name={statusButtons.icon}
                 colors={statusButtons.color}
               />
