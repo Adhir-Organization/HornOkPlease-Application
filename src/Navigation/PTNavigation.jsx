@@ -2,7 +2,7 @@ import {
     createStackNavigator,
    
   } from "@react-navigation/stack";
-import PT1StartCheck from "../../screens/PreTripCheckup/PT1StartCheck.js"
+import PT1StartCheck from "../screens/PreTripCheckup/PT1StartCheck"
   export default function PTNavigation () {
       const Stack = createStackNavigator();
     
@@ -14,4 +14,4 @@ import PT1StartCheck from "../../screens/PreTripCheckup/PT1StartCheck.js"
     );
   };
 
-  
+   
