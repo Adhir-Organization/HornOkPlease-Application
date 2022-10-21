@@ -17,6 +17,7 @@ const PT1 = (props) => {
   );
 };
 export default function PT1StartCheck() {
+  const navigation = useNavigation();
   return (
     <Box safeArea>
       <VStack space="2">
@@ -24,7 +25,12 @@ export default function PT1StartCheck() {
         <PT1 name={"Driver"} placeholder={"john"} />
         <PT1 name={"Fleet ID"} placeholder={"ABC123SZ"} />
         <PT1 name={"Fleet Name"} placeholder={"Truck ABC213"} />
-        <Button mr="20" ml="20" mt="16">
+        <Button
+          mr="20"
+          ml="20"
+          mt="16"
+          onPress={() => navigation.navigate("PT2CheckUpList")}
+        >
           Start CheckUp
         </Button>
       </VStack>
