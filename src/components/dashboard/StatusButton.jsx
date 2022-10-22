@@ -1,13 +1,16 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
 import { IconButton } from "native-base";
+import { useContext } from "react";
 import Icon from "react-native-vector-icons/Feather";
+import authContext from "../../context/authContext";
 
 export default function StatusButton(props) {
-  const navigation = useNavigation();
+  const { setIsLoggedIn } = useContext(authContext);
   const handleLogout = async () => {
     await AsyncStorage.removeItem("authToken");
-    navigation.navigate("GetStarted");
+    setIsLoggedIn(false);
+    console.log(await AsyncStorage.getItem("token"));
   };
   return (
     <IconButton
