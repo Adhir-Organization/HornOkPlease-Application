@@ -2,11 +2,14 @@ import "react-native-gesture-handler";
 
 // Packages Import
 import { NavigationContainer } from "@react-navigation/native";
-import { extendTheme, Heading, useTheme } from "native-base";
+import { extendTheme, Heading, Text, useTheme } from "native-base";
 import {
   createStackNavigator,
   CardStyleInterpolators,
 } from "@react-navigation/stack";
+
+// Loading animation
+import AnimatedLoader from "react-native-animated-loader";
 
 // Screens Import
 import TabNavigation from "./TabNavigation";
@@ -45,16 +48,17 @@ export default function StackNavigation() {
   const getToken = async () => {
     try {
       const value = await AsyncStorage.getItem("authToken");
-      console.log(value);
+      // console.log(value);
       if (value == null) {
         setIsLoggedIn(false);
       } else {
         setIsLoggedIn(true);
       }
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2300);
     } catch (e) {
       console.log(e);
-      setLoading(false);
     }
   };
   useEffect(() => {
@@ -64,7 +68,19 @@ export default function StackNavigation() {
   if (loading) {
     return (
       <>
-        <Heading size="lg">Loading...</Heading>
+        <AnimatedLoader
+          visible={loading}
+          overlayColor="rgba(255,255,255,0.75)"
+          // change animation from here : https://lottiefiles.com/98915-loader
+          source={require("../../assets/animation/loader.json")}
+          animationStyle={{
+            width: 300,
+            height: 300,
+          }}
+          speed={1}
+        >
+          {/* <Text>Please wait...</Text> */}
+        </AnimatedLoader>
       </>
     );
   }

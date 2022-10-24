@@ -10,7 +10,7 @@ export default function StatusButton(props) {
   const handleLogout = async () => {
     await AsyncStorage.removeItem("authToken");
     setIsLoggedIn(false);
-    console.log(await AsyncStorage.getItem("token"));
+    // console.log(await AsyncStorage.getItem("token"));
   };
   return (
     <IconButton

@@ -12,17 +12,14 @@ import authContext from "../context/authContext";
 export default function OtpVerification() {
   const { setIsLoggedIn } = useContext(authContext);
   const navigation = useNavigation();
+
   // const [otp, setOtp] = useState(1234);
   // const [inputOtp, setInputOtp] = useState(0);
   const pressHandler = async () => {
-    // set auth token in async storage
-    await AsyncStorage.setItem("authToken", "1234567890");
     setIsLoggedIn(true);
+    await AsyncStorage.setItem("authToken", "1234567890");
     navigation.navigate("TabNavigation");
   };
-  useEffect(() => {
-    pressHandler();
-  }, []);
 
   const storeData = async () => {
     try {
