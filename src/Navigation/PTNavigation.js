@@ -7,7 +7,11 @@ export default function PTNavigation() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
+        headerStyle: {
+          backgroundColor: "#2871E6",
+        },
+        headerTintColor: "#fff",
       }}
     >
       <Stack.Screen name="PT1StartCheck" component={PT1StartCheck} />

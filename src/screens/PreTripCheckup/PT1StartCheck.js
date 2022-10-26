@@ -21,7 +21,8 @@ export default function PT1StartCheck() {
   return (
     <Box safeArea>
       <VStack space="2">
-        <Header headerName={"Pre-Trip Checkup"} />
+        {/* removing this because of set built in header to true with appropriate colors */}
+        {/* <Header headerName={"Pre-Trip Checkup"} /> */}
         <PT1 name={"Driver"} placeholder={"john"} />
         <PT1 name={"Fleet ID"} placeholder={"ABC123SZ"} />
         <PT1 name={"Fleet Name"} placeholder={"Truck ABC213"} />
