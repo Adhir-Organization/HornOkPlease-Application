@@ -1,16 +1,7 @@
 import React from "react";
-import {
-  Box,
-  Text,
-  Center,
-  ScrollView,
-  VStack,
-  HStack,
-  IconButton,
-  Flex,
-} from "native-base";
+import { Box, ScrollView, VStack } from "native-base";
 import Header from "../components/Header";
-import Icon from "react-native-vector-icons/Ionicons";
+
 import HeroBox from "../components/contacts/HeroBox";
 export default function Contacts() {
   const data = [
