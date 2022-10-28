@@ -59,6 +59,7 @@ export default function Dashboard({ navigation }) {
   };
 
   return (
+
     <Box flex="1" safeArea background="white">
       {/* Hero Section Rounded */}
       <Box background="blue.500" p={5} borderBottomRadius="3xl" h={"72"}>
@@ -83,28 +84,9 @@ export default function Dashboard({ navigation }) {
         </VStack>
       </Box>
 
-      <Box p={5}>
-        {/* Shortcut Section */}
-        <Box py={5}>
-          <Heading size="md" letterSpacing={"lg"} fontWeight={"medium"} mb={3}>
-            Shortcuts
-          </Heading>
-          <VStack space={2} alignItems="center" justifyContent="center">
-            {content.shortcutButtons.map((shortcutButtons, index) => (
-              <ShortcutButton
-                key={index}
-                iconName={shortcutButtons.icon}
-                names={shortcutButtons.title}
-                nav={shortcutButtons.screen}
-              />
-            ))}
-            <AssignedTrip />
-          </VStack>
-        </Box>
-
-        {/* Status Section */}
-        <Box>
-          <Heading size="md" letterSpacing={"lg"} fontWeight={"medium"} mb={3}>
+      <ScrollView>
+        <Box p={5}>
+          <Heading size="md" letterSpacing={"lg"} fontWeight={"medium"} mb={5}>
             Status
           </Heading>
 
@@ -119,11 +101,36 @@ export default function Dashboard({ navigation }) {
           </HStack>
         </Box>
 
-        {/* 👇 Main Box */}
-      </Box>
+        <Box p={5}>
+          {/* Shortcut Section */}
+          <Box py={5}>
+            <Heading size="md" letterSpacing={"lg"} fontWeight={"medium"} mb={3}>
+              Shortcuts
+            </Heading>
+            <VStack space={2} alignItems="center" justifyContent="center">
+              {content.shortcutButtons.map((shortcutButtons, index) => (
+                <ShortcutButton
+                  key={index}
+                  iconName={shortcutButtons.icon}
+                  names={shortcutButtons.title}
+                  nav={shortcutButtons.screen}
+                />
+              ))}
+              <AssignedTrip />
+            </VStack>
+          </Box>
+
+          {/* 👇 Main Box */}
+        </Box>
+
+      </ScrollView>
+      {/* Status Section */}
+
 
       {/* 🔘 Floating Action Button - Maintenance */}
       <MaintenanceFAB />
     </Box>
+
+
   );
 }
