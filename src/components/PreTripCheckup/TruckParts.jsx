@@ -8,14 +8,24 @@ export default function ShortcutButton(props) {
         <Box
             flex={1}
             background="#E0DCDC"
-            p="2"
-            mt="6"
+            p="3"
+            mt="2"
             ml="0"
             mr="0"
             borderRadius="0"
 
         >
-            <Text> {props.title} </Text>
-        </Box>
+            <HStack>
+                <Box pt="1">
+                    <Icon
+                        name="check"
+                        size={20}
+                        style={{ color: "#808080" }}
+                    />
+                </Box>
+                <Text fontSize="md" pl={3}> {props.title} </Text>
+            </HStack>
+
+        </Box >
     );
 }

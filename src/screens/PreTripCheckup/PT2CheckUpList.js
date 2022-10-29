@@ -39,6 +39,22 @@ export default function PT2CheckUpList({ navigation }) {
       index: 8,
       title: "Body",
     },
+    {
+      index: 9,
+      title: "Body",
+    },
+    {
+      index: 10,
+      title: "Body",
+    },
+    {
+      index: 11,
+      title: "Body",
+    },
+    {
+      index: 12,
+      title: "Body",
+    },
   ];
 
   return (
