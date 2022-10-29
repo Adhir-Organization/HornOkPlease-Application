@@ -4,7 +4,6 @@ import {
   Box,
   Text,
  
-  VStack,
   HStack,
  
 } from "native-base";
@@ -31,7 +30,7 @@ export default function HeroBox  (props) {
           </Box>
 
           <Box flexDirection="row">
-            <VStack>
+            
               <Box w="40">
                 <Text fontSize="md" fontWeight="medium" pt={1} paddingLeft={4}>
                   {props.name}
@@ -40,7 +39,7 @@ export default function HeroBox  (props) {
                   {props.number}
                 </Text>
               </Box>
-            </VStack>
+            
             <TouchableOpacity>
               <Box pl="20" pt="3">
                 <Icon
