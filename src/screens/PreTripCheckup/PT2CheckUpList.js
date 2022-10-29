@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import { Box, Text, VStack, Input, Button, ScrollView } from "native-base";
 
 // Importing component(s)
-// import TruckParts from "../components/PreTripCheckup/TruckParts";
+import TruckParts from "../../components/PreTripCheckup/TruckParts";
 
 export default function PT2CheckUpList({ navigation }) {
   const truckParts = [
@@ -54,9 +54,9 @@ export default function PT2CheckUpList({ navigation }) {
       <ScrollView>
         <Box p={5}>
           <VStack>
-            {/* {truckParts.map((PreTripCheckup, index) => (
+            {truckParts.map((truckParts, index) => (
               <TruckParts key={index} title={truckParts.title} />
-            ))} */}
+            ))}
           </VStack>
         </Box>
       </ScrollView>

@@ -13,7 +13,9 @@ export default function ShortcutButton(props) {
             ml="0"
             mr="0"
             borderRadius="0"
+
         >
+            <Text> {props.title} </Text>
         </Box>
     );
 }
