@@ -90,6 +90,7 @@ function Example() {
               : useColorModeValue("coolGray.200", "gray.400");
           return (
             <Box
+              key={i}
               borderBottomWidth="3"
               borderColor={borderColor}
               alignItems="center"

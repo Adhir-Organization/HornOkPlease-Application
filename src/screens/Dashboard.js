@@ -15,9 +15,11 @@ import ShortcutButton from "../components/dashboard/ShortcutButton";
 import StatusButton from "../components/dashboard/StatusButton";
 import MaintenanceFAB from "../components/dashboard/MaintenanceFAB";
 import AssignedTrip from "../components/dashboard/AssignedTrip";
+import { useState } from "react";
 // Importing Icons
 
 export default function Dashboard({ navigation }) {
+  const [activeStatus, setActiveStatus] = useState();
   const content = {
     shortcutButtons: [
       {
@@ -59,7 +61,6 @@ export default function Dashboard({ navigation }) {
   };
 
   return (
-
     <Box flex="1" safeArea background="white">
       {/* Hero Section Rounded */}
       <Box background="blue.500" p={5} borderBottomRadius="3xl" h={"72"}>
@@ -94,6 +95,9 @@ export default function Dashboard({ navigation }) {
             {content.statusButtons.map((statusButtons, index) => (
               <StatusButton
                 key={index}
+                activeStatus={activeStatus}
+                index={index}
+                setActiveStatus={setActiveStatus}
                 name={statusButtons.icon}
                 colors={statusButtons.color}
               />
@@ -101,10 +105,15 @@ export default function Dashboard({ navigation }) {
           </HStack>
         </Box>
 
-        <Box p={5}>
+        <Box px={5}>
           {/* Shortcut Section */}
-          <Box py={5}>
-            <Heading size="md" letterSpacing={"lg"} fontWeight={"medium"} mb={3}>
+          <Box py={2}>
+            <Heading
+              size="md"
+              letterSpacing={"lg"}
+              fontWeight={"medium"}
+              mb={3}
+            >
               Shortcuts
             </Heading>
             <VStack space={2} alignItems="center" justifyContent="center">
@@ -122,15 +131,11 @@ export default function Dashboard({ navigation }) {
 
           {/* 👇 Main Box */}
         </Box>
-
       </ScrollView>
       {/* Status Section */}
-
 
       {/* 🔘 Floating Action Button - Maintenance */}
       <MaintenanceFAB />
     </Box>
-
-
   );
 }
