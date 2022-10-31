@@ -9,9 +9,11 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
 import authContext from "../context/authContext";
 
-export default function OtpVerification() {
+export default function OtpVerification({ route }) {
   const { setIsLoggedIn } = useContext(authContext);
   const navigation = useNavigation();
+
+  const { phone } = route.params;
 
   // const [otp, setOtp] = useState(1234);
   // const [inputOtp, setInputOtp] = useState(0);
@@ -61,7 +63,7 @@ export default function OtpVerification() {
         <Box>
           <Text fontSize="sm">Enter OTP code sent to your number</Text>
           <Text fontWeight="semibold" fontSize="lg" marginBottom="5">
-            +91 12345 54321
+            +91 {phone}
           </Text>
           <Input
             placeholder="Enter OTP"
