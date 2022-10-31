@@ -7,6 +7,7 @@ import {
   ScrollView,
   Text,
   Avatar,
+  Pressable,
 } from "native-base";
 
 // Importing Components
@@ -15,6 +16,7 @@ import ShortcutButton from "../components/dashboard/ShortcutButton";
 import StatusButton from "../components/dashboard/StatusButton";
 import MaintenanceFAB from "../components/dashboard/MaintenanceFAB";
 import AssignedTrip from "../components/dashboard/AssignedTrip";
+import Profile from "../components/dashboard/Profile";
 import { useState } from "react";
 // Importing Icons
 
@@ -65,12 +67,14 @@ export default function Dashboard({ navigation }) {
       {/* Hero Section Rounded */}
       <Box background="blue.500" p={5} borderBottomRadius="3xl" h={"72"}>
         <VStack space={1}>
-          <Avatar
+          {/* <Avatar
             bg="cyan.500"
             source={{
               uri: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
             }}
-          />
+          /> */}
+          <Profile />
+
           <Text fontSize={20} color="white">
             Hello, John
           </Text>
