@@ -96,10 +96,11 @@ export default function AssignedTrip() {
       <Button
         p="3"
         w="full"
-        background="blue.100"
+        background="white"
         rounded="md"
+        borderWidth={1}
+        borderColor={"blue.100"}
         justifyContent={"flex-start"}
-        shadow="0"
         onPress={() => {
           setModalVisible(!modalVisible);
           // openModal("center");
@@ -112,9 +113,8 @@ export default function AssignedTrip() {
           <Text
             alignSelf={"center"}
             ml={2}
-            fontSize={"xl"}
-            fontWeight={"medium"}
-            color="blue.500"
+            fontSize={"lg"}
+            color="warmGray.900"
           >
             Assigned Trip
           </Text>

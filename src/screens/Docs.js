@@ -1,36 +1,19 @@
 import * as React from "react";
-import {
-  View,
-  StyleSheet,
-  Dimensions,
-  StatusBar,
-  TouchableOpacity,
-  Animated,
-  Pressable,
-} from "react-native";
+import { Dimensions, StatusBar, Animated, Pressable } from "react-native";
 import { TabView, SceneMap } from "react-native-tab-view";
-import {
-  NativeBaseProvider,
-  Box,
-  Text,
-  Center,
-  VStack,
-  Button,
-} from "native-base";
-import Constants from "expo-constants";
+import { NativeBaseProvider, Box, VStack, Button } from "native-base";
 import { useColorModeValue } from "native-base";
-import Header from "../components/Header";
-import Consignment from "../components/Docs/Consignment";
 import LR from "../components/Docs/LR";
+import ConsigmentButton from "../components/Docs/ConsignmentButton";
+
 //constant declare
 const FirstRoute = () => (
   <>
-    <VStack>
-      <Consignment DocsName={"Document 1"} />
-      <Consignment DocsName={"Document 2"} />
-      <Consignment DocsName={"Document 3"} />
-      <Consignment DocsName={"Document 4"} />
-      <Consignment DocsName={"Document 5"} />
+    <VStack space={2}>
+      {/* Rendered static : (Dynmaic when fetched from api) */}
+      <ConsigmentButton />
+      <ConsigmentButton />
+      <ConsigmentButton />
     </VStack>
     <Button mx="32" my="8">
       Upload
@@ -142,7 +125,7 @@ export default () => {
   return (
     <NativeBaseProvider>
       <Box safeArea flex={1}>
-        <Header headerName={"Documents"} />
+        {/* <Header headerName={"Documents"} /> */}
         <Example />
       </Box>
     </NativeBaseProvider>
