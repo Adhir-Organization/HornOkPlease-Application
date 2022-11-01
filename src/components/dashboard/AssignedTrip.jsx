@@ -38,7 +38,7 @@ export default function AssignedTrip() {
           </Box>
           <Box>:</Box>
           <Box>
-            <Input w="40" fontSize="13" borderColor={"#F2EDED"}>
+            <Input w="40" fontSize="13" borderColor={"#F2EDED"} editable={false} >
               {props.input}
             </Input>
           </Box>
