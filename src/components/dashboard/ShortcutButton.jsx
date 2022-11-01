@@ -8,10 +8,11 @@ export default function ShortcutButton(props) {
     <Button
       p="3"
       w="full"
-      background="blue.100"
+      background={"white"}
+      borderWidth="1"
+      borderColor={"blue.100"}
       rounded="md"
       justifyContent={"flex-start"}
-      shadow="0"
       onPress={() => {
         navigation.navigate(props.nav);
       }}
@@ -20,14 +21,7 @@ export default function ShortcutButton(props) {
         <Box background={"blue.500"} p={2} rounded="full">
           <Icon name={props.iconName} color={"white"} size={20} />
         </Box>
-        <Text
-          alignSelf={"center"}
-          ml={2}
-          fontSize={"xl"}
-          fontWeight={"medium"}
-          color="blue.500"
-          
-        >
+        <Text alignSelf={"center"} ml={2} fontSize={"lg"} color="warmGray.900">
           {props.names}
         </Text>
       </HStack>

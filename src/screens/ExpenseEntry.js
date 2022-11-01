@@ -17,7 +17,7 @@ import {
 } from "native-base";
 import HeroBox from "../components/contacts/HeroBox";
 
-export default function ExpenseEntry({}) {
+export default function ExpenseEntry({ }) {
   const [service, setService] = React.useState("");
   return (
     <Box safeArea>
@@ -36,7 +36,7 @@ export default function ExpenseEntry({}) {
               minWidth="200"
               marginTop="2"
               accessibilityLabel="Choose Service"
-              placeholder="Select Cost Heading"
+              placeholder="Select Expense Name"
               fontSize="md"
               _selectedItem={{
                 bg: "teal.600",
@@ -44,11 +44,19 @@ export default function ExpenseEntry({}) {
               mt={1}
               onValueChange={(itemValue) => setService(itemValue)}
             >
-              <Select.Item label="$50-$100" value="ux" />
-              <Select.Item label="$150" value="web" />
-              <Select.Item label="$200" value="cross" />
-              <Select.Item label="$300" value="ui" />
-              <Select.Item label="$400" value="backend" />
+              <Select.Item label="Fuel" value="ux" />
+              <Select.Item label="Driver Allowance" value="web" />
+              <Select.Item label="Toll" value="cross" />
+              <Select.Item label="Mamoon" value="ui" />
+              <Select.Item label="Statutory" value="backend" />
+              <Select.Item label="Tyre" value="backend" />
+              <Select.Item label="Engine" value="backend" />
+              <Select.Item label="Gearbox" value="backend" />
+              <Select.Item label="Housing" value="backend" />
+              <Select.Item label="Bodyworks" value="backend" />
+              <Select.Item label="Overhead" value="backend" />
+              <Select.Item label="Depreciation" value="backend" />
+              <Select.Item label="Others" value="backend" />
             </Select>
           </Box>
           <Box>
@@ -57,7 +65,7 @@ export default function ExpenseEntry({}) {
               minWidth="200"
               marginTop="2"
               accessibilityLabel="Choose Service"
-              placeholder="Select Cost Heading"
+              placeholder="Select Expense Category"
               fontSize="md"
               _selectedItem={{
                 bg: "teal.600",
@@ -65,11 +73,8 @@ export default function ExpenseEntry({}) {
               mt={1}
               onValueChange={(itemValue) => setService(itemValue)}
             >
-              <Select.Item label="$50-$100" value="ux" />
-              <Select.Item label="$150" value="web" />
-              <Select.Item label="$200" value="cross" />
-              <Select.Item label="$300" value="ui" />
-              <Select.Item label="$400" value="backend" />
+              <Select.Item label="Direct" value="ux" />
+              <Select.Item label="Preventive" value="web" />
             </Select>
           </Box>
           <Box>
@@ -80,11 +85,15 @@ export default function ExpenseEntry({}) {
             <Text fontSize="md">Remark</Text>
             <Input
               size="xs"
-              h="40"
+              h="20"
               placeholder="Write your remark.."
               fontSize="md"
               marginTop="2"
             />
+          </Box>
+          <Box>
+            <Text fontSize="md">Upload Receipt</Text>
+            {/* <input type='file' id='multi' multiple /> */}
           </Box>
           {/* <Box>
                         <Box marginTop="1">

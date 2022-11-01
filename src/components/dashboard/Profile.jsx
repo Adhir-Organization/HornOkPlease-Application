@@ -9,15 +9,17 @@ import {
   Text,
   FormControl,
   Center,
+  Avatar,
+  Pressable
 } from "native-base";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons" ;
+import Icons from "react-native-vector-icons/Ionicons" ;
+
 import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 export default function AssignedTrip() {
   const [modalVisible, setModalVisible] = React.useState(false);
-
   const [placement, setPlacement] = useState(undefined);
-
   const [open, setOpen] = useState(false);
   const openModal = (placement) => {
     setOpen(true);
@@ -29,19 +31,23 @@ export default function AssignedTrip() {
   const navigation = useNavigation();
   const FieldBox = (props) => {
     return (
-      <Box backgroundColor={"#F2EDED"} borderRadius="md">
-        <HStack justifyContent={"center"} alignItems="center">
-          <Box flex="1">
-            <Text fontSize={15} pl="3">
+      <Box >
+        <HStack 
+        justifyContent={"center"} 
+        alignItems="center" 
+        borderBottomWidth={"2"} 
+        borderBottomColor={"gray.200"} 
+        
+        >
+               <Icon name={props.icon} size={30} color="#0058DB"/>
+            <Icons name={props.icons} size={30} color="#0058DB"/>
+          <Box flex="1" my="4" mx="16" >
+            <Text fontSize={18} >
               {props.label}{" "}
             </Text>
           </Box>
-          <Box>:</Box>
-          <Box>
-            <Input w="40" fontSize="13" borderColor={"#F2EDED"} editable={false} >
-              {props.input}
-            </Input>
-          </Box>
+          
+          
         </HStack>
       </Box>
     );
@@ -59,22 +65,20 @@ export default function AssignedTrip() {
         <Center flex={1}>
           <Modal.Content>
             <Modal.CloseButton />
-            <Modal.Header pl="24" color="blue.500">
-              Assigned Trips
+            <Modal.Header pl="32" color="blue.500">
+             Profile
             </Modal.Header>
             <Modal.Body>
               <FormControl w={"80"}>
                 <VStack space={2}>
-                  <FieldBox label={"Vehicle Number"} input={"GJ06AB5739"} />
-                  <FieldBox label={"Date"} input={"01 August 1999"} />
-                  <FieldBox label={"From"} input={"Jamnagar"} />
-                  <FieldBox label={"To"} input={"Surat"} />
-                  <FieldBox label={"Duration "} input={"3 days"} />
-                  <FieldBox label={"Diesel"} input={"155 L"} />
-                  <FieldBox label={"Advance Amount"} input={"Rs. 2000"} />
-                  <FieldBox label={"Flat"} input={"Rs. 2000"} />
-                  <FieldBox label={"Estimated Km "} input={"1500"} />
-                  <FieldBox label={"LR Number"} input={"ABH456"} />
+                <FieldBox label={"John"} icons={"person-outline"} />
+                  <FieldBox label={"+91999399999"} icons={"ios-call-outline"} />
+                  <FieldBox label={"GJ10HR8978"} icon={"truck-outline"}  />
+                  <FieldBox label={"Tata Truck"} icon={"truck-minus"} />
+                  <FieldBox label={"974974930"} icon={"card-account-details-outline"} />
+                  <FieldBox label={"89797079 "}icons={"person-outline"} />
+                  <FieldBox label={"04 August 2002"} icon={"calendar-month-outline"} />
+                  
                 </VStack>
               </FormControl>
             </Modal.Body>
@@ -86,40 +90,26 @@ export default function AssignedTrip() {
                   setModalVisible(!modalVisible);
                 }}
               >
-                Start Trip
+                Logout
               </Button>
             </Modal.Footer>
           </Modal.Content>
         </Center>
       </Modal>
 
-      <Button
-        p="3"
-        w="full"
-        background="white"
-        rounded="md"
-        borderWidth={1}
-        borderColor={"blue.100"}
-        justifyContent={"flex-start"}
+      <Pressable
         onPress={() => {
           setModalVisible(!modalVisible);
           // openModal("center");
         }}
       >
-        <HStack>
-          <Box background={"blue.500"} p={2} rounded="full">
-            <Icon name="road" color={"white"} size={20} />
-          </Box>
-          <Text
-            alignSelf={"center"}
-            ml={2}
-            fontSize={"lg"}
-            color="warmGray.900"
-          >
-            Assigned Trip
-          </Text>
-        </HStack>
-      </Button>
+       <Avatar
+            bg="cyan.500"
+            source={{
+              uri: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+            }}
+          />
+      </Pressable>
     </>
   );
 }

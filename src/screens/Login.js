@@ -7,16 +7,38 @@ import {
   Input,
   Container,
   Button,
+  Alert,
 } from "native-base";
 import { Image } from "react-native";
+
+import axios from "axios";
 
 import { ICONS, COLORS } from "../../constants/theme";
 
 import Icon from "react-native-vector-icons/MaterialIcons";
+import { useState } from "react";
 
 export default function Login({ navigation }) {
+  const [contactNo, setContactNo] = useState("");
+  const [alertMsg, setAlertMsg] = useState(null);
+  const handleRequest = async () => {
+    try {
+      const { data } = await axios.get(
+        `http://192.168.211.202:5000/api/driver/get/searchBy?phone=${contactNo}`
+      );
+      console.log(data);
+      navigation.navigate("OtpVerification", { phone: contactNo });
+    } catch (e) {
+      if (e.response.status === 400) {
+        setAlertMsg("*You are not registered with us. Please register first.");
+      }
+      console.log(e.response.status);
+      console.log(e.response.data);
+    }
+  };
   const pressHandler = async () => {
-    navigation.navigate("OtpVerification");
+    // handleRequest();
+    navigation.navigate("OtpVerification", { phone: 1234567890 });
   };
   return (
     <Box flex="1" safeArea p="5">
@@ -47,13 +69,20 @@ export default function Login({ navigation }) {
         </Box>
         <Box>
           <Input
-            placeholder="+91 19000 12345"
+            placeholder="+91 1234567890"
             w="100%"
             color="blue.500"
             _focus={{ color: "blue.500" }}
+            value={contactNo}
+            onChangeText={(text) => setContactNo(text)}
             size="md"
           />
-          <Button marginY="10" size="lg" onPress={pressHandler}>
+          {alertMsg ? (
+            <Text fontSize="sm" mt="3" color="red.500">
+              {alertMsg}
+            </Text>
+          ) : null}
+          <Button my="7" size="lg" onPress={pressHandler}>
             Get OTP
           </Button>
         </Box>

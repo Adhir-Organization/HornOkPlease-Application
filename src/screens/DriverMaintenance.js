@@ -1,16 +1,16 @@
-import { Box, HStack, VStack, Input } from "native-base";
+import { Box, VStack, Input } from "native-base";
 
-import DatePicker from "../components/maintenance/DatePicker";
+import DateSelector from "../components/maintenance/DateSelector";
 import IssueSelector from "../components/maintenance/IssueSelector";
 
 export default function DriverMaintenance(navigation) {
   return (
     <>
       <Box flex={1} safeArea>
-        <HStack space="3" alignItems="center">
+        <VStack space="3" alignItems="center">
           {/* Date Picker */}
           <Box>
-            <DatePicker />
+            <DateSelector />
           </Box>
           {/* Select Issue */}
           <Box>
@@ -22,7 +22,7 @@ export default function DriverMaintenance(navigation) {
           </Box>
           {/* Done date picker */}
           <Box>
-            <DatePicker />
+            <DateSelector />
           </Box>
           {/* Garage Name */}
           <Box>
@@ -33,7 +33,7 @@ export default function DriverMaintenance(navigation) {
           <Box></Box>
           {/* Submit Button */}
           <Box></Box>
-        </HStack>
+        </VStack>
       </Box>
     </>
   );
