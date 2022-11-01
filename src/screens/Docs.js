@@ -1,33 +1,42 @@
 import * as React from "react";
 import { Dimensions, StatusBar, Animated, Pressable } from "react-native";
 import { TabView, SceneMap } from "react-native-tab-view";
-import { NativeBaseProvider, Box, VStack, Button } from "native-base";
+import {
+  NativeBaseProvider,
+  Box,
+  VStack,
+  Button,
+  Container,
+  Center,
+} from "native-base";
 import { useColorModeValue } from "native-base";
-import LR from "../components/Docs/LR";
+import LRButton from "../components/Docs/LRButton";
 import ConsigmentButton from "../components/Docs/ConsignmentButton";
 
 //constant declare
 const FirstRoute = () => (
   <>
-    <VStack space={2}>
+    <VStack space={2} p={5}>
       {/* Rendered static : (Dynmaic when fetched from api) */}
       <ConsigmentButton />
       <ConsigmentButton />
       <ConsigmentButton />
     </VStack>
-    <Button mx="32" my="8">
-      Upload
-    </Button>
+    <Box m={10}>
+      <Center>
+        <Button>Upload</Button>
+      </Center>
+    </Box>
   </>
 );
 
 const SecondRoute = () => (
   <>
-    <LR DocsName={"Document 1"} />
-    <LR DocsName={"Document 2"} />
-    <LR DocsName={"Document 3"} />
-    <LR DocsName={"Document 4"} />
-    <LR DocsName={"Document 5"} />
+    <VStack space={2} p={5}>
+      <LRButton />
+      <LRButton />
+      <LRButton />
+    </VStack>
   </>
 );
 
@@ -124,7 +133,7 @@ function Example() {
 export default () => {
   return (
     <NativeBaseProvider>
-      <Box safeArea flex={1}>
+      <Box safeArea flex={1} bg={"white"}>
         {/* <Header headerName={"Documents"} /> */}
         <Example />
       </Box>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Linking, TouchableOpacity } from "react-native";
-import { Box, Text, HStack, Heading } from "native-base";
+import { Box, Text, HStack } from "native-base";
 import Icon from "react-native-vector-icons/Feather";
 
-export default function ConsigmentButton(props) {
+export default function LRButton(props) {
   return (
     <Box
       p="3"
@@ -22,14 +22,11 @@ export default function ConsigmentButton(props) {
             {props.documentTitle}
           </Text>
         </Box>
-        <Box>
-          <Icon name="camera" size={24} style={{ color: "black" }} />
-        </Box>
       </HStack>
     </Box>
   );
 }
 
-ConsigmentButton.defaultProps = {
+LRButton.defaultProps = {
   documentTitle: "Document Title",
 };

@@ -28,11 +28,11 @@ const theme = extendTheme({
 export default function App() {
   return (
     <>
-      <SafeAreaProvider>
-        <NativeBaseProvider useTheme={theme}>
+      <NativeBaseProvider useTheme={theme}>
+        <SafeAreaProvider>
           <MainStackNavigation />
-        </NativeBaseProvider>
-      </SafeAreaProvider>
+        </SafeAreaProvider>
+      </NativeBaseProvider>
     </>
   );
 }
