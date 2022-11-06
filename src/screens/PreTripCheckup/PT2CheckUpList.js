@@ -1,69 +1,12 @@
-import React from "react";
-import Header from "../../components/Header";
 import { Box, Text, VStack, Input, Button, ScrollView } from "native-base";
 
 // Importing component(s)
 import TruckParts from "../../components/PreTripCheckup/TruckParts";
+import { useContext } from "react";
+import PreTripContext from "../../context/preTripContext";
 
 export default function PT2CheckUpList({ navigation }) {
-  const truckParts = [
-    {
-      index: 1,
-      title: "Engine",
-    },
-    {
-      index: 2,
-      title: "Fuel System",
-    },
-    {
-      index: 3,
-      title: "Air Lines",
-    },
-    {
-      index: 4,
-      title: "Battery",
-    },
-    {
-      index: 5,
-      title: "Brakes",
-    },
-    {
-      index: 6,
-      title: "Clutch",
-    },
-    {
-      index: 7,
-      title: "Gear Box",
-    },
-    {
-      index: 8,
-      title: "Body",
-    },
-    {
-      index: 9,
-      title: "Body",
-    },
-    {
-      index: 10,
-      title: "Body",
-    },
-    {
-      index: 11,
-      title: "Body",
-    },
-    {
-      index: 12,
-      title: "Body",
-    },
-    {
-      index: 12,
-      title: "Body",
-    },
-    {
-      index: 12,
-      title: "Body",
-    },
-  ];
+  const { parts } = useContext(PreTripContext);
 
   return (
     <Box safeArea>
@@ -78,8 +21,8 @@ export default function PT2CheckUpList({ navigation }) {
       <ScrollView>
         <Box p={5}>
           <VStack space={2}>
-            {truckParts.map((truckParts, index) => (
-              <TruckParts key={index} title={truckParts.title} />
+            {parts.map((part, index) => (
+              <TruckParts index={index} key={index} name={part.name} />
             ))}
           </VStack>
         </Box>
