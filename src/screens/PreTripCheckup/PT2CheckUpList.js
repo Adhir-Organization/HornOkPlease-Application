@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Header from "../../components/Header";
 import { Box, Text, VStack, Input, Button, ScrollView } from "native-base";
 
@@ -55,6 +55,14 @@ export default function PT2CheckUpList({ navigation }) {
       index: 12,
       title: "Body",
     },
+    {
+      index: 12,
+      title: "Body",
+    },
+    {
+      index: 12,
+      title: "Body",
+    },
   ];
 
   return (
@@ -69,15 +77,13 @@ export default function PT2CheckUpList({ navigation }) {
       </Box>
       <ScrollView>
         <Box p={5}>
-          <VStack>
+          <VStack space={2}>
             {truckParts.map((truckParts, index) => (
               <TruckParts key={index} title={truckParts.title} />
             ))}
           </VStack>
         </Box>
       </ScrollView>
-
     </Box>
-  )
-
+  );
 }

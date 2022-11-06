@@ -1,50 +1,42 @@
 import * as React from "react";
-import {
-  View,
-  StyleSheet,
-  Dimensions,
-  StatusBar,
-  TouchableOpacity,
-  Animated,
-  Pressable,
-} from "react-native";
+import { Dimensions, StatusBar, Animated, Pressable } from "react-native";
 import { TabView, SceneMap } from "react-native-tab-view";
 import {
   NativeBaseProvider,
   Box,
-  Text,
-  Center,
   VStack,
   Button,
+  Container,
+  Center,
 } from "native-base";
-import Constants from "expo-constants";
 import { useColorModeValue } from "native-base";
-import Header from "../components/Header";
-import Consignment from "../components/Docs/Consignment";
-import LR from "../components/Docs/LR";
+import LRButton from "../components/Docs/LRButton";
+import ConsigmentButton from "../components/Docs/ConsignmentButton";
+
 //constant declare
 const FirstRoute = () => (
   <>
-    <VStack>
-      <Consignment DocsName={"Document 1"} />
-      <Consignment DocsName={"Document 2"} />
-      <Consignment DocsName={"Document 3"} />
-      <Consignment DocsName={"Document 4"} />
-      <Consignment DocsName={"Document 5"} />
+    <VStack space={2} p={5}>
+      {/* Rendered static : (Dynmaic when fetched from api) */}
+      <ConsigmentButton />
+      <ConsigmentButton />
+      <ConsigmentButton />
     </VStack>
-    <Button mx="32" my="8">
-      Upload
-    </Button>
+    <Box m={10}>
+      <Center>
+        <Button>Upload</Button>
+      </Center>
+    </Box>
   </>
 );
 
 const SecondRoute = () => (
   <>
-    <LR DocsName={"Document 1"} />
-    <LR DocsName={"Document 2"} />
-    <LR DocsName={"Document 3"} />
-    <LR DocsName={"Document 4"} />
-    <LR DocsName={"Document 5"} />
+    <VStack space={2} p={5}>
+      <LRButton />
+      <LRButton />
+      <LRButton />
+    </VStack>
   </>
 );
 
@@ -90,6 +82,7 @@ function Example() {
               : useColorModeValue("coolGray.200", "gray.400");
           return (
             <Box
+              key={i}
               borderBottomWidth="3"
               borderColor={borderColor}
               alignItems="center"
@@ -99,7 +92,6 @@ function Example() {
             >
               <Pressable
                 onPress={() => {
-                  console.log(i);
                   setIndex(i);
                   {
                     route.title;
@@ -141,8 +133,8 @@ function Example() {
 export default () => {
   return (
     <NativeBaseProvider>
-      <Box safeArea flex={1}>
-        <Header headerName={"Documents"} />
+      <Box safeArea flex={1} bg={"white"}>
+        {/* <Header headerName={"Documents"} /> */}
         <Example />
       </Box>
     </NativeBaseProvider>
