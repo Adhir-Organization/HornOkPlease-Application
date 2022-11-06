@@ -3,10 +3,13 @@ import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 export default function ShortcutButton(props) {
+  // console.log(props.data);
   const navigation = useNavigation();
   return (
     <Button
-      onPress={() => navigation.navigate("IndividualCheckups", { data: props })}
+      onPress={() =>
+        navigation.navigate("IndividualCheckups", { data: props.data })
+      }
       justifyContent={"flex-start"}
       flex={1}
       background="#E0DCDC"
@@ -19,7 +22,7 @@ export default function ShortcutButton(props) {
         </Box>
         <Text fontSize="md" pl={3}>
           {" "}
-          {props.name}
+          {props.data.name}
         </Text>
       </HStack>
     </Button>

@@ -7,6 +7,8 @@ import PreTripContext from "../../context/preTripContext";
 
 export default function PT2CheckUpList({ navigation }) {
   const { parts } = useContext(PreTripContext);
+  console.log(typeof parts);
+  console.log(parts);
 
   return (
     <Box safeArea>
@@ -22,7 +24,7 @@ export default function PT2CheckUpList({ navigation }) {
         <Box p={5}>
           <VStack space={2}>
             {parts.map((part, index) => (
-              <TruckParts index={index} key={index} name={part.name} />
+              <TruckParts key={index} data={part} />
             ))}
           </VStack>
         </Box>
