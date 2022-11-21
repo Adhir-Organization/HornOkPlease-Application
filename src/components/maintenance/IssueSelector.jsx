@@ -16,6 +16,7 @@ export default function IssueSelector() {
           _selectedItem={{
             bg: "blue.200",
           }}
+          onValueChange={(itemValue) => setIssue(itemValue)}
         >
           <Select.Item label="Issue 1" value="js" />
           <Select.Item label="TypeScript" value="ts" />
@@ -23,9 +24,6 @@ export default function IssueSelector() {
           <Select.Item label="Python" value="py" />
           <Select.Item label="Java" value="java" />
         </Select>
-        <FormControl.ErrorMessage>
-          Please select an issue
-        </FormControl.ErrorMessage>
       </FormControl>
     </Center>
   );

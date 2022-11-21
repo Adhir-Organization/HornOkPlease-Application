@@ -1,6 +1,6 @@
 import React from "react";
 import { Linking, TouchableOpacity } from "react-native";
-import { Box, Text, HStack, Heading } from "native-base";
+import { Box, Text, HStack, Heading, Pressable } from "native-base";
 import Icon from "react-native-vector-icons/Feather";
 
 export default function ConsigmentButton(props) {
@@ -23,7 +23,14 @@ export default function ConsigmentButton(props) {
           </Text>
         </Box>
         <Box>
-          <Icon name="camera" size={24} style={{ color: "black" }} />
+          <Pressable
+            p="2"
+            onPress={() => {
+              console.log("Pressed");
+            }}
+          >
+            <Icon name="camera" size={24} style={{ color: "black" }} />
+          </Pressable>
         </Box>
       </HStack>
     </Box>
