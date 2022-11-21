@@ -24,7 +24,6 @@ export default function ConsigmentButton(props) {
         </Box>
         <Box>
           <Pressable
-            p="2"
             onPress={() => {
               console.log("Pressed");
             }}

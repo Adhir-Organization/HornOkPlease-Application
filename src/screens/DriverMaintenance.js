@@ -12,7 +12,7 @@ import IssueSelector from "../components/maintenance/IssueSelector";
 import DateSelector from "../components/maintenance/DateSelector";
 import { useState } from "react";
 
-export default function DriverMaintenance(navigation) {
+export default function DriverMaintenance({ route, navigation }) {
   const [todayDate, setTodayDate] = useState();
   const [doneDate, setDoneDate] = useState();
 
@@ -23,7 +23,24 @@ export default function DriverMaintenance(navigation) {
           <FormControl isRequired isInvalid>
             <VStack space="5">
               {/* Date Picker */}
-              <DateSelector />
+              <Box>
+                <FormControl.Label>Select Date</FormControl.Label>
+                <HStack
+                  justifyContent={"space-between"}
+                  alignItems={"center"}
+                  p={3}
+                  borderWidth="1"
+                  borderColor={"blue.100"}
+                  rounded="md"
+                  w="full"
+                >
+                  <Text fontSize={"xs"}>{todayDate}</Text>
+                  <DateSelector
+                    value={todayDate}
+                    onInputValueChange={setTodayDate}
+                  />
+                </HStack>
+              </Box>
               {/* Select Issue */}
               <Box>
                 <IssueSelector />
