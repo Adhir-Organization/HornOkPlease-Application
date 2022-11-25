@@ -3,6 +3,7 @@ import { Box, ScrollView, VStack } from "native-base";
 import Header from "../components/Header";
 
 import HeroBox from "../components/contacts/HeroBox";
+import { FlatList } from "react-native-gesture-handler";
 export default function Contacts() {
   const data = [
     {
@@ -44,15 +45,19 @@ export default function Contacts() {
   ];
 
   return (
-    <Box safeArea>
+    <Box safeArea h="container">
       <VStack space={5}>
         <Header headerName={"Contacts"} />
         <ScrollView>
-          <VStack>
-            {data.map((contact, index) => (
-              <HeroBox key={index} name={contact.name} number={contact.phone} />
-            ))}
-          </VStack>
+          <FlatList
+            // {data.map((contact, index) => (
+            // <HeroBox key={index} name={contact.name} number={contact.phone} />
+
+            data={data}
+            renderItem={({ item }) => (
+              <HeroBox name={item.name} number={item.phone} />
+            )}
+          />
         </ScrollView>
       </VStack>
     </Box>
