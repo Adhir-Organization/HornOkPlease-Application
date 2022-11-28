@@ -45,19 +45,16 @@ const theme = extendTheme({
 
 export default function StackNavigation() {
   const [loading, setLoading] = useState(true);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [authToken, setAuthToken] = useState(null);
   const getToken = async () => {
     try {
       const value = await AsyncStorage.getItem("authToken");
-      // console.log(value);
       if (value == null) {
-        setIsLoggedIn(false);
+        setAuthToken(null);
       } else {
-        setIsLoggedIn(true);
+        setAuthToken(value);
       }
-      setTimeout(() => {
-        setLoading(false);
-      }, 2300);
+      setLoading(false);
     } catch (e) {
       console.log(e);
     }
@@ -86,7 +83,7 @@ export default function StackNavigation() {
     );
   }
   return (
-    <authContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+    <authContext.Provider value={{ authToken, setAuthToken }}>
       <SafeAreaProvider>
         <NavigationContainer>
           <Stack.Navigator
@@ -96,7 +93,7 @@ export default function StackNavigation() {
             }}
             initialRouteName={"GetStarted"}
           >
-            {!isLoggedIn ? (
+            {!authToken ? (
               <>
                 <Stack.Screen name="GetStarted" component={GetStarted} />
                 <Stack.Screen name="Login" component={Login} />
