@@ -23,22 +23,26 @@ export default function Login({ navigation }) {
   const [alertMsg, setAlertMsg] = useState(null);
   const handleRequest = async () => {
     try {
+      console.log("requesting for data");
       const { data } = await axios.get(
-        `http://192.168.211.202:5000/api/driver/get/searchBy?phone=${contactNo}`
+        `http://192.168.1.6:5000/api/driver/get/searchBy?phone=1234567890`
       );
-      console.log(data);
-      navigation.navigate("OtpVerification", { phone: contactNo });
-    } catch (e) {
-      if (e.response.status === 400) {
-        setAlertMsg("*You are not registered with us. Please register first.");
+      console.log(data.result);
+      if (data.result.length === 0) {
+        setAlertMsg("No user found");
+      } else {
+        navigation.navigate("OtpVerification", {
+          user: data.result[0]._id,
+          phone: contactNo,
+        });
       }
-      console.log(e.response.status);
-      console.log(e.response.data);
+    } catch (e) {
+      console.log(e);
     }
   };
   const pressHandler = async () => {
-    // handleRequest();
-    navigation.navigate("OtpVerification", { phone: 1234567890 });
+    handleRequest();
+    // navigation.navigate("OtpVerification", { phone: 1234567890 });
   };
   return (
     <Box flex="1" safeArea p="5">

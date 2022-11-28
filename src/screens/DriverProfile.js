@@ -33,10 +33,10 @@ export default function DriverProfile() {
   };
 
   // logout function logic
-  const { setIsLoggedIn } = useContext(authContext);
+  const { setAuthToken } = useContext(authContext);
   const handleLogout = async () => {
     await AsyncStorage.removeItem("authToken");
-    setIsLoggedIn(false);
+    setAuthToken(null);
     // console.log(await AsyncStorage.getItem("token"));
   };
 
