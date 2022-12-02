@@ -27,8 +27,8 @@ export default function Dashboard({ navigation }) {
       {
         index: 1,
         icon: "card-account-details-outline",
-        title: "License",
-        screen: "Contacts",
+        title: "Language",
+        screen: "Language",
       },
       {
         index: 2,
