@@ -22,6 +22,7 @@ import OtpVerification from "../screens/OtpVerification";
 import DriverMaintenance from "../screens/DriverMaintenance";
 import PTNavigation from "./PTNavigation";
 import DriverProfile from "../screens/DriverProfile";
+import Language from "../screens/Language";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -117,6 +118,7 @@ export default function StackNavigation() {
                 />
                 <Stack.Screen name="PTNavigation" component={PTNavigation} />
                 <Stack.Screen name="DriverProfile" component={DriverProfile} />
+                <Stack.Screen name="Language" component={Language} />
               </>
             )}
           </Stack.Navigator>
