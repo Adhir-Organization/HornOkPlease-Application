@@ -1,0 +1,71 @@
+{
+    "dashboard": {
+        "home": "Home",
+        "hello": "Hello",
+        "john": "John",
+        "on-road expense": "On-road Expense",
+        "current trip": "Current trip",
+        "workshop": "Workshop",
+        "repaired": "Repaired",
+        "shortcuts": "Shortcuts",
+        "license": "License",
+        "expense entry": "Expense Entry",
+        "assigned trip": "Assigned trip",
+        "status": "Status"
+    },
+    "contact": {
+        "tyre shop": "Tyre Shop",
+        "supervisor": "Supervisor",
+        "workshop": "Workshop",
+        "fleet manager": "Fleet Manager",
+        "maintenance": "Maintenance"
+    },
+    "expense entry": {
+        "expense name": "Expense Name",
+        "select expense name": "Select Expense Name",
+        "expense category": "Expense category",
+        "select category": "Select Category",
+        "amount": "Amount",
+        "remark": "Remark",
+        "enter your remark": "Enter your remark",
+        "optional": "Optional",
+        "upload receipt": "Upload receipt",
+        "submit": "Submit"
+    },
+    "maintenance": {
+        "date": "Date",
+        "select issue": "Select Issue",
+        "amount": "Amount",
+        "done date": "Done Date",
+        "garage name": "Garage Name",
+        "remark": "Remark",
+        "record voice": "Record voice",
+        "submit": "Submit"
+    },
+    "profile": {
+        "john doe": "John DOe",
+        "tata truck": "Tata Truck"
+    },
+    "documents": {
+        "docs": "Docs",
+        "consignments": "Consignments",
+        "lr": "LR",
+        "upload": "Upload",
+        "no on-going trip": "No on-going trip",
+        "open with": "Open with",
+        "just once": "Just once",
+        "always": "Always"
+    },
+    "assigned trip": {
+        "vehicle number": "Vehicle Number",
+        "date": "Date",
+        "from": "From",
+        "to": "To",
+        "duration": "Duration",
+        "diesel": "Diesel",
+        "advance amount": "Advance Amount",
+        "flat": "Flat",
+        "estimated km": "Estimated KM",
+        "lr number": "LR Number"
+    }
+}
