@@ -11,7 +11,7 @@ import {
 } from "native-base";
 import { useColorModeValue } from "native-base";
 import LRButton from "../components/Docs/LRButton";
-import ConsigmentButton from "../components/Docs/ConsignmentButton";
+import ConsignmentButton from "../components/Docs/ConsignmentButton";
 
 //constant declare
 const FirstRoute = () => (
@@ -27,9 +27,9 @@ const FirstRoute = () => (
         </Button>
       </Box>
       {/* Rendered static : (Dynmaic when fetched from api) */}
-      <ConsigmentButton />
-      <ConsigmentButton />
-      <ConsigmentButton />
+      <ConsignmentButton />
+      <ConsignmentButton />
+      <ConsignmentButton />
     </VStack>
   </>
 );
