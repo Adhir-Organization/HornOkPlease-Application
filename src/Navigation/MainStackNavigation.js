@@ -26,6 +26,8 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import authContext from "../context/authContext";
+import axios from "axios";
+import { BASE_URL } from "../../config";
 
 const Stack = createStackNavigator();
 const theme = extendTheme({
@@ -48,13 +50,23 @@ export default function StackNavigation() {
   const [authToken, setAuthToken] = useState(null);
   const getToken = async () => {
     try {
+      // [ ] @abhi verify token whether it is valid or not using /token/verify api
       const value = await AsyncStorage.getItem("authToken");
+      // if (value !== null) {
+      // verify token from /token/verify api by setting header authToken
+      // const { data } = await axios.get(`${BASE_URL}/token/verify`, {
+      //   headers: {
+      //     authToken: value,
+      //   },
+      // });
+
       if (value == null) {
         setAuthToken(null);
       } else {
         setAuthToken(value);
       }
       setLoading(false);
+      // }
     } catch (e) {
       console.log(e);
     }
