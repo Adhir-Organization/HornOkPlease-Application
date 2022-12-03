@@ -2,6 +2,8 @@ import React from "react";
 import { Linking, TouchableOpacity } from "react-native";
 import { Box, Text, HStack } from "native-base";
 import Icon from "react-native-vector-icons/Ionicons";
+import { dataDetectorType } from "deprecated-react-native-prop-types/DeprecatedTextPropTypes";
+
 
 export default function HeroBox(props) {
   return (
@@ -26,10 +28,10 @@ export default function HeroBox(props) {
         <Box flexDirection="row">
           <Box w="40">
             <Text fontSize="md" fontWeight="medium" pt={1} paddingLeft={4}>
-              {props.name}
+              {data.name}
             </Text>
             <Text fontSize="xs" pl={5}>
-              {props.number}
+              {data.number}
             </Text>
           </Box>
 

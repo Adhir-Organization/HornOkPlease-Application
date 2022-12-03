@@ -6,6 +6,7 @@ import PreTripContext from "../../context/preTripContext";
 export default function PT3IndividualCheckup({ route }) {
   const { parts, setParts } = useContext(PreTripContext);
   const { data } = route.params;
+  console.log(data.status);
   const navigation = useNavigation();
   return (
     <Box safeArea>
@@ -13,7 +14,14 @@ export default function PT3IndividualCheckup({ route }) {
         <Heading size="xl" mt="12" mb="3">
           {data.name}
         </Heading>
-        <Text>Current Status : {data.status}</Text>
+        <Text>
+          Current Status :{" "}
+          {data.status === false
+            ? "Broken"
+            : data.status === true
+            ? "Good"
+            : null}
+        </Text>
         <Text textAlign={"center"}>
           Examine the {data.name.toLowerCase()} and verify that there are no
           defects and properly working
@@ -37,7 +45,8 @@ export default function PT3IndividualCheckup({ route }) {
                 // console.log(current);
                 current.map((item) => {
                   if (item.name == data.name) {
-                    return { ...item, status: true };
+                    // return { ...item, status: true };
+                    return { ...item };
                   }
                   return item;
                 });

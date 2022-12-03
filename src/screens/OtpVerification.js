@@ -8,26 +8,30 @@ import { Image } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
 import authContext from "../context/authContext";
+import { BASE_URL } from "../../config";
+import axios from "axios";
 
 export default function OtpVerification({ route }) {
-  const { setIsLoggedIn } = useContext(authContext);
-  const navigation = useNavigation();
+  const { setAuthToken } = useContext(authContext);
 
-  const { phone } = route.params;
+  const { phone, user } = route.params;
 
   // const [otp, setOtp] = useState(1234);
   // const [inputOtp, setInputOtp] = useState(0);
-  const pressHandler = async () => {
-    setIsLoggedIn(true);
-    await AsyncStorage.setItem("authToken", "1234567890");
-    navigation.navigate("TabNavigation");
-  };
 
-  const storeData = async () => {
+  const handleRequest = async () => {
     try {
-      await AsyncStorage.setItem("authToken", "abcd");
-      // const value = await AsyncStorage.getItem("authToken");
+      // const { data } = await axios.post(`${BASE_URL}/token/generate`, {
+      //   userId: user,
+      // });
+      // await AsyncStorage.setItem("authToken", {
+      // user: user,
+      // token: data.token,
+      // });
+      await AsyncStorage.setItem("authToken", "1234567890");
+      const value = await AsyncStorage.getItem("authToken");
       // console.log(value);
+      setAuthToken(value);
     } catch (e) {
       console.log(e);
     }
@@ -75,7 +79,7 @@ export default function OtpVerification({ route }) {
             // onChangeText={(value) => setInputOtp(value)}
             keyboardType="number-pad"
           />
-          <Button marginY="10" size="lg" onPress={pressHandler}>
+          <Button marginY="10" size="lg" onPress={handleRequest}>
             Login
           </Button>
         </Box>

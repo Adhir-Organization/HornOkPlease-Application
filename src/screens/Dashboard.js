@@ -26,9 +26,9 @@ export default function Dashboard({ navigation }) {
     shortcutButtons: [
       {
         index: 1,
-        icon: "card-account-details-outline",
-        title: "License",
-        screen: "Contacts",
+        icon: "plus",
+        title: "Start-Trip",
+        screen: "PTNavigation",
       },
       {
         index: 2,

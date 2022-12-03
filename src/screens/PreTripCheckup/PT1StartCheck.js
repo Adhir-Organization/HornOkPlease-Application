@@ -2,8 +2,6 @@ import React from "react";
 import Header from "../../components/Header";
 import { Box, Text, VStack, Input, Button } from "native-base";
 import { useNavigation } from "@react-navigation/native";
-import { useContext } from "react";
-import PreTripContext from "../../context/preTripContext";
 const PT1 = (props) => {
   return (
     <Box mr="10" ml="10" mt="4">
