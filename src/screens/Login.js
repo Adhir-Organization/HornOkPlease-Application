@@ -17,6 +17,7 @@ import { ICONS, COLORS } from "../../constants/theme";
 
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { useState } from "react";
+import { BASE_URL } from "../../config";
 
 export default function Login({ navigation }) {
   const [contactNo, setContactNo] = useState("");
@@ -25,7 +26,7 @@ export default function Login({ navigation }) {
     try {
       console.log("requesting for data");
       const { data } = await axios.get(
-        `http://192.168.1.6:5000/api/driver/get/searchBy?phone=1234567890`
+        `${BASE_URL}/driver/get/searchBy?phone=1234567890`
       );
       console.log(data.result);
       if (data.result.length === 0) {
@@ -41,8 +42,8 @@ export default function Login({ navigation }) {
     }
   };
   const pressHandler = async () => {
-    handleRequest();
-    // navigation.navigate("OtpVerification", { phone: 1234567890 });
+    // handleRequest();
+    navigation.navigate("OtpVerification", { phone: 1234567890 });
   };
   return (
     <Box flex="1" safeArea p="5">

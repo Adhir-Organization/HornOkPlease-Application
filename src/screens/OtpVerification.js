@@ -13,7 +13,6 @@ import axios from "axios";
 
 export default function OtpVerification({ route }) {
   const { setAuthToken } = useContext(authContext);
-  const navigation = useNavigation();
 
   const { phone, user } = route.params;
 
@@ -22,11 +21,16 @@ export default function OtpVerification({ route }) {
 
   const handleRequest = async () => {
     try {
-      const { data } = await axios.post(`${BASE_URL}/token/generate`, {
-        userId: user,
-      });
-      await AsyncStorage.setItem("authToken", data.token);
+      // const { data } = await axios.post(`${BASE_URL}/token/generate`, {
+      //   userId: user,
+      // });
+      // await AsyncStorage.setItem("authToken", {
+      // user: user,
+      // token: data.token,
+      // });
+      await AsyncStorage.setItem("authToken", "1234567890");
       const value = await AsyncStorage.getItem("authToken");
+      // console.log(value);
       setAuthToken(value);
     } catch (e) {
       console.log(e);
