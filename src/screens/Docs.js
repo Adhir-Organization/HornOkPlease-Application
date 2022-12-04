@@ -11,22 +11,26 @@ import {
 } from "native-base";
 import { useColorModeValue } from "native-base";
 import LRButton from "../components/Docs/LRButton";
-import ConsigmentButton from "../components/Docs/ConsignmentButton";
+import ConsignmentButton from "../components/Docs/ConsignmentButton";
 
 //constant declare
 const FirstRoute = () => (
   <>
     <VStack space={2} p={5}>
+      <Box justifyItems={"flex-end"} bg={"blue.200"}>
+        <Button
+          style={{
+            width: "fitContent",
+          }}
+        >
+          Upload Document
+        </Button>
+      </Box>
       {/* Rendered static : (Dynmaic when fetched from api) */}
-      <ConsigmentButton />
-      <ConsigmentButton />
-      <ConsigmentButton />
+      <ConsignmentButton />
+      <ConsignmentButton />
+      <ConsignmentButton />
     </VStack>
-    <Box m={10}>
-      <Center>
-        <Button>Upload</Button>
-      </Center>
-    </Box>
   </>
 );
 
@@ -133,7 +137,7 @@ function Example() {
 export default () => {
   return (
     <NativeBaseProvider>
-      <Box safeArea flex={1} bg={"white"}>
+      <Box flex={1} bg={"white"}>
         {/* <Header headerName={"Documents"} /> */}
         <Example />
       </Box>

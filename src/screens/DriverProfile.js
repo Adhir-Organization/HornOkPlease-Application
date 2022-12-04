@@ -17,6 +17,9 @@ import Icons from "react-native-vector-icons/Ionicons";
 
 import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { useContext } from "react";
+import authContext from "../context/authContext";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 export default function DriverProfile() {
   const [modalVisible, setModalVisible] = React.useState(false);
   const [placement, setPlacement] = useState(undefined);
@@ -28,6 +31,15 @@ export default function DriverProfile() {
   const styles = {
     center: {},
   };
+
+  // logout function logic
+  const { setAuthToken } = useContext(authContext);
+  const handleLogout = async () => {
+    await AsyncStorage.removeItem("authToken");
+    setAuthToken(null);
+    // console.log(await AsyncStorage.getItem("token"));
+  };
+
   const navigation = useNavigation();
   const FieldBox = (props) => {
     return (
@@ -86,8 +98,8 @@ export default function DriverProfile() {
               <Button
                 flex="1"
                 onPress={() => {
-                  navigation.navigate("PTNavigation");
                   setModalVisible(!modalVisible);
+                  handleLogout();
                 }}
               >
                 Logout
