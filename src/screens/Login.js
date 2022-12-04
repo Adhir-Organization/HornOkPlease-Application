@@ -89,6 +89,15 @@ export default function Login({ navigation }) {
           <Button my="7" size="lg" onPress={pressHandler}>
             Get OTP
           </Button>
+          <Text
+            underline
+            mx={32}
+            fontSize={16}
+            color={"blue.500"}
+            onPress={() => navigation.navigate("MainStackNav")}
+          >
+            Login as Fleet
+          </Text>
         </Box>
       </VStack>
     </Box>
