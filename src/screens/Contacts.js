@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import { Linking, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import HeroBox from "../components/contacts/HeroBox";
-import { FlatList } from "react-native-gesture-handler";
+
 export default function Contacts() {
   const data = [
     {
