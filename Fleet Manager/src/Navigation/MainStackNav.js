@@ -13,8 +13,8 @@ import {
 // Screens Import
 
 import LoginFleet from "../Screens/LoginFleet";
-import OtpVerificationFleet from "../Screens/OTPVerificationFleet";
-
+import OTPVerificationFleet from "../Screens/OTPVerificationFleet";
+import TabNavigation from "./TabNavigationFleet";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const Stack = createStackNavigator();
@@ -35,19 +35,18 @@ const theme = extendTheme({
 
 export default function MainStackNav() {
   return (
-    <SafeAreaProvider>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-        }}
-      >
-        <Stack.Screen name="LoginFleet" component={LoginFleet} />
-        <Stack.Screen
-          name="OtpVerificationFleet"
-          component={OtpVerificationFleet}
-        />
-      </Stack.Navigator>
-    </SafeAreaProvider>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+      }}
+    >
+      <Stack.Screen name="LoginFleet" component={LoginFleet} />
+      <Stack.Screen
+        name="OTPVerificationFleet"
+        component={OTPVerificationFleet}
+      />
+      <Stack.Screen name="TabNavigation" component={TabNavigation} />
+    </Stack.Navigator>
   );
 }
