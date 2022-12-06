@@ -96,7 +96,7 @@ export default function Contacts() {
                         name="call-sharp"
                         size={28}
                         onPress={() => {
-                          Linking.openURL(`tel:${props.number}`);
+                          Linking.openURL(`tel:${item.phone}`);
                         }}
                       />
                     </Box>
