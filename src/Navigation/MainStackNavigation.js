@@ -28,8 +28,8 @@ import { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import authContext from "../context/authContext";
 import axios from "axios";
-import { BASE_URL } from "../../config";  
- 
+import { BASE_URL } from "../../config";
+
 const Stack = createStackNavigator();
 const theme = extendTheme({
   colors: {
@@ -72,7 +72,7 @@ export default function StackNavigation() {
       console.log(e);
     }
   };
-  useEffect(() => {  
+  useEffect(() => {
     getToken();
   }, []);
 
@@ -104,7 +104,7 @@ export default function StackNavigation() {
               headerShown: false,
               cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
             }}
-            initialRouteName={"GetStarted"}
+            initialRouteName={"MainStackNav"}
           >
             {!authToken ? (
               <>
