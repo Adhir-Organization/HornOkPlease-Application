@@ -43,10 +43,10 @@ export default function PT3IndividualCheckup({ route }) {
               // setParts(...State,)
               setParts((current) => {
                 // console.log(current);
-                current.map((item) => {
+                return current.map((item) => {
                   if (item.name == data.name) {
-                    // return { ...item, status: true };
-                    return { ...item };
+                    return { ...item, status: true };
+                    // return { ...item };
                   }
                   return item;
                 });
