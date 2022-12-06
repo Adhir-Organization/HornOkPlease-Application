@@ -17,12 +17,12 @@ import StatusButton from "../components/dashboard/StatusButton";
 import MaintenanceFAB from "../components/dashboard/MaintenanceFAB";
 import AssignedTrip from "../components/dashboard/AssignedTrip";
 import DriverProfile from "./DriverProfile";
-import { useState } from "react";
+import { useState } from "react"; 
 // Importing Icons
 
 export default function Dashboard({ navigation }) {
   const [activeStatus, setActiveStatus] = useState();
-  const content = {
+  const content = {     
     shortcutButtons: [
       {
         index: 1,
