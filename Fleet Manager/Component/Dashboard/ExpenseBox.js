@@ -25,7 +25,7 @@ const ExpenseBox = (props) => {
                         <Text fontSize={22} w={"48"}>
                             {props.expenseType}
                         </Text>
-                        <Text fontSize={15} bold>
+                        <Text fontSize={15}>
                             {props.uom}
                         </Text>
                         <Text>

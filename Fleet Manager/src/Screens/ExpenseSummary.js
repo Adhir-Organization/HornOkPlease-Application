@@ -15,6 +15,20 @@ const ExpenseSummary = () => {
                     </Center>
                 </HStack>
             </Box>
+
+            <Box  padding="3">
+                <HStack>
+                    <Center>
+                        <Text fontSize="xl" color="black" mx="24">
+                            TOTAL EXPENSE
+                        </Text>
+                        <Text fontSize={"2xl"} color={"red.600"}>
+                            15000
+                        </Text>
+                    </Center>
+                </HStack>
+            </Box>
+
             <ScrollView>
                 <Box mx="3" my="4">
                     <ExpenseBox
@@ -51,6 +65,22 @@ const ExpenseSummary = () => {
                         cost={"-1500"}
                         remainCost={"₹80"}
 
+                    />
+                    <ExpenseBox
+                        expenseType={"Engine Repair"}
+                        uom={"cost/UOM"}
+                        color={"#D2D2D2"}
+                        date={"10 august 2022"}
+                        cost={"-2000"}
+                        remainCost={"₹80"}
+                    />
+                    <ExpenseBox
+                        expenseType={"Engine Repair"}
+                        uom={"cost/UOM"}
+                        color={"#D2D2D2"}
+                        date={"10 august 2022"}
+                        cost={"-2000"}
+                        remainCost={"₹80"}
                     />
                     <ExpenseBox
                         expenseType={"Engine Repair"}

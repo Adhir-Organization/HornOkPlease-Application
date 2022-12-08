@@ -7,8 +7,6 @@ import Graph from "../../Component/Dashboard/Graph";
 import { useNavigation } from "@react-navigation/native";
 
 
-
-
 const DashboardFleet = () => {
   const navigation = useNavigation({});
   return (
@@ -60,7 +58,7 @@ const DashboardFleet = () => {
             my="1/6"
             size="lg"
             onPress={() => navigation.navigate("ExpenseSummary")}>
-            Hello 
+            Expense Summary 
          </Button>
 
         </Box>
