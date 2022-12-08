@@ -1,12 +1,19 @@
 import React from "react";
 
-import { Box, Center, Text, HStack, ScrollView } from "native-base";
+import { Box, Center, Text, HStack, ScrollView, Button } from "native-base";
 import Icon from "react-native-vector-icons/EvilIcons";
 import TruckBox from "../../Component/Dashboard/TruckBox";
 import Graph from "../../Component/Dashboard/Graph";
+import { useNavigation } from "@react-navigation/native";
+
+
+
+
 const DashboardFleet = () => {
+  const navigation = useNavigation({});
   return (
     <Box safeArea>
+
       <Box background="#0058DB" padding="3">
         <HStack>
           <Icon name="navicon" size={30} color={"black"} />
@@ -48,8 +55,17 @@ const DashboardFleet = () => {
           <Box borderColor="amber.500" borderWidth="1" mx="4">
             <Graph />
           </Box>
+
+          <Button
+            my="1/6"
+            size="lg"
+            onPress={() => navigation.navigate("ExpenseSummary")}>
+            Hello 
+         </Button>
+
         </Box>
       </ScrollView>
+      {/* </Stack.Navigator> */}
     </Box>
   );
 };
