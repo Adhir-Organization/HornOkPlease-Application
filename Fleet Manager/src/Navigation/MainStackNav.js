@@ -17,7 +17,7 @@ import OTPVerificationFleet from "../Screens/OTPVerificationFleet";
 import ExpenseSummary from "../Screens/ExpenseSummary";
 import TabNavigation from "./TabNavigationFleet";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-
+import DrawerNav from "./DrawerNav";
 const Stack = createStackNavigator();
 const theme = extendTheme({
   colors: {
@@ -36,16 +36,22 @@ const theme = extendTheme({
 
 export default function MainStackNav() {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-      }}
-    >
-      <Stack.Screen name="LoginFleet" component={LoginFleet} />
-      <Stack.Screen name="OTPVerificationFleet" component={OTPVerificationFleet}/>
-      <Stack.Screen name="TabNavigation" component={TabNavigation} />
-      <Stack.Screen name ="ExpenseSummary" component={ExpenseSummary} />
-    </Stack.Navigator>
+    <SafeAreaProvider>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      >
+        <Stack.Screen name="LoginFleet" component={LoginFleet} />
+        <Stack.Screen
+          name="OTPVerificationFleet"
+          component={OTPVerificationFleet}
+        />
+        <Stack.Screen name="TabNavigation" component={TabNavigation} />
+        <Stack.Screen name="ExpenseSummary" component={ExpenseSummary} />
+        <Stack.Screen name="DrawerNav" component={DrawerNav} />
+      </Stack.Navigator>
+    </SafeAreaProvider>
   );
 }
