@@ -134,7 +134,7 @@ function Example() {
   );
 }
 
-export default () => {
+export default function Docs() {
   return (
     <NativeBaseProvider>
       <Box flex={1} bg={"white"}>
@@ -143,4 +143,4 @@ export default () => {
       </Box>
     </NativeBaseProvider>
   );
-};
+}
