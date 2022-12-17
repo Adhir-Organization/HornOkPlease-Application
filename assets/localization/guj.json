@@ -1,0 +1,71 @@
+{
+    "dashboard": {
+        "home": "ઘર",
+        "hello": "નમસ્તે",
+        "john": "જ્હોન",
+        "on-road expense": "રસ્તા પરનો ખર્ચ",
+        "current trip": "વર્તમાન સફર",
+        "workshop": "વર્કશોપ",
+        "repaired": "સમારકામ",
+        "shortcuts": "શૉર્ટકટ્સ",
+        "license": "લાઇસન્સ",
+        "expense entry": "ખર્ચ પ્રવેશ",
+        "assigned trip": "સોંપાયેલ સફર",
+        "status": "સ્થિતિ"
+    },
+    "contact": {
+        "tyre shop": "ટાયરની દુકાન",
+        "supervisor": "સુપરવાઇઝર",
+        "workshop": "વર્કશોપ",
+        "fleet manager": "ફ્લીટ મેનેજર",
+        "maintenance": "જાળવણી"
+    },
+    "expense entry": {
+        "expense name": "ખર્ચનું નામ",
+        "select expense name": "ખર્ચનું નામ પસંદ કરો",
+        "expense category": "ખર્ચ શ્રેણી",
+        "select category": "શ્રેણી પસંદ કરો",
+        "amount": "રકમ",
+        "remark": "ટિપ્પણી",
+        "enter your remark": "તમારી ટિપ્પણી દાખલ કરો",
+        "optional": "વૈકલ્પિક",
+        "upload receipt": "અપલોડ રસીદ",
+        "submit": "સબમિટ કરો"
+    },
+    "maintenance": {
+        "date": "તારીખ",
+        "select issue": "મુદ્દો પસંદ કરો",
+        "amount": "રકમ",
+        "done date": "પૂર્ણ તારીખ",
+        "garage name": "ગેરેજનું નામ",
+        "remark": "ટિપ્પણી",
+        "record voice": "અવાજ રેકોર્ડ કરો",
+        "submit": "સબમિટ કરો"
+    },
+    "profile": {
+        "john doe": "જ્હોન ડો",
+        "tata truck": "ટાટા ટ્રક"
+    },
+    "documents": {
+        "docs": "દસ્તાવેજ",
+        "consignments": "માલસામાન",
+        "lr": "એલ.આર",
+        "upload": "અપલોડ કરો",
+        "no on-going trip": "કોઈ ચાલુ સફર નથી",
+        "open with": "સાથે ખોલો",
+        "just once": "માત્ર એક જ વાર",
+        "always": "હંમેશા"
+    },
+    "assigned trip": {
+        "vehicle number": "વાહન નંબર",
+        "date": "તારીખ",
+        "from": "સ્ત્રોત",
+        "to": "ગંતવ્ય",
+        "duration": "સમયગાળો",
+        "diesel": "ડીઝલ",
+        "advance amount": "એડવાન્સ રકમ",
+        "flat": "ફ્લેટ",
+        "estimated km": "અંદાજિત કિલોમીટર",
+        "lr number": "એલઆર નંબર"
+    }
+}

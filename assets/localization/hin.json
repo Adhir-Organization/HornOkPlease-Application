@@ -1,0 +1,71 @@
+{
+    "dashboard": {
+        "home": "घर",
+        "hello": "नमस्ते",
+        "john": "जॉन",
+        "on-road expense": "ऑन-रोड खर्च",
+        "current trip": "वर्तमान यात्रा",
+        "workshop": "कार्यशाला",
+        "repaired": "मरम्मत",
+        "shortcuts": "शॉर्टकट",
+        "license": "लाइसेंस",
+        "expense entry": "व्यय प्रविष्टि",
+        "assigned trip": "असाइन की गई यात्रा",
+        "status": "दर्जा"
+    },
+    "contact": {
+        "tyre shop": "टायर की दुकान",
+        "supervisor": "पर्यवेक्षक",
+        "workshop": "कार्यशाला",
+        "fleet manager": "नौसेना प्रबंधक",
+        "maintenance": "भरण पोषण"
+    },
+    "expense entry": {
+        "expense name": "व्यय नाम",
+        "select expense name": "व्यय नाम चुनें",
+        "expense category": "व्यय श्रेणी",
+        "select category": "श्रेणी चुनना",
+        "amount": "रकम",
+        "remark": "टिप्पणी",
+        "enter your remark": "अपनी टिप्पणी दर्ज करें",
+        "optional": "वैकल्पिक",
+        "upload receipt": "रसीद अपलोड करें",
+        "submit": "प्रस्तुत"
+    },
+    "maintenance": {
+        "date": "दिनांक",
+        "select issue": "मुद्दा चुनें",
+        "amount": "रकम",
+        "done date": "तिथि",
+        "garage name": "गैरेज का नाम",
+        "remark": "टिप्पणी",
+        "record voice": "आवाज रिकॉर्ड करना",
+        "submit": "प्रस्तुत"
+    },
+    "profile": {
+        "john doe": "जॉन डो",
+        "tata truck": "टाटा ट्रक"
+    },
+    "documents": {
+        "docs": "डॉक्स",
+        "consignments": "खेप",
+        "lr": "एलआर",
+        "upload": "डालना",
+        "no on-going trip": "कोई चल रही यात्रा नहीं",
+        "open with": "के साथ खोलें",
+        "just once": "सिर्फ एक बार",
+        "always": "हमेशा"
+    },
+    "assigned trip": {
+        "vehicle number": "गाडी नंबर",
+        "date": "दिनांक",
+        "from": "प्रस्थान बिंदू",
+        "to": "गंतव्य",
+        "duration": "अवधि",
+        "diesel": "डीज़ल",
+        "advance amount": "अग्रिम राशि",
+        "flat": "समतल",
+        "estimated km": "अनुमानित किलोमीटर",
+        "lr number": "एलआर संख्या"
+    }
+}
