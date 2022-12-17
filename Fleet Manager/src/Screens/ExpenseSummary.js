@@ -43,7 +43,7 @@ const ExpenseSummary = () => {
                         expenseType={"Tyre Maintanence"}
                         uom={"cost/UOM"}
                         color={"#D2D2D2"}
-                        date={"10 august 2022"}
+                        date={"1 august 2023"}
                         cost={"-2200"}
                         remainCost={"₹80"}
 
