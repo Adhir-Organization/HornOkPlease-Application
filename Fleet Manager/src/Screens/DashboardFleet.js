@@ -30,6 +30,7 @@ const DashboardFleet = () => {
             name={"On-Road"}
             color={"green.200"}
             btnColor={"#279600"}
+            fn={() => navigation.navigate("ExpenseSummary")}
           />
           <TruckBox
             iconName={"truck"}
@@ -37,6 +38,7 @@ const DashboardFleet = () => {
             name={"Available"}
             color={"orange.200"}
             btnColor={"orange.500"}
+            fn={() => navigation.navigate("ExpenseSummary")}
           />
           <TruckBox
             iconName={"road"}
@@ -44,6 +46,7 @@ const DashboardFleet = () => {
             name={"In-Workshop"}
             color={"#FFBCBC"}
             btnColor={"#FF3E3E"}
+            fn={() => navigation.navigate("ExpenseSummary")}
           />
         </Box>
         <Box>
