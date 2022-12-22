@@ -54,7 +54,7 @@ const AvailableTrucks = () => {
                     <AvailableBox
                         truckName={"Volvo"}
                         iconName={"truck"}
-                        truckId={"11s545242"}
+                        truckId={"11s545242"} 
                         color={"#D2D2D2"}
                         btnColor={"#FFBE17"}
                     />
@@ -81,7 +81,7 @@ const AvailableTrucks = () => {
                         color={"#D2D2D2"}
                         btnColor={"#FFBE17"}
 
-                    />
+                    /> 
                     <AvailableBox
                         truckName={"tata"}
                         iconName={"truck"}
@@ -89,10 +89,10 @@ const AvailableTrucks = () => {
                         color={"#D2D2D2"}
                         btnColor={"#FFBE17"}
                     />
-                  </Box>
+                  </Box> 
                 <Box>
                 </Box>
-            </ScrollView>
+            </ScrollView>  
 
         </Box>
     );

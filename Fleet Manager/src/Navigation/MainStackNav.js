@@ -16,6 +16,7 @@ import LoginFleet from "../Screens/LoginFleet";
 import OTPVerificationFleet from "../Screens/OTPVerificationFleet";
 import ExpenseSummary from "../Screens/ExpenseSummary";
 import AvailableTrucks from "../Screens/AvailableTrucks";
+import OnroadTrucks from "../Screens/OnroadTrucks";
 import TabNavigation from "./TabNavigationFleet";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
@@ -48,6 +49,7 @@ export default function MainStackNav() {
       <Stack.Screen name="TabNavigation" component={TabNavigation} />
       <Stack.Screen name="ExpenseSummary" component={ExpenseSummary} />
       <Stack.Screen name="AvailableTrucks" component={AvailableTrucks} />
+      <Stack.Screen name="OnroadTrucks" component={OnroadTrucks} />
     </Stack.Navigator>
   );
 }

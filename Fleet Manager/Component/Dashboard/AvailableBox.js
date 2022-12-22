@@ -19,7 +19,7 @@ const AvailableBox = (props) => {
             backgroundColor={props.color}
             borderRadius="9"
         >
-            <HStack>
+            <HStack> 
                 <IconButton
                     icon={<Icon name={props.iconName} color={"white"} size={27} />}
                     variant="unstyled"
@@ -37,12 +37,6 @@ const AvailableBox = (props) => {
                         </Text>
                     </VStack>
                 </Box>
-
-                {/* <Box height={7} backgroundColor={"blue.300"} borderRadius="16" mx="12">
-                    <Text onPress={props.fn} pl="2" pr="3" pt="1">
-                        View All <Icon name="arrow-right"></Icon>
-                    </Text>
-                </Box> */}
             </HStack>
         </Box>
     );

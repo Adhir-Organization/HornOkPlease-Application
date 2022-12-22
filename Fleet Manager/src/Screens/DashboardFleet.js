@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Box, Center, Text, HStack, ScrollView, Button } from "native-base";
 import Icon from "react-native-vector-icons/EvilIcons";
 import TruckBox from "../../Component/Dashboard/TruckBox";
@@ -31,7 +30,7 @@ const DashboardFleet = () => {
             name={"On-Road"}
             color={"green.200"}
             btnColor={"#279600"}
-            fn={() => navigation.navigate("ExpenseSummary")}
+            fn={() => navigation.navigate("OnroadTrucks")}
           />
           <TruckBox
             iconName={"truck"}
