@@ -16,7 +16,7 @@ const ExpenseSummary = () => {
                 </HStack>
             </Box>
 
-            <Box  padding="3">
+            <Box padding="3">
                 <HStack>
                     <Center>
                         <Text fontSize="xl" color="black" mx="24">

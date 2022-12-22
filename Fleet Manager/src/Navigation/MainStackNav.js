@@ -15,6 +15,7 @@ import {
 import LoginFleet from "../Screens/LoginFleet";
 import OTPVerificationFleet from "../Screens/OTPVerificationFleet";
 import ExpenseSummary from "../Screens/ExpenseSummary";
+import AvailableTrucks from "../Screens/AvailableTrucks";
 import TabNavigation from "./TabNavigationFleet";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
@@ -45,7 +46,8 @@ export default function MainStackNav() {
       <Stack.Screen name="LoginFleet" component={LoginFleet} />
       <Stack.Screen name="OTPVerificationFleet" component={OTPVerificationFleet}/>
       <Stack.Screen name="TabNavigation" component={TabNavigation} />
-      <Stack.Screen name ="ExpenseSummary" component={ExpenseSummary} />
+      <Stack.Screen name="ExpenseSummary" component={ExpenseSummary} />
+      <Stack.Screen name="AvailableTrucks" component={AvailableTrucks} />
     </Stack.Navigator>
   );
 }
