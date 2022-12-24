@@ -26,8 +26,8 @@ const AssignTrip = () => {
                 <Box background="#0058DB" padding="3">
                     <HStack>
                         <Center>
-                            <Text fontSize="xl" color="white" mx={["110px"]}>
-                                Available Trucks
+                            <Text fontSize="xl" color="white" mx={["136px"]}>
+                                Assign Trip
                             </Text>
                         </Center>
                     </HStack>
@@ -36,9 +36,9 @@ const AssignTrip = () => {
                 <ScrollView>
                     <Box padding="3">
                         <HStack>
-                            <Text fontSize="xl" fontWeight={"bold"} color="black" mx="6">
-                                Available Trucks
-                            </Text>
+                            {/* <Text fontSize="xl" fontWeight={"bold"} color="black" mx="3">
+                                Assign Trip
+                            </Text> */}
                         </HStack>
                     </Box>
                     <Box p={5}>
