@@ -58,11 +58,14 @@ const DashboardFleet = () => {
           </Box>
 
           <Button
-            my="1/6"
+            my="1"
             size="lg"
             onPress={() => navigation.navigate("ExpenseSummary")}>
             Expense Summary 
-         </Button>
+          </Button>
+          <Button width="32" mx="auto" my="16">
+            Assign Trip
+          </Button>
 
         </Box>
       </ScrollView>
