@@ -101,8 +101,8 @@ const AssignTrip = () => {
                                     <FormControl.Label>Long Halt</FormControl.Label>
                                     <Input placeholder="Numbers of hours" />
                                 </Box>
-                                <Box marginBottom="12" display="flex" mx="auto" >
-                                    <Box display="flex" flexDirection="row" >
+                                <Box marginBottom="6" display="flex" mx="auto" >
+                                    <Box display="flex" flexDirection="row" marginBottom="4">
                                     <FormControl.Label>Estimate Kms</FormControl.Label>
                                     <Input placeholder="Numbers of hours" width="40" />
                                     </Box>
@@ -113,6 +113,9 @@ const AssignTrip = () => {
                                     </Box>
                                 </Box>
                             </VStack>
+                            <Button width="32" mx="auto" marginBottom="12">
+                                Assign Trip
+                            </Button>
                         </FormControl>
                     </Box>
                 </ScrollView>
