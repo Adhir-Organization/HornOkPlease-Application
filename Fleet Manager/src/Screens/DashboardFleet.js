@@ -61,10 +61,10 @@ const DashboardFleet = () => {
             my="1"
             size="lg"
             onPress={() => navigation.navigate("ExpenseSummary")}>
-            Expense Summary 
+            Expense Summary
           </Button>
           <Button width="32" mx="auto" my="16"
-           onPress={() => navigation.navigate("AssignTrip")}>
+            onPress={() => navigation.navigate("AssignTrip")}>
             Assign Trip
           </Button>
 
