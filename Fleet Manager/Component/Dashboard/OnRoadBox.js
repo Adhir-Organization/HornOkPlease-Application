@@ -10,7 +10,7 @@ import {
 import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-const OnRoadBox = ({ truckName, truckId, icon, from, to, color, btnColor }) => {
+const OnRoadBox = ({ truckName, truckId, icon, from, to, color, btnColor,update }) => {
     return (
         <Box
             padding="5"
@@ -29,9 +29,15 @@ const OnRoadBox = ({ truckName, truckId, icon, from, to, color, btnColor }) => {
                 />
                 <Box mx="6">
                     <VStack space="1">
+                        <HStack space="2">
                         <Text fontSize={24} mb={-1}>
                             {truckName}
                         </Text>
+                        <Text marginTop="2">
+                            {update}
+                        </Text>
+
+                        </HStack>
                         <Text fontSize={16} fontWeight="medium">
                             {truckId}
                         </Text>

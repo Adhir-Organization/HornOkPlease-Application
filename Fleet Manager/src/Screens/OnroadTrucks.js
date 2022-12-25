@@ -22,6 +22,7 @@ const OnroadTrucks = () => {
             to: "dubai",
             color: "#D2D2D2",
             btnColor:"#FFBE17",
+            update:"updated 3 hrs ago",
         },
         
         {
@@ -32,6 +33,7 @@ const OnroadTrucks = () => {
             to: "dubai",
             color: "#D2D2D2",
             btnColor: "#FFBE17",
+            update:"updated 3 hrs ago",
         },
         {
             truckName: "Volvo",
@@ -41,6 +43,7 @@ const OnroadTrucks = () => {
             to: "dubai",
             color: "#D2D2D2",
             btnColor: "#FFBE17",
+            update:"updated 3 hrs ago",
         },
         {
             truckName: "tata",
@@ -50,6 +53,7 @@ const OnroadTrucks = () => {
             to: "dubai",
             color: "#D2D2D2",
             btnColor: "#FFBE17",
+            update:"updated 3 hrs ago",
         },
     ];
 
