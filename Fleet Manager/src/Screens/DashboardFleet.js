@@ -12,6 +12,7 @@ import {
 import Icon from "react-native-vector-icons/EvilIcons";
 import TruckBox from "../../Component/Dashboard/TruckBox";
 import Graph from "../../Component/Dashboard/Graph";
+// import AvailableTrucks from "./AvailableTrucks";
 import { useNavigation } from "@react-navigation/native";
 import Draw from "../../Component/Dashboard/Draw";
 
@@ -44,6 +45,7 @@ const DashboardFleet = () => {
             name={"On-Road"}
             color={"green.200"}
             btnColor={"#279600"}
+            fn={() => navigation.navigate("OnroadTrucks")}
           />
           <TruckBox
             iconName={"truck"}
@@ -51,6 +53,7 @@ const DashboardFleet = () => {
             name={"Available"}
             color={"orange.200"}
             btnColor={"orange.500"}
+            fn={() => navigation.navigate("AvailableTrucks")}
           />
           <TruckBox
             iconName={"road"}
@@ -58,6 +61,7 @@ const DashboardFleet = () => {
             name={"In-Workshop"}
             color={"#FFBCBC"}
             btnColor={"#FF3E3E"}
+            fn={() => navigation.navigate("ExpenseSummary")}
           />
         </Box>
         <Box>
@@ -69,11 +73,19 @@ const DashboardFleet = () => {
           </Box>
 
           <Button
-            my="1/6"
+            my="1"
             size="lg"
             onPress={() => navigation.navigate("ExpenseSummary")}
           >
             Expense Summary
+          </Button>
+          <Button
+            width="32"
+            mx="auto"
+            my="16"
+            onPress={() => navigation.navigate("AssignTrip")}
+          >
+            Assign Trip
           </Button>
         </Box>
       </ScrollView>

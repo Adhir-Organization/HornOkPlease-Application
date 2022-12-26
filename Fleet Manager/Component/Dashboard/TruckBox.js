@@ -37,11 +37,11 @@ const TruckBox = (props) => {
             </Text>
           </VStack>
         </Box>
-
+ 
         <Box height={7} backgroundColor={"blue.300"} borderRadius="16" mx="12">
-          <Text pl="3" pr="3" pt="1">
+          <Text onPress={props.fn} pl="2" pr="3" pt="1">
             View All <Icon name="arrow-right"></Icon>
-          </Text>
+          </Text> 
         </Box>
       </HStack>
     </Box>

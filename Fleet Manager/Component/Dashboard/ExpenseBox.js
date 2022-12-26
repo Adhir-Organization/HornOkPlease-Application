@@ -4,7 +4,7 @@ import {
     Text,
     HStack,
     IconButton,
-    VStack,
+    VStack, 
     Button,
 } from "native-base";
 import React from "react";
