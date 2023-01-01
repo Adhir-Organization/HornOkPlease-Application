@@ -10,9 +10,12 @@ import {
 } from "native-base";
 import React from "react";
 import OnRoadBox from "../../Component/Dashboard/OnRoadBox";
+import { useNavigation } from "@react-navigation/native";
+
 
 const OnroadTrucks = () => {
 
+    const navigation = useNavigation({});
     const available = [
         {
             truckName: "Tata",
@@ -22,7 +25,8 @@ const OnroadTrucks = () => {
             to: "dubai",
             color: "#D2D2D2",
             btnColor:"#FFBE17",
-            update:"updated 3 hrs ago",
+            update: "updated 3 hrs ago",
+            // lnk: navigation.navigate("OnRoadTrucksDetails"),
         },
         
         {
@@ -33,7 +37,9 @@ const OnroadTrucks = () => {
             to: "dubai",
             color: "#D2D2D2",
             btnColor: "#FFBE17",
-            update:"updated 3 hrs ago",
+            update: "updated 3 hrs ago",
+            // link: navigation.navigate("OnRoadTrucksDetails") 
+
         },
         {
             truckName: "Volvo",
@@ -43,7 +49,8 @@ const OnroadTrucks = () => {
             to: "dubai",
             color: "#D2D2D2",
             btnColor: "#FFBE17",
-            update:"updated 3 hrs ago",
+            update: "updated 3 hrs ago",
+            // link: navigation.navigate("OnRoadTrucksDetails") 
         },
         {
             truckName: "tata",
@@ -53,12 +60,14 @@ const OnroadTrucks = () => {
             to: "dubai",
             color: "#D2D2D2",
             btnColor: "#FFBE17",
-            update:"updated 3 hrs ago",
+            update: "updated 3 hrs ago",
+            // link: navigation.navigate("OnRoadTrucksDetails") 
+
         },
     ];
 
-
     return (
+
         <Box safeArea>
 
             <Box background="#0058DB" padding="3">

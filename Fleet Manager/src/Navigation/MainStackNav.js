@@ -19,6 +19,7 @@ import AvailableTrucks from "../Screens/AvailableTrucks";
 import OnroadTrucks from "../Screens/OnroadTrucks";
 import TabNavigation from "./TabNavigationFleet";
 import AssignTrip from "../Screens/AssignTrip";
+import OnRoadTrucksDetails from "../Screens/OnRoadTrucksDetails";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import DrawerNav from "./DrawerNav";
 const Stack = createStackNavigator();
@@ -51,6 +52,7 @@ export default function MainStackNav() {
       <Stack.Screen name="ExpenseSummary" component={ExpenseSummary} />
       <Stack.Screen name="AvailableTrucks" component={AvailableTrucks} />
       <Stack.Screen name="OnroadTrucks" component={OnroadTrucks} />
+      <Stack.Screen name="OnRoadTrucksDetails" component={OnRoadTrucksDetails} />
       <Stack.Screen name="AssignTrip" component={AssignTrip} />
     </Stack.Navigator>
   );
