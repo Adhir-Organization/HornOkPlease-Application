@@ -8,6 +8,7 @@ import Icon from "react-native-vector-icons/Feather";
 const Tab = createMaterialBottomTabNavigator();
 
 export default function TabNavigation() {
+
   return (
     <Tab.Navigator barStyle={{ backgroundColor: "#2871E6" }}>
       <Tab.Screen
@@ -43,5 +44,7 @@ export default function TabNavigation() {
         }}
       />
     </Tab.Navigator>
+
+    
   );
 }

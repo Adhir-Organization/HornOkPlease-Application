@@ -96,9 +96,9 @@ export default function Contacts() {
                       <Icon
                         name="call-sharp"
                         size={28}
-                        onPress={() => {
-                          Linking.openURL(`tel:${item.phone}`);
-                        }}
+                        // onPress={() => {
+                        //   Linking.openURL(`tel:${item.phone}`);
+                        // }}
                       />
                     </Box>
                   </TouchableOpacity>

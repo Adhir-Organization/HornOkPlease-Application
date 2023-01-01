@@ -1,11 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
-
+import Draw from "../../Component/Dashboard/Draw";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 const NotificationFleet = () => {
   return (
-    <View>
-      <Text>NotificationFleet</Text>
-    </View>
+    <SafeAreaProvider>
+      <Draw />
+    </SafeAreaProvider>
   );
 };
 

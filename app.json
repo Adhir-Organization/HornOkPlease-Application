@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.hornokplease.HornOkPlease"
+      "package": "com.HornOkPlease.HornOkPlease"
     },
     "web": {
       "favicon": "./assets/favicon.png"
