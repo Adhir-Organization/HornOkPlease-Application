@@ -20,8 +20,6 @@ const DashboardFleet = () => {
   const navigation = useNavigation({});
   return (
     <Box safeArea>
-      <Draw />
-
       <Box background="#0058DB" padding="3">
         <HStack>
           <HamburgerIcon
