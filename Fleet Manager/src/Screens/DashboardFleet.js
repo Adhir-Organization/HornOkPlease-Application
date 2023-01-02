@@ -25,7 +25,7 @@ const DashboardFleet = () => {
           <HamburgerIcon
             size="8"
             color="white"
-            onPress={() => navigation.navigate("DrawerNav")}
+            onPress={() => navigation.navigate("Draw")}
           ></HamburgerIcon>
           {/* <Icon name="navicon" size={30} color={"black"} /> */}
           <Center>

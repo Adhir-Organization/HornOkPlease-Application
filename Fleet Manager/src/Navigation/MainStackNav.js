@@ -20,7 +20,7 @@ import OnroadTrucks from "../Screens/OnroadTrucks";
 import TabNavigation from "./TabNavigationFleet";
 import AssignTrip from "../Screens/AssignTrip";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import DrawerNav from "./DrawerNav";
+
 const Stack = createStackNavigator();
 const theme = extendTheme({
   colors: {
@@ -46,7 +46,10 @@ export default function MainStackNav() {
       }}
     >
       <Stack.Screen name="LoginFleet" component={LoginFleet} />
-      <Stack.Screen name="OTPVerificationFleet" component={OTPVerificationFleet}/>
+      <Stack.Screen
+        name="OTPVerificationFleet"
+        component={OTPVerificationFleet}
+      />
       <Stack.Screen name="TabNavigation" component={TabNavigation} />
       <Stack.Screen name="ExpenseSummary" component={ExpenseSummary} />
       <Stack.Screen name="AvailableTrucks" component={AvailableTrucks} />
