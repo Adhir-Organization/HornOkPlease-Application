@@ -9,10 +9,14 @@ import {
 } from "native-base";
 import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
+import OnroadTrucks from "../../src/Screens/OnroadTrucks";
+import { useNavigation } from "@react-navigation/native";
 
-const OnRoadBox = ({ truckName, truckId, icon, from, to, color, btnColor,update,lnk }) => {
+const OnRoadBox = ({ truckName, truckId, icon, from, to, screenNavigation, color, btnColor,update }) => {
+    const navigation = useNavigation();
+
     return (
-        <Button onPress={lnk}
+        <Box
             padding="5"  
             mx="3"      
             my="3"
@@ -54,7 +58,15 @@ const OnRoadBox = ({ truckName, truckId, icon, from, to, color, btnColor,update,
                     To: {to}
                 </Text>
             </HStack>
-        </Button>
+            <Box>
+                {/* <Button mt="4" fontSize="xl"
+                    // onPress={navigation.navigate(screenNavigation)}
+                    onPress={screenNavigation}
+                >
+                    go
+                </Button> */}
+            </Box>
+        </Box>
     );
 };
 

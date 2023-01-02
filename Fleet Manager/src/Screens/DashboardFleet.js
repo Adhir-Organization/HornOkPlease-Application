@@ -69,14 +69,19 @@ const DashboardFleet = () => {
           <Box borderColor="amber.500" borderWidth="1" mx="4">
             <Graph />
           </Box>
+          {/* <HStack space="32" display="flex" flexDirection="row" >
+            <Button
+              // w="1/2"
+              // h="20"
+              my="1"
+              size="md"
+              onPress={() => navigation.navigate("ExpenseSummary")}
+              >
+              Expense Summary
+            </Button>
+            <Button size="md">wrdvrd</Button>
+          </HStack> */}
 
-          <Button
-            my="1"
-            size="lg"
-            onPress={() => navigation.navigate("ExpenseSummary")}
-          >
-            Expense Summary
-          </Button>
           <Button
             width="32"
             mx="auto"

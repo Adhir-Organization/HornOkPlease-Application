@@ -3,8 +3,15 @@ import React from "react";
 import { Dimensions } from "react-native";
 const screenWidth = Dimensions.get("screen").width - 33;
 import { BarChart } from "react-native-chart-kit";
-
-const Graph = () => {
+import {
+  Box,
+  Center,
+  HStack,
+  IconButton,
+  VStack,
+  Button,
+} from "native-base";
+const Graph = (props) => {
   const data = {
     labels: [0, 1, 2, 3, 4, 5],
     datasets: [
@@ -34,7 +41,7 @@ const Graph = () => {
       yAxisLabel="$"
       chartConfig={chartConfig}
       showValuesOnTopOfBars={true}
-    ></BarChart>
+      ></BarChart>
   );
 };
 
