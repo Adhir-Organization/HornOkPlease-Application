@@ -8,6 +8,11 @@ import {
   ScrollView,
   Button,
   HamburgerIcon,
+  NativeBaseProvider,
+  Menu,
+  Divider,
+  Pressable,
+  View
 } from "native-base";
 import Icon from "react-native-vector-icons/EvilIcons";
 import TruckBox from "../../Component/Dashboard/TruckBox";
@@ -18,6 +23,33 @@ import Draw from "../../Component/Dashboard/Draw";
 
 const DashboardFleet = () => {
   const navigation = useNavigation({});
+
+  function Example() {
+    return <Box w="100%">
+      <Menu w="440" h="735" trigger={triggerProps => {
+        return <Pressable {...triggerProps}>
+          <HamburgerIcon size="8" />
+        </Pressable>;
+      }}>
+        <Menu.Group title="Free">
+          <Menu.Item>vehicle</Menu.Item>
+          <Menu.Item>driver</Menu.Item>
+          <Menu.Item>driver document</Menu.Item>
+          <Menu.Item>driver document</Menu.Item>
+          <Menu.Item>driver document</Menu.Item>
+          <Menu.Item>driver document</Menu.Item>
+
+        </Menu.Group>
+        <Divider mt="3" w="100%" />
+        <Menu.Group title="Paid">
+          <Menu.Item>SF Pro</Menu.Item>
+          <Menu.Item>Helvetica</Menu.Item>
+        </Menu.Group>
+      </Menu>
+    </Box>;
+  }
+
+
   return (
     <Box safeArea>
       <Box background="#0058DB" padding="3">
@@ -25,7 +57,7 @@ const DashboardFleet = () => {
           <HamburgerIcon
             size="8"
             color="white"
-            onPress={() => navigation.navigate("DrawerNav")}
+            onPress={() => navigation.navigate( 'Draw' )}
           ></HamburgerIcon>
           {/* <Icon name="navicon" size={30} color={"black"} /> */}
           <Center>
@@ -35,6 +67,13 @@ const DashboardFleet = () => {
           </Center>
         </HStack>
       </Box>
+
+      {/* //hamburger  */}
+      <Center py="4" ml="2">
+        <Example />
+      </Center>
+      
+      
       <ScrollView>
         <Box mx="5" my="4">
           <TruckBox
@@ -69,20 +108,47 @@ const DashboardFleet = () => {
           <Box borderColor="amber.500" borderWidth="1" mx="4">
             <Graph />
           </Box>
-          {/* <HStack space="32" display="flex" flexDirection="row" >
-            <Button
-              // w="1/2"
-              // h="20"
-              my="1"
+          <HStack mx="auto" space="7" display="flex" flexDirection="row" >
+            <Button 
+              _text={{
+                color: "black",
+              }}
+              shadow="4"
+              backgroundColor="#FFFFFF"
+              w="1/3"
+              h="32"
+              my="8"
               size="md"
+              borderRadius="xl"
               onPress={() => navigation.navigate("ExpenseSummary")}
-              >
-              Expense Summary
+            >
+              <Text fontSize="xl">10,000</Text>
+              <Text fontSize="xs">Last Month Expense</Text>
+              <Text fontWeight="extrabold" borderRadius="2xl" px="3" bg="#0ACFCF" mt="4">View Details</Text>
+            </Button >
+            <Button
+              _text={{
+                color: "black",
+              }}
+              shadow="4"
+              backgroundColor="#FFFFFF"
+              w="1/3"
+              h="32"
+              my="8"
+              size="md"
+              borderRadius="xl"
+              onPress={() => navigation.navigate("ExpenseSummary")}
+            >
+              <Text fontSize="xl">42</Text>
+              <Text fontSize="xs">Trips Occurred</Text>
+              <Text fontWeight="extrabold" borderRadius="2xl" px="3" bg="#0ACFCF" mt="4">View Details</Text>
             </Button>
-            <Button size="md">wrdvrd</Button>
-          </HStack> */}
+          </HStack>
+
+          
 
           <Button
+            marginTop="1"
             width="32"
             mx="auto"
             my="16"
