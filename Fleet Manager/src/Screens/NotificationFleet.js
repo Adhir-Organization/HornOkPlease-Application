@@ -1,13 +1,12 @@
-import { View, Text } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import Draw from "../../Component/Dashboard/Draw";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-const NotificationFleet = () => {
-  return (
-    <SafeAreaProvider>
-      <Draw />
-    </SafeAreaProvider>
-  );
-};
 
-export default NotificationFleet;
+export default function NotificationFleet() {
+  return (
+    <View>
+      <Text>NotificationFleet</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({});
