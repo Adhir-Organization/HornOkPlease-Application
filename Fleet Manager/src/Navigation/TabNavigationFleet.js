@@ -2,13 +2,12 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import DashboardFleet from "../Screens/DashboardFleet";
 import LRDocsFleet from "../Screens/LRDocsFleet";
 import NotificationFleet from "../Screens/NotificationFleet";
-import Unknown from "../Screens/Unknown";
 import Icon from "react-native-vector-icons/Feather";
+import Add_Vehicle from "../Screens/Drawer Screens/Add_Vehicle";
 
 const Tab = createMaterialBottomTabNavigator();
 
 export default function TabNavigation() {
-
   return (
     <Tab.Navigator barStyle={{ backgroundColor: "#2871E6" }}>
       <Tab.Screen
@@ -36,15 +35,13 @@ export default function TabNavigation() {
         }}
       />
       <Tab.Screen
-        name="Unknown"
-        component={Unknown}
+        name="Add_Vehicle"
+        component={Add_Vehicle}
         options={{
           tabBarLabel: "Contacts",
           tabBarIcon: () => <Icon name="phone" color="white" size={24} />,
         }}
       />
     </Tab.Navigator>
-
-    
   );
 }

@@ -20,6 +20,7 @@ import OnroadTrucks from "../Screens/OnroadTrucks";
 import TabNavigation from "./TabNavigationFleet";
 import AssignTrip from "../Screens/AssignTrip";
 import OnRoadTrucksDetails from "../Screens/OnRoadTrucksDetails";
+import DrawerNav from "../Navigation/DrawerNav";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const Stack = createStackNavigator();
@@ -40,23 +41,29 @@ const theme = extendTheme({
 
 export default function MainStackNav() {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-      }}
-    >
-      <Stack.Screen name="LoginFleet" component={LoginFleet} />
-      <Stack.Screen
-        name="OTPVerificationFleet"
-        component={OTPVerificationFleet}
-      />
-      <Stack.Screen name="TabNavigation" component={TabNavigation} />
-      <Stack.Screen name="ExpenseSummary" component={ExpenseSummary} />
-      <Stack.Screen name="AvailableTrucks" component={AvailableTrucks} />
-      <Stack.Screen name="OnroadTrucks" component={OnroadTrucks} />
-      <Stack.Screen name="OnRoadTrucksDetails" component={OnRoadTrucksDetails} />
-      <Stack.Screen name="AssignTrip" component={AssignTrip} />
-    </Stack.Navigator>
+    <SafeAreaProvider>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      >
+        <Stack.Screen name="LoginFleet" component={LoginFleet} />
+        <Stack.Screen
+          name="OTPVerificationFleet"
+          component={OTPVerificationFleet}
+        />
+        <Stack.Screen name="TabNavigation" component={TabNavigation} />
+        <Stack.Screen name="ExpenseSummary" component={ExpenseSummary} />
+        <Stack.Screen name="AvailableTrucks" component={AvailableTrucks} />
+        <Stack.Screen name="OnroadTrucks" component={OnroadTrucks} />
+        <Stack.Screen
+          name="OnRoadTrucksDetails"
+          component={OnRoadTrucksDetails}
+        />
+        <Stack.Screen name="AssignTrip" component={AssignTrip} />
+        <Stack.Screen name="DrawerNav" component={DrawerNav} />
+      </Stack.Navigator>
+    </SafeAreaProvider>
   );
 }
