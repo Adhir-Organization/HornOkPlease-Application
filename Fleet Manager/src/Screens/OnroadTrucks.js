@@ -30,7 +30,7 @@ const OnroadTrucks = () => {
 
     {
       // screenNavigation: navigation.navigate("OnRoadTrucksDetails"),
-      screenNavigation: "LRDocsFleet",
+      screenNavigation: "OnRoadTrucksDetails",
       truckName: "Volvo",
       truckId: "5515s54154",
       icon: "truck",
@@ -41,7 +41,7 @@ const OnroadTrucks = () => {
       update: "updated 3 hrs ago",
     },
     {
-      screenNavigation: "ExpenseSummary",
+      screenNavigation: "OnRoadTrucksDetails",
       // screenNavigation: navigation.navigate("OnRoadTrucksDetails"),
 
       truckName: "Volvo",
@@ -54,7 +54,7 @@ const OnroadTrucks = () => {
       update: "updated 3 hrs ago",
     },
     {
-      screenNavigation: "Driver",
+      screenNavigation: "OnRoadTrucksDetails",
       //   screenNavigation: navigation.navigate("OnRoadTrucksDetails"),
 
       truckName: "tata",

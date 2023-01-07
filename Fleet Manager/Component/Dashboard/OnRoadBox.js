@@ -54,15 +54,15 @@ const OnRoadBox = ({
         <Text fontSize={"lg"}>From: {from}</Text>
         <Text fontSize={"lg"}>To: {to}</Text>
       </HStack>
-      <Box>
-        <Button
+      <Box >
+        <Button 
           mt="4"
           fontSize="xl"
           //   onPress={navigation.navigate(screenNavigation)}
           //   onPress={screenNavigation}
           onPress={() => navigation.navigate(screenNavigation)}
         >
-          Go
+          View Details
         </Button>
       </Box>
     </Box>
