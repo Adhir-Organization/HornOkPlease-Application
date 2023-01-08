@@ -79,19 +79,19 @@ const OnRoadTrucksDetails = () => {
                 </VStack>
                 <Box mx="5" my="4" mb="16">
                     <TripExpenseBox
-                        // iconName={"road"}
+                        icon={"truck"}
                         name={"Food"}
                         color={"#D2D2D2"}
                         btnColor={"#279600"}
                     />
                     <TripExpenseBox
-                        // iconName={"truck"}
+                        iconName={"truck"}
                         name={"Fuel"}
                         color={"#D2D2D2"}
                         btnColor={"orange.500"}
                     />
                     <TripExpenseBox
-                        // iconName={"road"}
+                        iconName={"road"}
                         name={"Food"}
                         color={"#D2D2D2"}
                         btnColor={"#FF3E3E"}

@@ -10,35 +10,34 @@ import {
 import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-const TripExpenseBox = (props) => {
+const TripExpenseBox = ({ name,icon, color, btnColor }) => {
     return (
         <>
             <Box
                 padding="3"
                 mx="3"
                 my="3"
-                backgroundColor={props.color}
+                backgroundColor={color}
                 borderRadius="9"
             >
                 <HStack alignItems="center">
                     <IconButton
-                        icon={<Icon name={props.iconName} color={"white"} size={27} />}
+                        icon={<Icon name={icon} color={"white"} size={27} />}
                         variant="unstyled"
                         rounded="full"
-                        backgroundColor={props.btnColor}
+                        backgroundColor={btnColor}
                         size="16"
                     />
                     <Box mx="3">
                         <VStack space="1">
                             <Text fontSize={18} bold>
-                                {props.name}
+                                {name}
                             </Text>
                         </VStack>
                     </Box>
                 </HStack>
             </Box>
             <Box>
-
             </Box>
         </>
     )
