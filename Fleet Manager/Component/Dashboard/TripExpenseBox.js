@@ -25,14 +25,14 @@ const TripExpenseBox = ({ name,icon, color, btnColor }) => {
                         icon={<Icon name={icon} color={"white"} size={27} />}
                         variant="unstyled"
                         rounded="full"
-                        backgroundColor={btnColor}
+                        backgroundColor={btnColor}   
                         size="16"
                     />
                     <Box mx="3">
                         <VStack space="1">
                             <Text fontSize={18} bold>
                                 {name}
-                            </Text>
+                            </Text>                                                                                                                      
                         </VStack>
                     </Box>
                 </HStack>

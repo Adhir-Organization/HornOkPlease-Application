@@ -85,13 +85,13 @@ const OnRoadTrucksDetails = () => {
                         btnColor={"#279600"}
                     />
                     <TripExpenseBox
-                        iconName={"truck"}
+                        icon={"truck"}
                         name={"Fuel"}
                         color={"#D2D2D2"}
                         btnColor={"orange.500"}
                     />
                     <TripExpenseBox
-                        iconName={"road"}
+                        icon={"road"}
                         name={"Food"}
                         color={"#D2D2D2"}
                         btnColor={"#FF3E3E"}
