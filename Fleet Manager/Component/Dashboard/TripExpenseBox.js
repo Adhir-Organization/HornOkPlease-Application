@@ -10,7 +10,7 @@ import {
 import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-const TripExpenseBox = ({ name,icon, color, btnColor }) => {
+const TripExpenseBox = ({ name, icon, color, btnColor }) => {
     return (
         <>
             <Box
@@ -25,7 +25,7 @@ const TripExpenseBox = ({ name,icon, color, btnColor }) => {
                         icon={<Icon name={icon} color={"white"} size={27} />}
                         variant="unstyled"
                         rounded="full"
-                        backgroundColor={btnColor}   
+                        backgroundColor={btnColor}
                         size="16"
                     />
                     <Box mx="1">
