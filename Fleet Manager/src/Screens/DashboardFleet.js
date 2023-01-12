@@ -102,7 +102,7 @@ const DashboardFleet = () => {
             <Divider w="100%" />
             <Menu.Item
               onPress={() =>
-                navigation.navigate("DrawerNav", { screen: "Add_Contacts" })
+                navigation.navigate("DrawerNav", { screen: "Add_Contact" })
               }
             >
               <Icons name="contact-phone" size={30} color="blue" />
@@ -111,7 +111,7 @@ const DashboardFleet = () => {
             <Divider w="100%" />
             <Menu.Item
               onPress={() =>
-                navigation.navigate("DrawerNav", { screen: "Settings" })
+                navigation.navigate("DrawerNav", { screen: "Add_Contact" })
               }
             >
               <Icons name="settings" size={30} color="blue" />
