@@ -57,7 +57,7 @@ const DashboardFleet = () => {
           <Menu.Group>
             <Menu.Item
               onPress={() =>
-                navigation.navigate("DrawerNav", { screen: "Add_Vehicle" })
+                navigation.navigate("DrawerNav", { screen: "Vehicle_Details" })
               }
             >
               <Icon name="truck" size={30} color="blue" />

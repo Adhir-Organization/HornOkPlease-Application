@@ -3,7 +3,10 @@ import DashboardFleet from "../Screens/DashboardFleet";
 import LRDocsFleet from "../Screens/LRDocsFleet";
 import NotificationFleet from "../Screens/NotificationFleet";
 import Icon from "react-native-vector-icons/Feather";
-import Add_Vehicle from "../Screens/Drawer Screens/Add_Vehicle";
+
+// import Vehicle_Details from "../Screens/Drawer Screens/Vehicle/Add_Vehicle1";
+// import Add_Vehicle1 from "../Screens/Drawer Screens/Vehicle/Add_Vehicle1";
+import Add_Vehicle2 from "../Screens/Drawer Screens/Vehicle/Add_Vehicle2";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -35,8 +38,8 @@ export default function TabNavigation() {
         }}
       />
       <Tab.Screen
-        name="Add_Vehicle"
-        component={Add_Vehicle}
+        name="Add_Vehicle2"
+        component={Add_Vehicle2}
         options={{
           tabBarLabel: "Contacts",
           tabBarIcon: () => <Icon name="phone" color="white" size={24} />,

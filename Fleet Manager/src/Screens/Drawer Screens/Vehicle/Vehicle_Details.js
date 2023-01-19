@@ -13,7 +13,7 @@ import {
 } from "native-base";
 import React from "react";
 
-const Add_Driver = () => {
+const Vehicle_Details = () => {
   return (
     <Box safeArea>
       <Box background="#0058DB" padding="3">
@@ -32,8 +32,11 @@ const Add_Driver = () => {
           <Button>Available</Button>
         </Box>
       </ScrollView>
+    <View>
+      <Text>Vehicle_Details</Text>
+    </View>
     </Box>
   );
 };
 
-export default Add_Driver;
+export default Vehicle_Details;
