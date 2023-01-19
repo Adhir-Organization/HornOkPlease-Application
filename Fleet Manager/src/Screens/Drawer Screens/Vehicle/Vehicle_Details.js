@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const Add_Driver = () => {
+const Vehicle_Details = () => {
   return (
     <View>
-      <Text>Add_Driver</Text>
+      <Text>Vehicle_Details</Text>
     </View>
   );
 };
 
-export default Add_Driver;
+export default Vehicle_Details;

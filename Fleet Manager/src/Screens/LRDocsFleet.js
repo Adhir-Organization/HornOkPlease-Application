@@ -16,13 +16,11 @@ const LRDocsFleet = () => {
   return (
     <Box safeArea>
       <Box background="#0058DB" padding="3">
-        <HStack>
-          <Center>
-            <Text fontSize="xl" color="white" mx={["110px"]}>
-              LR Docs
-            </Text>
-          </Center>
-        </HStack>
+        <Center>
+          <Text fontSize="xl" color="white" mx={["110px"]}>
+            LR Docs
+          </Text>
+        </Center>
       </Box>
       {/* 
       <Box padding="3">
