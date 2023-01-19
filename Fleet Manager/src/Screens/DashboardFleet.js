@@ -66,16 +66,16 @@ const DashboardFleet = () => {
             <Divider w="100%" />
             <Menu.Item
               onPress={() =>
-                navigation.navigate("DrawerNav", { screen: "Add_Driver" })
+                navigation.navigate("DrawerNav", { screen: "Driver_Details" })
               }
             >
               <Icons name="person-add-alt" size={30} color="blue" />
-              <Text fontSize="xl">Add Driver</Text>
+              <Text fontSize="xl">Driver Details</Text>
             </Menu.Item>
             <Divider w="100%" />
             <Menu.Item
               onPress={() =>
-                navigation.navigate("DrawerNav", { screen: "Driver_Docs" })
+                navigation.navigate("DrawerNav", { screen: "Driver_Details" })
               }
             >
               <Icon name="file-document-outline" size={30} color="blue" />
@@ -111,7 +111,7 @@ const DashboardFleet = () => {
             <Divider w="100%" />
             <Menu.Item
               onPress={() =>
-                navigation.navigate("DrawerNav", { screen: "Add_Contact" })
+                navigation.navigate("DrawerNav", { screen: "#" })
               }
             >
               <Icons name="settings" size={30} color="blue" />

@@ -19,8 +19,8 @@ const Vehicle_Details = () => {
       <Box background="#0058DB" padding="3">
         <HStack>
           <Center>
-            <Text fontSize="xl" color="white" mx={["125px"]}>
-              Add Contacts
+            <Text fontSize="xl" color="white" mx={["120px"]}>
+              Vehicle Details
             </Text>
           </Center>
         </HStack>

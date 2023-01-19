@@ -11,7 +11,7 @@ import {
 // Loading animation
 
 // Screens Import
-import Driver_Details from "../Screens/Drawer Screens/Driver_Details";
+// import Driver_Details from "../Screens/Drawer Screens/Driver_Details";
 import Add_Vehicle1 from "../Screens/Drawer Screens/Vehicle/Add_Vehicle1";
 
 import Add_Contact from "../Screens/Drawer Screens/Add_Contact";
@@ -21,6 +21,7 @@ import Settings from "../Screens/Drawer Screens/Settings";
 import Trips from "../Screens/Drawer Screens/Trips";
 import Add_Vehicle2 from "../Screens/Drawer Screens/Vehicle/Add_Vehicle2";
 import Vehicle_Details from "../Screens/Drawer Screens/Vehicle/Vehicle_Details";
+import Driver_Details from "../Screens/Drawer Screens/Driver_Details";
 
 const Stack = createStackNavigator();
 const theme = extendTheme({
@@ -49,7 +50,7 @@ export default function DrawerNav() {
       <Stack.Screen name="Vehicle_Details" component={Vehicle_Details} />
       <Stack.Screen name="Add_Vehicle1" component={Add_Vehicle1} />
       <Stack.Screen name="Add_Vehicle2" component={Add_Vehicle2} />
-      <Stack.Screen name="Add_Driver" component={Add_Driver} />
+      <Stack.Screen name="Driver_Details" component={Driver_Details} />
       <Stack.Screen name="Driver_Docs" component={Driver_Docs} />
       <Stack.Screen name="Trips" component={Trips} />
       <Stack.Screen name="Maintenance" component={Maintenance} />
