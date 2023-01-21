@@ -18,9 +18,10 @@ const DrawerBox = ({  driverName , number, icon ,color,btnColor }) => {
     return (
         <>
             <Box
-                padding="3"
-                mx="3"
-                // my="1"
+                // padding="2"
+                marginTop="3"
+                mx="6"
+                my="1"
                 // backgroundColor={color}
                 borderRadius="10"
             >
@@ -40,8 +41,8 @@ const DrawerBox = ({  driverName , number, icon ,color,btnColor }) => {
                             <Text fontSize={16} > 
                                 {number}
                             </Text>
-                            <Box height={7} marginTop="3" width="20" display="flex" alignItems="center" justifyContent="center" backgroundColor={"blue.300"} borderRadius="16" >
-                                <Text >
+                            <Box height={7} marginTop="2" width="20" display="flex" alignItems="center" justifyContent="center" backgroundColor={"blue.300"} borderRadius="16" >
+                                <Text>
                                     Available
                                 </Text>
                             </Box>
