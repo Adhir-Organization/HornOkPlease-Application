@@ -26,33 +26,35 @@ const Driver_Details = () => {
       number: "GJ06AB1234",
       icon: "road",
       color: "orange.200",
-      btnColor: "orange.500",
+      btnColor: "orange.400",
+
     },
 
     {
       // screenNavigation: "OnRoadTrucksDetails",
-      driverName: "dipesh kala",
+      driverName: "Ram Pal",
       number: "GJ06AB1234",
       icon: "truck",
       color: "orange.200",
-      btnColor: "orange.500",
+      btnColor: "orange.400",
     },
     {
       // screenNavigation: "OnRoadTrucksDetails",
-      driverName: "dipesh kala",
+      driverName: "Raju Gupta",
       number: "GJ06AB1234",
       icon: "truck",
       color: "orange.200",
-      btnColor: "orange.500",
+      btnColor: "orange.400",
       
     },
     {
       // screenNavigation: "OnRoadTrucksDetails",
-      driverName: "dipesh kala",
+      driverName: "John Doe",
       number: "GJ06AB1234",
       icon: "truck",
       color: "orange.200",
-      btnColor: "orange.500",
+      btnColor: "orange.400",
+
     },
 
   ];
@@ -80,6 +82,9 @@ const Driver_Details = () => {
             key={index}
           />
         ))}
+        <Button width="32" mx="auto" marginTop="7" onPress={() => navigation.navigate("Add_Driver1")}>
+          Add Driver 
+        </Button>
       </ScrollView>
     </Box>
   );
