@@ -51,8 +51,8 @@ const Add_Driver2 = () => {
         <InputBox title="License Issue State " placeholder="John Doe" />
         {/* <InputBox title="Lincense Issue Date" placeholder="1999" />
         <InputBox title="Lincense Expiry Date" placeholder="1999" /> */}
-        <DateSelectors name="Lincense Issue Date" />
-        <DateSelectors name="Lincense Expiry Date" />
+        <DateSelectors name="License Issue Date" />
+        <DateSelectors name="License Expiry Date" />
       </Box>
       <Button
         size="md"

@@ -16,7 +16,11 @@ const DateSelectors = (props) => {
   const [doneDate, setDoneDate] = useState();
   return (
     <Box mx="5" my="2">
-      <FormControl.Label color="black"> {props.name}</FormControl.Label>
+      <FormControl.Label>
+        <Text bold color="black">
+          {props.name}
+        </Text>
+      </FormControl.Label>
       <HStack
         justifyContent={"space-between"}
         alignItems={"center"}
