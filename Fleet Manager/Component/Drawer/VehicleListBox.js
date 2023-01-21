@@ -14,7 +14,7 @@ import {
 import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-const DrawerBox = ({  driverName , number, icon ,color,btnColor }) => {
+const VehicleList = ({ TruckNo, number, icon, color, btnColor }) => {
     return (
         <>
             <Box
@@ -27,7 +27,7 @@ const DrawerBox = ({  driverName , number, icon ,color,btnColor }) => {
             >
                 <HStack>
                     <IconButton
-                        // icon={<Icon name={icon} color={"white"} size={27} />}
+                        icon={<Icon name={icon} color={"white"} size={27} />}
                         variant="unstyled"
                         rounded="full"
                         backgroundColor={btnColor}
@@ -36,9 +36,9 @@ const DrawerBox = ({  driverName , number, icon ,color,btnColor }) => {
                     <Box mx="6">
                         <VStack >
                             <Text fontSize={24} >
-                                {driverName}
+                                {TruckNo}
                             </Text>
-                            <Text fontSize={16} > 
+                            <Text fontSize={16} >
                                 {number}
                             </Text>
                             <Box height={7} marginTop="2" width="20" display="flex" alignItems="center" justifyContent="center" backgroundColor={"blue.300"} borderRadius="16" >
@@ -50,7 +50,7 @@ const DrawerBox = ({  driverName , number, icon ,color,btnColor }) => {
                     </Box>
                 </HStack>
                 <Text borderBottomStyle="dashed" borderBottomWidth={"1"}>
-                </Text> 
+                </Text>
             </Box>
             <Box>
 
@@ -59,4 +59,4 @@ const DrawerBox = ({  driverName , number, icon ,color,btnColor }) => {
     )
 }
 
-export default DrawerBox;
+export default VehicleList;
