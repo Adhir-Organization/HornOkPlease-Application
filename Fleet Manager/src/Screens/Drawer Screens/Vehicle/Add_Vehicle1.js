@@ -1,18 +1,7 @@
 import React from "react";
 import { Box, Text, Center, Input, Button } from "native-base";
 import { useNavigation } from "@react-navigation/native";
-function InputBo(props) {
-  return (
-    <Box mx="5" my="2">
-      <Text bold>{props.title}</Text>
-      <Input
-        placeholder={props.placeholder}
-        borderColor="black"
-        borderRadius="lg"
-      />
-    </Box>
-  );
-}
+import InputBox from "../../../../Component/Drawer/InputBox";
 const Add_Vehicle1 = () => {
   const navigation = useNavigation({});
   return (
@@ -25,14 +14,14 @@ const Add_Vehicle1 = () => {
         </Center>
       </Box>
       <Box my="4">
-        <InputBo title="Vehicle Number" placeholder="GJ06AB1234" />
-        <InputBo title="Transpoter ID" placeholder="John Doe" />
-        <InputBo title="Broker/Owner " placeholder="John Doe" />
-        <InputBo title="Vehicle Model" placeholder="John Doe" />
-        <InputBo title="Vehicle Year" placeholder="1999" />
-        <InputBo title="Vehicle Buy Date" placeholder="1999" />
-        <InputBo title="Engine Number" placeholder="1999" />
-        <InputBo title="Chasis Number" placeholder="1999" />
+        <InputBox title="Vehicle Number" placeholder="GJ06AB1234" />
+        <InputBox title="Transpoter ID" placeholder="John Doe" />
+        <InputBox title="Broker/Owner " placeholder="John Doe" />
+        <InputBox title="Vehicle Model" placeholder="John Doe" />
+        <InputBox title="Vehicle Year" placeholder="1999" />
+        <InputBox title="Vehicle Buy Date" placeholder="1999" />
+        <InputBox title="Engine Number" placeholder="1999" />
+        <InputBox title="Chasis Number" placeholder="1999" />
       </Box>
       <Button
         size="md"

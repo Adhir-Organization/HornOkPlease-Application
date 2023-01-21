@@ -47,6 +47,7 @@ export default function MainStackNav() {
           headerShown: false,
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
+        initialRouteName={"TabNavigation"}
       >
         <Stack.Screen name="LoginFleet" component={LoginFleet} />
         <Stack.Screen
