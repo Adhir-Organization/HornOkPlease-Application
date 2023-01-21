@@ -12,8 +12,9 @@ import {
   Input,
 } from "native-base";
 import React from "react";
-
+import { useNavigation } from "@react-navigation/native";
 const Vehicle_Details = () => {
+  const navigation = useNavigation({});
   return (
     <Box safeArea>
       <Box background="#0058DB" padding="3">
@@ -29,12 +30,14 @@ const Vehicle_Details = () => {
         <Box>
           <Text>Deepesh kaala</Text>
           <Text>GJ06AB1234</Text>
-          <Button>Available</Button>
+          <Button onPress={() => navigation.navigate("Add_Vehicle1")}>
+            Available
+          </Button>
         </Box>
       </ScrollView>
-    <View>
-      <Text>Vehicle_Details</Text>
-    </View>
+      <View>
+        <Text>Vehicle_Details</Text>
+      </View>
     </Box>
   );
 };

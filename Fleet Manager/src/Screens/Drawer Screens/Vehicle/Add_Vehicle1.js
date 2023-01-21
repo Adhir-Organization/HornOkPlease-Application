@@ -20,7 +20,7 @@ const Add_Vehicle1 = () => {
       <Box background="#0058DB" padding="3">
         <Center>
           <Text fontSize="xl" color="white" mx={["110px"]}>
-            Vehicle Details
+            Add Vehicle
           </Text>
         </Center>
       </Box>
