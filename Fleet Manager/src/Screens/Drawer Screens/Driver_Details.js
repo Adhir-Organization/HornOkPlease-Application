@@ -12,8 +12,51 @@ import {
   Input,
 } from "native-base";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import DrawerBox from "../../../Component/Drawer/DrawerBox";
 
-export default function Driver_Details() {
+const Driver_Details = () => {
+
+  const navigation = useNavigation();
+
+  const available = [
+    {
+      // screenNavigation: "OnRoadTrucksDetails",
+      driverName: "dipesh kala",
+      number: "gj06AB1234",
+      icon: "truck",
+      color: "orange.200",
+      btnColor: "orange.500",
+    },
+
+    {
+      // screenNavigation: "OnRoadTrucksDetails",
+      driverName: "dipesh kala",
+      number: "gj06AB1234",
+      icon: "truck",
+      color: "orange.200",
+      btnColor: "orange.500",
+    },
+    {
+      // screenNavigation: "OnRoadTrucksDetails",
+      driverName: "dipesh kala",
+      number: "gj06AB1234",
+      icon: "truck",
+      color: "orange.200",
+      btnColor: "orange.500",
+      
+    },
+    {
+      // screenNavigation: "OnRoadTrucksDetails",
+      driverName: "dipesh kala",
+      number: "gj06AB1234",
+      icon: "truck",
+      color: "orange.200",
+      btnColor: "orange.500",
+    },
+
+  ];
+
   return (
     <Box safeArea>
       <Box background="#0058DB" padding="3">
@@ -25,19 +68,21 @@ export default function Driver_Details() {
           </Center>
         </HStack>
       </Box>
-      <ScrollView>
-        <Box>
-          <Text>Deepesh kaala</Text>
-          <Text>GJ06AB1234</Text>
-          <Box height={7} width="1/4" backgroundColor={"blue.300"} borderRadius="16">
-            <Text mx="auto" pt="1">
-              Available
-            </Text>
-          </Box>
-        </Box>
+      <ScrollView mb="20" mt="5">
+        {available.map((available, index) => (
+          <DrawerBox
+            driverName={available.driverName}
+            icon={available.icon}
+            number={available.number}
+            color={available.color}
+            btnColor={available.btnColor}
+            // screenNavigation={available.screenNavigation}
+            key={index}
+          />
+        ))}
       </ScrollView>
-  
     </Box>
   );
 }
 
+export default Driver_Details;

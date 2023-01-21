@@ -68,7 +68,7 @@ const DashboardFleet = () => {
               onPress={() =>
                 navigation.navigate("DrawerNav", { screen: "Driver_Details" })
               }
-            >
+            >  
               <Icons name="person-add-alt" size={30} color="blue" />
               <Text fontSize="xl">Driver Details</Text>
             </Menu.Item>
