@@ -77,7 +77,7 @@ const Vehicle_Details = () => {
             key={index}
           />
         ))}
-        <Button width="32" mx="auto" marginTop="7" onPress={() => navigation.navigate("Add_Driver1")}>
+        <Button width="32" mx="auto" marginTop="7" onPress={() => navigation.navigate("Add_Vehicle1")}>
           Add Vehicle
         </Button>
       </ScrollView>
