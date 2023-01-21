@@ -22,9 +22,9 @@ const Driver_Details = () => {
   const available = [
     {
       // screenNavigation: "OnRoadTrucksDetails",
-      driverName: "dipesh kala",
-      number: "gj06AB1234",
-      icon: "truck",
+      driverName: "Dipesh Kala",
+      number: "GJ06AB1234",
+      icon: "road",
       color: "orange.200",
       btnColor: "orange.500",
     },
@@ -32,7 +32,7 @@ const Driver_Details = () => {
     {
       // screenNavigation: "OnRoadTrucksDetails",
       driverName: "dipesh kala",
-      number: "gj06AB1234",
+      number: "GJ06AB1234",
       icon: "truck",
       color: "orange.200",
       btnColor: "orange.500",
@@ -40,7 +40,7 @@ const Driver_Details = () => {
     {
       // screenNavigation: "OnRoadTrucksDetails",
       driverName: "dipesh kala",
-      number: "gj06AB1234",
+      number: "GJ06AB1234",
       icon: "truck",
       color: "orange.200",
       btnColor: "orange.500",
@@ -49,7 +49,7 @@ const Driver_Details = () => {
     {
       // screenNavigation: "OnRoadTrucksDetails",
       driverName: "dipesh kala",
-      number: "gj06AB1234",
+      number: "GJ06AB1234",
       icon: "truck",
       color: "orange.200",
       btnColor: "orange.500",
