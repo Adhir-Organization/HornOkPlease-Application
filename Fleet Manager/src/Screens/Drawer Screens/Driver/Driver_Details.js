@@ -13,10 +13,9 @@ import {
 } from "native-base";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import DrawerBox from "../../../Component/Drawer/DrawerBox";
+import DrawerBox from "../../../../Component/Drawer/DrawerBox";
 
 const Driver_Details = () => {
-
   const navigation = useNavigation();
 
   const available = [
@@ -27,7 +26,6 @@ const Driver_Details = () => {
       icon: "road",
       color: "orange.200",
       btnColor: "orange.400",
-
     },
 
     {
@@ -45,7 +43,6 @@ const Driver_Details = () => {
       icon: "truck",
       color: "orange.200",
       btnColor: "orange.400",
-      
     },
     {
       // screenNavigation: "OnRoadTrucksDetails",
@@ -54,9 +51,7 @@ const Driver_Details = () => {
       icon: "truck",
       color: "orange.200",
       btnColor: "orange.400",
-
     },
-
   ];
 
   return (
@@ -82,12 +77,17 @@ const Driver_Details = () => {
             key={index}
           />
         ))}
-        <Button width="32" mx="auto" marginTop="7" onPress={() => navigation.navigate("Add_Driver1")}>
-          Add Driver 
+        <Button
+          width="32"
+          mx="auto"
+          marginTop="7"
+          onPress={() => navigation.navigate("Add_Driver1")}
+        >
+          Add Driver
         </Button>
       </ScrollView>
     </Box>
   );
-}
+};
 
 export default Driver_Details;

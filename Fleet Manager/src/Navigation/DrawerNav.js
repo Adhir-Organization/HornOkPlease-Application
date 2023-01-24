@@ -21,9 +21,10 @@ import Settings from "../Screens/Drawer Screens/Settings";
 import Trips from "../Screens/Drawer Screens/Trips";
 import Add_Vehicle2 from "../Screens/Drawer Screens/Vehicle/Add_Vehicle2";
 import Vehicle_Details from "../Screens/Drawer Screens/Vehicle/Vehicle_Details";
-import Driver_Details from "../Screens/Drawer Screens/Driver_Details";
-import Add_Driver1 from "../Screens/Drawer Screens/Add_Driver1";
-import Add_Driver2 from "../Screens/Drawer Screens/Add_Driver2";
+import Driver_Details from "../Screens/Drawer Screens/Driver/Driver_Details";
+import Add_Driver1 from "../Screens/Drawer Screens/Driver/Add_Driver1";
+import Add_Driver2 from "../Screens/Drawer Screens/Driver/Add_Driver2";
+import Add_Driver3 from "../Screens/Drawer Screens/Driver/Add_Driver3";
 const Stack = createStackNavigator();
 const theme = extendTheme({
   colors: {
@@ -59,6 +60,7 @@ export default function DrawerNav() {
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="Add_Driver1" component={Add_Driver1} />
       <Stack.Screen name="Add_Driver2" component={Add_Driver2} />
+      <Stack.Screen name="Add_Driver3" component={Add_Driver3} />
     </Stack.Navigator>
   );
 }

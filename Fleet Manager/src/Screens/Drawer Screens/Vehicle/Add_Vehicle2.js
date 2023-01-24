@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Center, Input, Button } from "native-base";
+import { Box, Text, Center, Input, Button, ScrollView } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 import InputBox from "../../../../Component/Drawer/InputBox";
 const Add_Vehicle2 = () => {
@@ -13,24 +13,26 @@ const Add_Vehicle2 = () => {
           </Text>
         </Center>
       </Box>
-      <Box my="4">
-        <InputBox title="Driver ID" placeholder="1999" />
-        <InputBox title="Driver Contact " placeholder="1999" />
-        <InputBox title="Tn Old Number " placeholder="23083408" />
-        <InputBox title="NewBx Number " placeholder="23083408" />
-        <InputBox title="Last ODO Read " placeholder="23083408" />
-        <InputBox title="Last ODO Read Date" placeholder="00/00/00" />
-        <InputBox title="Tool List" placeholder="Ashok Leyland" />
-        <InputBox title="Average" placeholder="3km/hr" />
-      </Box>
-      <Button
-        size="md"
-        mx="32"
-        my="-1"
-        // onPress={() => navigation.navigate("Add_Vehicle2")}
-      >
-        Save
-      </Button>
+      <ScrollView>
+        <Box my="4">
+          <InputBox title="Driver ID" placeholder="1999" />
+          <InputBox title="Driver Contact " placeholder="1999" />
+          <InputBox title="Tn Old Number " placeholder="23083408" />
+          <InputBox title="NewBx Number " placeholder="23083408" />
+          <InputBox title="Last ODO Read " placeholder="23083408" />
+          <InputBox title="Last ODO Read Date" placeholder="00/00/00" />
+          <InputBox title="Tool List" placeholder="Ashok Leyland" />
+          <InputBox title="Average" placeholder="3km/hr" />
+        </Box>
+        <Button
+          size="md"
+          mx="32"
+          my="-1"
+          // onPress={() => navigation.navigate("Add_Vehicle2")}
+        >
+          Save
+        </Button>
+      </ScrollView>
     </Box>
   );
 };

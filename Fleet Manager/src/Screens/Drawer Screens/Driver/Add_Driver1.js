@@ -12,10 +12,10 @@ import {
   Input,
 } from "native-base";
 import React from "react";
-import InputBox from "../../../Component/Drawer/InputBox";
+import InputBox from "../../../../Component/Drawer/InputBox";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Ionicons";
-
+import DateSelector from "../../../../Component/DateSelector";
 const Add_Driver1 = () => {
   const navigation = useNavigation();
   return (
@@ -29,21 +29,26 @@ const Add_Driver1 = () => {
           </Center>
         </HStack>
       </Box>
-      <Box mx="32">
-        <Icon name="person-circle-outline" size={112} color="blue" />
-      </Box>
-      {/* <IconButton>
+      <ScrollView>
+        <Box mx="32">
+          <Icon name="person-circle-outline" size={112} color="blue" />
+        </Box>
+        {/* <IconButton>
         <Icon name="camera-outline" size={40} />
       </IconButton> */}
-
-      <Box>
-        <InputBox title="Driver First Name " placeholder="1999" />
-        <InputBox title="Driver Middle Name opt " placeholder="1999" />
-        <InputBox title="Driver Last Name " placeholder="1999" />
-        <InputBox title="Date of Birth " placeholder="1999" />
-        <InputBox title="Driver Contact No." placeholder="1999" />
-        <InputBox title="Joining Date" placeholder="1999" />
-      </Box>
+        <Box my="6">
+          <InputBox title="Driver First Name " placeholder="1999" />
+          <InputBox title="Driver Middle Name opt " placeholder="1999" />
+          <InputBox title="Driver Last Name " placeholder="1999" />
+          <DateSelector name="Date of Date" />
+          <InputBox
+            title="Driver Contact No."
+            placeholder="9978"
+            type="phone-pad"
+          />
+          <DateSelector name="Joining Date" />
+        </Box>
+      </ScrollView>
       <Button
         size="md"
         mx="32"

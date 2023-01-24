@@ -9,6 +9,7 @@ export default function InputBox(props) {
         placeholder={props.placeholder}
         borderColor="black"
         borderRadius="lg"
+        keyboardType={props.type}
       />
     </Box>
   );
