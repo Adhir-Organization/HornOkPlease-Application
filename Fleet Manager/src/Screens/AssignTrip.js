@@ -14,7 +14,7 @@ import {
     ScrollView,
 } from "native-base";
 import { useState } from "react";
-import IssueSelector from "../../../src/components/maintenance/IssueSelector";
+
 import DateSelector from "../../../src/components/maintenance/DateSelector";
 
 const AssignTrip = () => {

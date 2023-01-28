@@ -24,15 +24,15 @@ const Add_Vehicle1 = () => {
           <InputBox title="Engine Number" placeholder="1999" />
           <InputBox title="Chasis Number" placeholder="1999" />
         </Box>
-        <Button
-          size="md"
-          mx="32"
-          my="-1"
-          onPress={() => navigation.navigate("Add_Vehicle2")}
-        >
-          Next
-        </Button>
       </ScrollView>
+      <Button
+        size="md"
+        mx="32"
+        my="-1"
+        onPress={() => navigation.navigate("Add_Vehicle2")}
+      >
+        Next
+      </Button>
     </Box>
   );
 };
