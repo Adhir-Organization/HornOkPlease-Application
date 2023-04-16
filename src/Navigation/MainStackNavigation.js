@@ -104,7 +104,7 @@ export default function StackNavigation() {
               headerShown: false,
               cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
             }}
-            initialRouteName={"MainStackNav"}
+            initialRouteName={"TabNavigation"}
           >
             {!authToken ? (
               <>

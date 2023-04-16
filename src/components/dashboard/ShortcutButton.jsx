@@ -7,8 +7,8 @@ export default function ShortcutButton(props) {
   return (
     <Button
       p="3"
-      w="full"
-      background={"white"}
+      w="60%"
+      background= "lightBlue.200"
       borderWidth="1"
       borderColor={"blue.100"}
       rounded="md"

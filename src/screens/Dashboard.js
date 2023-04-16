@@ -16,20 +16,15 @@ import ShortcutButton from "../components/dashboard/ShortcutButton";
 import StatusButton from "../components/dashboard/StatusButton";
 import MaintenanceFAB from "../components/dashboard/MaintenanceFAB";
 import AssignedTrip from "../components/dashboard/AssignedTrip";
+import MapViews from "../components/dashboard/MapViews";
 import DriverProfile from "./DriverProfile";
-import { useState } from "react"; 
+import { useState } from "react";
 // Importing Icons
 
 export default function Dashboard({ navigation }) {
   const [activeStatus, setActiveStatus] = useState();
-  const content = {     
+  const content = {
     shortcutButtons: [
-      {
-        index: 1,
-        icon: "plus",
-        title: "Start-Trip",
-        screen: "PTNavigation",
-      },
       {
         index: 2,
         icon: "application-edit-outline",
@@ -60,9 +55,8 @@ export default function Dashboard({ navigation }) {
     <Box flex="1" safeArea background="white">
       {/* Hero Section Rounded */}
       <ScrollView>
-        <Box background="blue.500" p={5} borderBottomRadius="3xl" h={"72"}>
-          <VStack space={1}>
-            {/* <Pressable
+        <Box background="blue.500" p={5} borderBottomRadius="3xl" h={"24"}>
+          {/* <Pressable
               p="2"
               borderWidth="1"
               onPress={() => {
@@ -77,21 +71,26 @@ export default function Dashboard({ navigation }) {
                 }}
               />
             </Pressable> */}
+          <HStack space={"1/2"}>
+            <VStack>
+              <Text fontSize={20} color="white">
+                Hello, John
+              </Text>
+              <Text color="white">134SRA3572</Text>
+            </VStack>
             <DriverProfile />
-            <Text fontSize={20} color="white">
-              Hello, John
-            </Text>
-            <Text color="white">134SRA3572</Text>
-            <HStack justifyContent="space-between" space={2}>
-              {/* Hero Section Card 1 */}
-              <HeroCard background="red.200" />
+          </HStack>
+          {/* <HStack justifyContent="space-between" space={2}> */}
+          {/* Hero Section Card 1 */}
+          {/* <HeroCard background="red.200" /> */}
 
-              {/* Hero Section Card 2 */}
-              <HeroCard background="red.200" />
-            </HStack>
-          </VStack>
+          {/* Hero Section Card 2 */}
+          {/* <HeroCard background="red.200" /> */}
+          {/* </HStack> */}
         </Box>
-
+        <Box mx="10" my="10">
+          <MapViews />
+        </Box>
         <Box p={5}>
           <Heading size="md" letterSpacing={"lg"} fontWeight={"medium"} mb={5}>
             Status

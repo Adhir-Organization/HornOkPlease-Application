@@ -95,8 +95,8 @@ export default function AssignedTrip() {
 
       <Button
         p="3"
-        w="full"
-        background="white"
+        w="60%"
+        background="lightBlue.200"
         rounded="md"
         borderWidth={1}
         borderColor={"blue.100"}
