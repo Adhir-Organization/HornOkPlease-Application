@@ -7,12 +7,12 @@ export default function MaintenanceFAB() {
   return (
     <>
       <Fab
-        icon={<Icon name="alert-triangle" size={24} color="white" />}
+        icon={<Icon name="phone" size={24} color="white" />}
         size="lg"
         bottom={20}
         backgroundColor="yellow.500"
         onPress={() => {
-          navigation.navigate("DriverMaintenance");
+          navigation.navigate("Contacts");
         }}
       />
     </>

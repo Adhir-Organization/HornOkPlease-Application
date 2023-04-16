@@ -4,6 +4,7 @@ import Dashboard from "../screens/Dashboard";
 import Notifications from "../screens/Notifications";
 import Contacts from "../screens/Contacts";
 import Icon from "react-native-vector-icons/Feather";
+import ChatRoom from "../screens/ChatRoom";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -35,11 +36,11 @@ export default function TabNavigation() {
         }}
       />
       <Tab.Screen
-        name="Contacts"
-        component={Contacts}
+        name="Message"
+        component={ChatRoom}
         options={{
-          tabBarLabel: "Contacts",
-          tabBarIcon: () => <Icon name="phone" color="white" size={24} />,
+          tabBarLabel: "Message",
+          tabBarIcon: () => <Icon name="send" color="white" size={24} />,
         }}
       />
     </Tab.Navigator>
