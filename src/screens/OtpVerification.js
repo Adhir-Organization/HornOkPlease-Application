@@ -3,9 +3,13 @@ import { COLORS } from "../../constants/theme";
 
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Image } from "react-native";
+import { useDispatch } from "react-redux";
+import { login } from "../store/authSlice";
 
 export default function OtpVerification({ navigation }) {
+  const dispatch = useDispatch();
   const pressHandler = () => {
+    dispatch(login());
     navigation.navigate("TabNavigation");
   };
 
