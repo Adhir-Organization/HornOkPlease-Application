@@ -104,7 +104,11 @@ export default function StackNavigation() {
               headerShown: false,
               cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
             }}
+<<<<<<< HEAD
             initialRouteName={"TabNavigation"}
+=======
+            initialRouteName={"MainStackNav"}
+>>>>>>> d262cb5a9d66eee9a2ec711157d154227c46ed0d
           >
             {!authToken ? (
               <>
@@ -114,10 +118,17 @@ export default function StackNavigation() {
                   name="OtpVerification"
                   component={OtpVerification}
                 />
+<<<<<<< HEAD
                 <Stack.Screen name="MainStackNav" component={MainStackNav} />
               </>
             ) : (
               <>
+=======
+              </>
+            ) : (
+              <>
+              <Stack.Screen name="MainStackNav" component={MainStackNav} />
+>>>>>>> d262cb5a9d66eee9a2ec711157d154227c46ed0d
                 <Stack.Screen name="TabNavigation" component={TabNavigation} />
                 <Stack.Screen name="Contacts" component={Contacts} />
                 <Stack.Screen name="Notifications" component={Notifications} />

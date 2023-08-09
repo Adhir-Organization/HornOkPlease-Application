@@ -18,12 +18,25 @@ import {
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import TruckBox from "../../Component/Dashboard/TruckBox";
 import Graph from "../../Component/Dashboard/Graph";
-// import AvailableTrucks from "./AvailableTrucks";
 import { useNavigation } from "@react-navigation/native";
 import Icons from "react-native-vector-icons/MaterialIcons";
 import IconT from "react-native-vector-icons/FontAwesome5";
+import { useContext } from "react";
+import authContext from "../../../src/context/authContext";
+
+
 const DashboardFleet = () => {
   const navigation = useNavigation({});
+
+  // auth logout logic
+  const [modalVisible, setModalVisible] = React.useState(false);
+
+  const { setAuthToken } = useContext(authContext);
+  const handleLogout = async () => {
+    await AsyncStorage.removeItem("authToken");
+    setAuthToken(null);
+  };
+  
 
   function Example() {
     return (
@@ -118,7 +131,13 @@ const DashboardFleet = () => {
               <Text fontSize="xl">Settings</Text>{" "}
             </Menu.Item>
             <Menu.Item>
-              <Button mx="12" my="10" w="20">
+              <Button mx="12" my="10" w="20"
+                onPress={() => {
+                setModalVisible(!modalVisible);
+                  navigation.navigate("GetStarted");
+                  handleLogout();
+                }}
+              >
                 Logout
               </Button>
             </Menu.Item>

@@ -86,7 +86,11 @@ export default function AssignedTrip() {
               <Button
                 flex="1"
                 onPress={() => {
+<<<<<<< HEAD
                   navigation.navigate("PTNavigation");
+=======
+                  navigation.navigate("OTPVerificationFleet");
+>>>>>>> d262cb5a9d66eee9a2ec711157d154227c46ed0d
                   setModalVisible(!modalVisible);
                 }}
               >

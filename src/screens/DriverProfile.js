@@ -37,7 +37,10 @@ export default function DriverProfile() {
   const handleLogout = async () => {
     await AsyncStorage.removeItem("authToken");
     setAuthToken(null);
+<<<<<<< HEAD
     // console.log(await AsyncStorage.getItem("token"));
+=======
+>>>>>>> d262cb5a9d66eee9a2ec711157d154227c46ed0d
   };
 
   const navigation = useNavigation();
@@ -97,8 +100,12 @@ export default function DriverProfile() {
             <Modal.Footer>
               <Button
                 flex="1"
+<<<<<<< HEAD
                 onPress={() => {
                   setModalVisible(!modalVisible);
+=======
+                onPress={() => {setModalVisible(!modalVisible);
+>>>>>>> d262cb5a9d66eee9a2ec711157d154227c46ed0d
                   handleLogout();
                 }}
               >
@@ -120,7 +127,10 @@ export default function DriverProfile() {
           source={{
             uri: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
           }}
+<<<<<<< HEAD
           size="lg"
+=======
+>>>>>>> d262cb5a9d66eee9a2ec711157d154227c46ed0d
         />
       </Pressable>
     </>

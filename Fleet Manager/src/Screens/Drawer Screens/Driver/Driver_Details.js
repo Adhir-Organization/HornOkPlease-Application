@@ -83,7 +83,11 @@ const Driver_Details = () => {
           marginTop="7"
           onPress={() => navigation.navigate("Add_Driver1")}
         >
+<<<<<<< HEAD
           Add Driver
+=======
+          Add Driverq
+>>>>>>> d262cb5a9d66eee9a2ec711157d154227c46ed0d
         </Button>
       </ScrollView>
     </Box>
