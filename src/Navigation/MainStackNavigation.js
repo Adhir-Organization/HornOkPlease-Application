@@ -64,7 +64,7 @@ export default function StackNavigation() {
       if (value == null) {
         setAuthToken(null);
       } else {
-        setAuthToken(value);
+        // setAuthToken(value);
       }
       setLoading(false);
       // }
