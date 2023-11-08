@@ -55,7 +55,7 @@ const LoginFleet = () => {
           <Button
             my="7"
             size="lg"
-            onPress={() => navigation.navigate("OTPVerificationFleet")}
+            // onPress={() => navigation.navigate("OTPVerificationFleet")}
           >
             Get OTP
           </Button>

@@ -19,10 +19,15 @@ import AssignedTrip from "../components/dashboard/AssignedTrip";
 import MapViews from "../components/dashboard/MapViews";
 import DriverProfile from "./DriverProfile";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 // Importing Icons
 
 export default function Dashboard({ navigation }) {
   const [activeStatus, setActiveStatus] = useState();
+
+  const token = useSelector((state) => state.auth);
+  const user  = useSelector((state) => state.auth);
+
   const content = {
     shortcutButtons: [
       {

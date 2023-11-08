@@ -23,24 +23,43 @@ import Icons from "react-native-vector-icons/MaterialIcons";
 import IconT from "react-native-vector-icons/FontAwesome5";
 import { useContext } from "react";
 import authContext from "../../../src/context/authContext";
-
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../../src/services/operations/authApi";
 
 const DashboardFleet = () => {
   const navigation = useNavigation({});
+  const dispatch = useDispatch();
+
+  const { user } = useSelector((state) => state.auth);
+  const { loginData } = useSelector((state) => state.auth);
+  console.log("userrrrrrrsssssssssss", user);
+
 
   // auth logout logic
   const [modalVisible, setModalVisible] = React.useState(false);
+  // const { setAuthToken } = useContext(authContext);
 
-  const { setAuthToken } = useContext(authContext);
+
   const handleLogout = async () => {
-    await AsyncStorage.removeItem("authToken");
-    setAuthToken(null);
+    if (user) {
+      await dispatch(logout(navigation));
+    } else {
+
+      console.log("user not defined");
+    }
   };
-  
+
+
+  // if (!loginData) {
+  //   navigation.navigate("GetStarted");
+  // }
+  console.log("loginData", loginData);
 
   function Example() {
+    if (user) {
+      
     return (
-      <Box w="10%">
+        <Box w="10%">
         <Menu
           w="240"
           h="830"
@@ -63,7 +82,7 @@ const DashboardFleet = () => {
               size="lg"
             />
             <Text color="blue.600" fontSize="2xl" bold my="8">
-              John Doe
+              {user.Name}
             </Text>
           </HStack>
           <Divider w="100%" color={"blue.50"} />
@@ -81,7 +100,7 @@ const DashboardFleet = () => {
               onPress={() =>
                 navigation.navigate("DrawerNav", { screen: "Driver_Details" })
               }
-            >  
+            >
               <Icons name="person-add-alt" size={30} color="blue" />
               <Text fontSize="xl">Driver Details</Text>
             </Menu.Item>
@@ -133,10 +152,9 @@ const DashboardFleet = () => {
             <Menu.Item>
               <Button mx="12" my="10" w="20"
                 onPress={() => {
-                setModalVisible(!modalVisible);
-                  navigation.navigate("GetStarted");
                   handleLogout();
-                }}
+                }
+                }
               >
                 Logout
               </Button>
@@ -144,123 +162,127 @@ const DashboardFleet = () => {
           </Menu.Group>
         </Menu>
       </Box>
-    );
+      );
+    }
   }
 
-  return (
-    <Box safeArea>
-      <Box background="#0058DB" padding="3">
-        <HStack>
-          <Example />
-          <Center>
-            <Text fontSize="xl" color="white" mx="24">
-              Dashboard
-            </Text>
-          </Center>
-        </HStack>
-      </Box>
-
-      <ScrollView>
-        <Box mx="5" my="4">
-          <TruckBox
-            iconName={"road"}
-            number={"10"}
-            name={"On-Road"}
-            color={"green.200"}
-            btnColor={"#279600"}
-            fn={() => navigation.navigate("OnroadTrucks")}
-          />
-          <TruckBox
-            iconName={"truck"}
-            number={"10"}
-            name={"Available"}
-            color={"orange.200"}
-            btnColor={"orange.500"}
-            fn={() => navigation.navigate("AvailableTrucks")}
-          />
-          <TruckBox
-            iconName={"road"}
-            number={"10"}
-            name={"In-Workshop"}
-            color={"#FFBCBC"}
-            btnColor={"#FF3E3E"}
-            fn={() => navigation.navigate("ExpenseSummary")}
-          />
-        </Box>
-        <Box>
-          <Text bold fontSize="24" mx="8">
-            Accounts
-          </Text>
-          <Box borderColor="amber.500" borderWidth="1" mx="4">
-            <Graph />
-          </Box>
-          <HStack mx="auto" space="7" display="flex" flexDirection="row">
-            <Button
-              _text={{
-                color: "black",
-              }}
-              shadow="4"
-              backgroundColor="#FFFFFF"
-              w="1/3"
-              h="32"
-              my="8"
-              size="md"
-              borderRadius="xl"
-              onPress={() => navigation.navigate("ExpenseSummary")}
-            >
-              <Text fontSize="xl">10,000</Text>
-              <Text fontSize="xs">Last Month Expense</Text>
-              <Text
-                fontWeight="extrabold"
-                borderRadius="2xl"
-                px="3"
-                bg="#0ACFCF"
-                mt="4"
-              >
-                View Details
+  if (user) {
+    
+    return (
+      <Box safeArea>
+        <Box background="#0058DB" padding="3">
+          <HStack>
+            <Example />
+            <Center>
+              <Text fontSize="xl" color="white" mx="auto">
+                {user.Name} Dashboard
               </Text>
-            </Button>
-            <Button
-              _text={{
-                color: "black",
-              }}
-              shadow="4"
-              backgroundColor="#FFFFFF"
-              w="1/3"
-              h="32"
-              my="8"
-              size="md"
-              borderRadius="xl"
-              onPress={() => navigation.navigate("ExpenseSummary")}
-            >
-              <Text fontSize="xl">42</Text>
-              <Text fontSize="xs">Trips Occurred</Text>
-              <Text
-                fontWeight="extrabold"
-                borderRadius="2xl"
-                px="3"
-                bg="#0ACFCF"
-                mt="4"
-              >
-                View Details
-              </Text>
-            </Button>
+            </Center>
           </HStack>
-
-          <Button
-            marginTop="1"
-            width="32"
-            mx="auto"
-            my="16"
-            onPress={() => navigation.navigate("AssignTrip")}
-          >
-            Assign Trip
-          </Button>
         </Box>
-      </ScrollView>
-      {/* </Stack.Navigator> */}
-    </Box>
-  );
+
+        <ScrollView>
+          <Box mx="5" my="4">
+            <TruckBox
+              iconName={"road"}
+              number={"10"}
+              name={"On-Road"}
+              color={"green.200"}
+              btnColor={"#279600"}
+              fn={() => navigation.navigate("OnroadTrucks")}
+            />
+            <TruckBox
+              iconName={"truck"}
+              number={"10"}
+              name={"Available"}
+              color={"orange.200"}
+              btnColor={"orange.500"}
+              fn={() => navigation.navigate("AvailableTrucks")}
+            />
+            <TruckBox
+              iconName={"road"}
+              number={"10"}
+              name={"In-Workshop"}
+              color={"#FFBCBC"}
+              btnColor={"#FF3E3E"}
+              fn={() => navigation.navigate("ExpenseSummary")}
+            />
+          </Box>
+          <Box>
+            <Text bold fontSize="24" mx="8">
+              Accounts
+            </Text>
+            <Box borderColor="amber.500" borderWidth="1" mx="4">
+              <Graph />
+            </Box>
+            <HStack mx="auto" space="7" display="flex" flexDirection="row">
+              <Button
+                _text={{
+                  color: "black",
+                }}
+                shadow="4"
+                backgroundColor="#FFFFFF"
+                w="1/3"
+                h="32"
+                my="8"
+                size="md"
+                borderRadius="xl"
+                onPress={() => navigation.navigate("ExpenseSummary")}
+              >
+                <Text fontSize="xl">10,000</Text>
+                <Text fontSize="xs">Last Month Expense</Text>
+                <Text
+                  fontWeight="extrabold"
+                  borderRadius="2xl"
+                  px="3"
+                  bg="#0ACFCF"
+                  mt="4"
+                >
+                  View Details
+                </Text>
+              </Button>
+              <Button
+                _text={{
+                  color: "black",
+                }}
+                shadow="4"
+                backgroundColor="#FFFFFF"
+                w="1/3"
+                h="32"
+                my="8"
+                size="md"
+                borderRadius="xl"
+                onPress={() => navigation.navigate("ExpenseSummary")}
+              >
+                <Text fontSize="xl">42</Text>
+                <Text fontSize="xs">Trips Occurred</Text>
+                <Text
+                  fontWeight="extrabold"
+                  borderRadius="2xl"
+                  px="3"
+                  bg="#0ACFCF"
+                  mt="4"
+                >
+                  View Details
+                </Text>
+              </Button>
+            </HStack>
+
+            <Button
+              marginTop="1"
+              width="32"
+              mx="auto"
+              my="16"
+              onPress={() => navigation.navigate("AssignTrip")}
+            >
+              Assign Trip
+            </Button>
+          </Box>
+        </ScrollView>
+        {/* </Stack.Navigator> */}
+      </Box>
+    );
+  }
 };
 
 export default DashboardFleet;

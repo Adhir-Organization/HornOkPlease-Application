@@ -18,33 +18,48 @@ import { ICONS, COLORS } from "../../constants/theme";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { useState } from "react";
 import { BASE_URL } from "../../config";
+import { login } from "../services/operations/authApi";
+import { useDispatch } from "react-redux";
+import { useNavigation } from "@react-navigation/native";
+import { setLoginData } from "../slices/authSLice";
 
-export default function Login({ navigation }) {
-  const [contactNo, setContactNo] = useState("");
-  const [alertMsg, setAlertMsg] = useState(null);
-  const handleRequest = async () => {
-    try {
-      console.log("requesting for data");
-      const { data } = await axios.get(
-        `${BASE_URL}/driver/get/searchBy?phone=1234567890`
-      );
-      console.log(data.result);
-      if (data.result.length === 0) {
-        setAlertMsg("No user found");
-      } else {
-        navigation.navigate("OtpVerification", {
-          user: data.result[0]._id,
-          phone: contactNo,
-        });
-      }
-    } catch (e) {
-      console.log(e);
-    }
-  };
+export default function Login( ) {
+
+ const navigation = useNavigation();
+
+  const dispatch = useDispatch();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // console.log("login screen",email);
+  // const handleRequest = async () => {
+  //   try {
+  //     console.log("requesting for data");
+  //     const { data } = await axios.get(
+  //       `${BASE_URL}/driver/get/searchBy?phone=1234567890`
+  //     );
+  //     console.log(data.result);
+  //     if (data.result.length === 0) {
+  //       setAlertMsg("No user found");
+  //     } else {
+  //       navigation.navigate("Login", {
+  //         user: data.result[0]._id,
+  //         phone: contactNo,
+  //       });
+  //     }
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // };
+
   const pressHandler = async () => {
     // handleRequest();
-    navigation.navigate("OtpVerification", { phone: 1234567890 });
+    // navigation.navigate("Login", { phone: 1234567890 });
+    dispatch(login(email, password, navigation));
+    dispatch(setLoginData({ email }));
   };
+
+
   return (
     <Box flex="1" safeArea p="5">
       <VStack space="5">
@@ -68,29 +83,38 @@ export default function Login({ navigation }) {
             <Icon name="mobile-friendly" size={80} color={COLORS.primaryBlue} />
           </Box>
           <Text fontSize="xl" fontWeight="semibold">
-            Enter your mobile number
+            Enter your email and password
           </Text>
           <Text fontSize="md">We will send you a verification OTP code.</Text>
         </Box>
         <Box>
           <Input
-            placeholder="+91 1234567890"
+            placeholder="Email"
             w="100%"
             color="blue.500"
             _focus={{ color: "blue.500" }}
-            value={contactNo}
-            onChangeText={(text) => setContactNo(text)}
+            value={email}
+            onChangeText={(text) => setEmail(text)}
             size="md"
           />
-          {alertMsg ? (
+          <Input my="5"
+            placeholder="Password"
+            w="100%"
+            color="blue.500"
+            _focus={{ color: "blue.500" }}
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+            size="md"
+          />
+          {/* {alertMsg ? (
             <Text fontSize="sm" mt="3" color="red.500">
               {alertMsg}
             </Text>
-          ) : null}
+          ) : null} */}
           <Button my="7" size="lg" onPress={pressHandler}>
-            Get OTP
+            Login
           </Button>
-          <Text
+          {/* <Text
             underline
             mx={32}
             fontSize={16}
@@ -98,7 +122,7 @@ export default function Login({ navigation }) {
             onPress={() => navigation.navigate("MainStackNav")}
           >
             Login as Fleet
-          </Text>
+          </Text> */}
         </Box>
       </VStack>
     </Box>

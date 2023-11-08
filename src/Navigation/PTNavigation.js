@@ -51,7 +51,7 @@ export default function PTNavigation() {
   return (
     <>
       <StatusBar backgroundColor="#2871E6" barStyle="light-content" />
-      <PreTripContext.Provider value={{ parts, setParts }}>
+      {/* <PreTripContext.Provider value={{ parts, setParts }}> */}
         <Stack.Navigator
           screenOptions={{
             headerShown: true,
@@ -68,7 +68,7 @@ export default function PTNavigation() {
             component={PT3IndividualCheckup}
           />
         </Stack.Navigator>
-      </PreTripContext.Provider>
+      {/* </PreTripContext.Provider> */}
     </>
   );
 }

@@ -33,10 +33,10 @@ export default function DriverProfile() {
   };
 
   // logout function logic
-  const { setAuthToken } = useContext(authContext);
+  // const { setAuthToken } = useContext(authContext);
   const handleLogout = async () => {
-    await AsyncStorage.removeItem("authToken");
-    setAuthToken(null);
+    // await AsyncStorage.removeItem("authToken");
+    // setAuthToken(null);
   };
 
   const navigation = useNavigation();

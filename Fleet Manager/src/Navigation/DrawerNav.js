@@ -25,6 +25,7 @@ import Driver_Details from "../Screens/Drawer Screens/Driver/Driver_Details";
 import Add_Driver1 from "../Screens/Drawer Screens/Driver/Add_Driver1";
 import Add_Driver2 from "../Screens/Drawer Screens/Driver/Add_Driver2";
 import Add_Driver3 from "../Screens/Drawer Screens/Driver/Add_Driver3";
+import { useSelector } from "react-redux";
 const Stack = createStackNavigator();
 const theme = extendTheme({
   colors: {
@@ -42,6 +43,10 @@ const theme = extendTheme({
 });
 
 export default function DrawerNav() {
+
+  const { user } = useSelector(state => state.auth);
+  const { token } = useSelector(state => state.auth);
+
   return (
     <Stack.Navigator
       screenOptions={{
@@ -49,18 +54,74 @@ export default function DrawerNav() {
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}
     >
-      <Stack.Screen name="Vehicle_Details" component={Vehicle_Details} />
-      <Stack.Screen name="Add_Vehicle1" component={Add_Vehicle1} />
-      <Stack.Screen name="Add_Vehicle2" component={Add_Vehicle2} />
-      <Stack.Screen name="Driver_Details" component={Driver_Details} />
-      <Stack.Screen name="Driver_Docs" component={Driver_Docs} />
-      <Stack.Screen name="Trips" component={Trips} />
-      <Stack.Screen name="Maintenance" component={Maintenance} />
-      <Stack.Screen name="Add_Contact" component={Add_Contact} />
-      <Stack.Screen name="Settings" component={Settings} />
-      <Stack.Screen name="Add_Driver1" component={Add_Driver1} />
-      <Stack.Screen name="Add_Driver2" component={Add_Driver2} />
-      <Stack.Screen name="Add_Driver3" component={Add_Driver3} />
+      <>
+        {/* { */}
+          {/* // user.accountType === "Driver" && token && ( */}
+
+            <>
+              <Stack.Screen
+                name="Vehicle_Details"
+                component={Vehicle_Details}
+              />
+
+              <Stack.Screen
+                name="Add_Vehicle1"
+                component={Add_Vehicle1}
+              />
+
+              <Stack.Screen
+                name="Add_Vehicle2"
+                component={Add_Vehicle2}
+              />
+
+              <Stack.Screen
+                name="Driver_Details"
+                component={Driver_Details}
+              />
+
+              <Stack.Screen
+                name="Driver_Docs"
+                component={Driver_Docs}
+              />
+
+              <Stack.Screen
+                name="Trips"
+                component={Trips}
+              />
+
+              <Stack.Screen
+                name="Maintenance"
+                component={Maintenance}
+              />
+
+              <Stack.Screen
+                name="Add_Contact"
+                component={Add_Contact}
+              />
+
+              <Stack.Screen
+                name="Settings"
+                component={Settings}
+              />
+
+              <Stack.Screen
+                name="Add_Driver1"
+                component={Add_Driver1}
+              />
+
+              <Stack.Screen
+                name="Add_Driver2"
+                component={Add_Driver2}
+              />
+
+              <Stack.Screen
+                name="Add_Driver3"
+                component={Add_Driver3}
+              />
+            </>
+          {/* ) */}
+        {/* } */}
+      </>
     </Stack.Navigator>
   );
 }

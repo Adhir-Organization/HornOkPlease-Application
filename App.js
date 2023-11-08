@@ -7,6 +7,9 @@ import MainStackNavigation from "./src/Navigation/MainStackNavigation";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
+import rootReducer from "./src/reducers";
 // async storage import
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -25,13 +28,19 @@ const theme = extendTheme({
   },
 });
 
+const store = configureStore({
+  reducer: rootReducer,
+});
+
 export default function App() {
   return (
     <>
       <NativeBaseProvider useTheme={theme}>
-        <SafeAreaProvider>
-          <MainStackNavigation />
-        </SafeAreaProvider>
+        <Provider store={store}>
+          <SafeAreaProvider>
+            <MainStackNavigation />
+          </SafeAreaProvider>
+        </Provider>
       </NativeBaseProvider>
     </>
   );

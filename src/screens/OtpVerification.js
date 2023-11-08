@@ -12,7 +12,7 @@ import { BASE_URL } from "../../config";
 import axios from "axios";
 
 export default function OtpVerification({ route }) {
-  const { setAuthToken } = useContext(authContext);
+  // const { setAuthToken } = useContext(authContext);
 
   const { phone, user } = route.params;
 
@@ -28,10 +28,10 @@ export default function OtpVerification({ route }) {
       // user: user,
       // token: data.token,
       // });
-      await AsyncStorage.setItem("authToken", "1234567890");
-      const value = await AsyncStorage.getItem("authToken");
+      // await AsyncStorage.setItem("authToken", "1234567890");
+      // const value = await AsyncStorage.getItem("authToken");
       // console.log(value);
-      setAuthToken(value);
+      // setAuthToken(value);
     } catch (e) {
       console.log(e);
     }
